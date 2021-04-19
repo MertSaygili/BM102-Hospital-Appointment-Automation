@@ -12,9 +12,6 @@ using System.Data.SqlClient;
 namespace BM102Proje
 {
 
-    //merhaba
-    //möerh
-//klşiklşklşlkş
 
     public partial class KullanıcıGirişiMenü : Form
     {
