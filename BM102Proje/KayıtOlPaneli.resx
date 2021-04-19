@@ -1,0 +1,815 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="TxtŞifreTekrar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>580, 143</value>
+  </data>
+  <data name="TxtŞifreTekrar.Mask" xml:space="preserve">
+    <value>000000</value>
+  </data>
+  <data name="TxtŞifreTekrar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 31</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TxtŞifreTekrar.TabIndex" type="System.Int32, mscorlib">
+    <value>22</value>
+  </data>
+  <data name="&gt;&gt;TxtŞifreTekrar.Name" xml:space="preserve">
+    <value>TxtŞifreTekrar</value>
+  </data>
+  <data name="&gt;&gt;TxtŞifreTekrar.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TxtŞifreTekrar.Parent" xml:space="preserve">
+    <value>gradiantPanel1</value>
+  </data>
+  <data name="&gt;&gt;TxtŞifreTekrar.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="TxtŞifre.Location" type="System.Drawing.Point, System.Drawing">
+    <value>580, 90</value>
+  </data>
+  <data name="TxtŞifre.Mask" xml:space="preserve">
+    <value>000000</value>
+  </data>
+  <data name="TxtŞifre.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 31</value>
+  </data>
+  <data name="TxtŞifre.TabIndex" type="System.Int32, mscorlib">
+    <value>21</value>
+  </data>
+  <data name="&gt;&gt;TxtŞifre.Name" xml:space="preserve">
+    <value>TxtŞifre</value>
+  </data>
+  <data name="&gt;&gt;TxtŞifre.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TxtŞifre.Parent" xml:space="preserve">
+    <value>gradiantPanel1</value>
+  </data>
+  <data name="&gt;&gt;TxtŞifre.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Gönder.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Gönder.Location" type="System.Drawing.Point, System.Drawing">
+    <value>524, 388</value>
+  </data>
+  <data name="Gönder.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 75</value>
+  </data>
+  <data name="Gönder.TabIndex" type="System.Int32, mscorlib">
+    <value>20</value>
+  </data>
+  <data name="Gönder.Text" xml:space="preserve">
+    <value>Gönder</value>
+  </data>
+  <data name="&gt;&gt;Gönder.Name" xml:space="preserve">
+    <value>Gönder</value>
+  </data>
+  <data name="&gt;&gt;Gönder.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Gönder.Parent" xml:space="preserve">
+    <value>gradiantPanel1</value>
+  </data>
+  <data name="&gt;&gt;Gönder.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="RoboKod.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="RoboKod.Location" type="System.Drawing.Point, System.Drawing">
+    <value>164, 362</value>
+  </data>
+  <data name="RoboKod.Size" type="System.Drawing.Size, System.Drawing">
+    <value>181, 28</value>
+  </data>
+  <data name="RoboKod.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="RoboKod.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>TopCenter</value>
+  </data>
+  <data name="&gt;&gt;RoboKod.Name" xml:space="preserve">
+    <value>RoboKod</value>
+  </data>
+  <data name="&gt;&gt;RoboKod.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;RoboKod.Parent" xml:space="preserve">
+    <value>gradiantPanel1</value>
+  </data>
+  <data name="&gt;&gt;RoboKod.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="TxtKullanıcıRobosu.Location" type="System.Drawing.Point, System.Drawing">
+    <value>168, 432</value>
+  </data>
+  <data name="TxtKullanıcıRobosu.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 31</value>
+  </data>
+  <data name="TxtKullanıcıRobosu.TabIndex" type="System.Int32, mscorlib">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;TxtKullanıcıRobosu.Name" xml:space="preserve">
+    <value>TxtKullanıcıRobosu</value>
+  </data>
+  <data name="&gt;&gt;TxtKullanıcıRobosu.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TxtKullanıcıRobosu.Parent" xml:space="preserve">
+    <value>gradiantPanel1</value>
+  </data>
+  <data name="&gt;&gt;TxtKullanıcıRobosu.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="Sayac.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Sayac.Location" type="System.Drawing.Point, System.Drawing">
+    <value>42, 362</value>
+  </data>
+  <data name="Sayac.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 101</value>
+  </data>
+  <data name="Sayac.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;Sayac.Name" xml:space="preserve">
+    <value>Sayac</value>
+  </data>
+  <data name="&gt;&gt;Sayac.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Sayac.Parent" xml:space="preserve">
+    <value>gradiantPanel1</value>
+  </data>
+  <data name="&gt;&gt;Sayac.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="KayıtOl.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="KayıtOl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>524, 213</value>
+  </data>
+  <data name="KayıtOl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 75</value>
+  </data>
+  <data name="KayıtOl.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="KayıtOl.Text" xml:space="preserve">
+    <value>Kayıt Ol</value>
+  </data>
+  <data name="&gt;&gt;KayıtOl.Name" xml:space="preserve">
+    <value>KayıtOl</value>
+  </data>
+  <data name="&gt;&gt;KayıtOl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;KayıtOl.Parent" xml:space="preserve">
+    <value>gradiantPanel1</value>
+  </data>
+  <data name="&gt;&gt;KayıtOl.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="SY.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="SY.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="SY.Location" type="System.Drawing.Point, System.Drawing">
+    <value>412, 149</value>
+  </data>
+  <data name="SY.Size" type="System.Drawing.Size, System.Drawing">
+    <value>147, 23</value>
+  </data>
+  <data name="SY.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="SY.Text" xml:space="preserve">
+    <value>Şifre Tekrardan:</value>
+  </data>
+  <data name="&gt;&gt;SY.Name" xml:space="preserve">
+    <value>SY</value>
+  </data>
+  <data name="&gt;&gt;SY.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;SY.Parent" xml:space="preserve">
+    <value>gradiantPanel1</value>
+  </data>
+  <data name="&gt;&gt;SY.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="label8.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label8.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 16pt</value>
+  </data>
+  <data name="label8.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
+    <value>252, 26</value>
+  </data>
+  <data name="label8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>217, 32</value>
+  </data>
+  <data name="label8.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="label8.Text" xml:space="preserve">
+    <value>Kayıt Olma Paneli</value>
+  </data>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
+  </data>
+  <data name="&gt;&gt;label8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label8.Parent" xml:space="preserve">
+    <value>gradiantPanel1</value>
+  </data>
+  <data name="&gt;&gt;label8.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="TxtVatandaşTelNumarası.Location" type="System.Drawing.Point, System.Drawing">
+    <value>188, 279</value>
+  </data>
+  <data name="TxtVatandaşTelNumarası.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 31</value>
+  </data>
+  <data name="TxtVatandaşTelNumarası.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;TxtVatandaşTelNumarası.Name" xml:space="preserve">
+    <value>TxtVatandaşTelNumarası</value>
+  </data>
+  <data name="&gt;&gt;TxtVatandaşTelNumarası.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TxtVatandaşTelNumarası.Parent" xml:space="preserve">
+    <value>gradiantPanel1</value>
+  </data>
+  <data name="&gt;&gt;TxtVatandaşTelNumarası.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="TxtVatandaşKimlikNumarası.Location" type="System.Drawing.Point, System.Drawing">
+    <value>188, 190</value>
+  </data>
+  <data name="TxtVatandaşKimlikNumarası.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 31</value>
+  </data>
+  <data name="TxtVatandaşKimlikNumarası.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="&gt;&gt;TxtVatandaşKimlikNumarası.Name" xml:space="preserve">
+    <value>TxtVatandaşKimlikNumarası</value>
+  </data>
+  <data name="&gt;&gt;TxtVatandaşKimlikNumarası.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TxtVatandaşKimlikNumarası.Parent" xml:space="preserve">
+    <value>gradiantPanel1</value>
+  </data>
+  <data name="&gt;&gt;TxtVatandaşKimlikNumarası.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="TxtVatandaşEmail.Location" type="System.Drawing.Point, System.Drawing">
+    <value>188, 236</value>
+  </data>
+  <data name="TxtVatandaşEmail.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 31</value>
+  </data>
+  <data name="TxtVatandaşEmail.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;TxtVatandaşEmail.Name" xml:space="preserve">
+    <value>TxtVatandaşEmail</value>
+  </data>
+  <data name="&gt;&gt;TxtVatandaşEmail.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TxtVatandaşEmail.Parent" xml:space="preserve">
+    <value>gradiantPanel1</value>
+  </data>
+  <data name="&gt;&gt;TxtVatandaşEmail.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="TxtVatandaşSoyİsim.Location" type="System.Drawing.Point, System.Drawing">
+    <value>188, 146</value>
+  </data>
+  <data name="TxtVatandaşSoyİsim.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 31</value>
+  </data>
+  <data name="TxtVatandaşSoyİsim.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;TxtVatandaşSoyİsim.Name" xml:space="preserve">
+    <value>TxtVatandaşSoyİsim</value>
+  </data>
+  <data name="&gt;&gt;TxtVatandaşSoyİsim.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TxtVatandaşSoyİsim.Parent" xml:space="preserve">
+    <value>gradiantPanel1</value>
+  </data>
+  <data name="&gt;&gt;TxtVatandaşSoyİsim.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="TxtVatandaşİsmi.Location" type="System.Drawing.Point, System.Drawing">
+    <value>188, 98</value>
+  </data>
+  <data name="TxtVatandaşİsmi.Size" type="System.Drawing.Size, System.Drawing">
+    <value>177, 31</value>
+  </data>
+  <data name="TxtVatandaşİsmi.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;TxtVatandaşİsmi.Name" xml:space="preserve">
+    <value>TxtVatandaşİsmi</value>
+  </data>
+  <data name="&gt;&gt;TxtVatandaşİsmi.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TxtVatandaşİsmi.Parent" xml:space="preserve">
+    <value>gradiantPanel1</value>
+  </data>
+  <data name="&gt;&gt;TxtVatandaşİsmi.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="S.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="S.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="S.Location" type="System.Drawing.Point, System.Drawing">
+    <value>504, 98</value>
+  </data>
+  <data name="S.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 23</value>
+  </data>
+  <data name="S.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="S.Text" xml:space="preserve">
+    <value>Şifre:</value>
+  </data>
+  <data name="&gt;&gt;S.Name" xml:space="preserve">
+    <value>S</value>
+  </data>
+  <data name="&gt;&gt;S.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;S.Parent" xml:space="preserve">
+    <value>gradiantPanel1</value>
+  </data>
+  <data name="&gt;&gt;S.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="TN.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="TN.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="TN.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 282</value>
+  </data>
+  <data name="TN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>167, 23</value>
+  </data>
+  <data name="TN.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="TN.Text" xml:space="preserve">
+    <value>Telefon Numarası:</value>
+  </data>
+  <data name="&gt;&gt;TN.Name" xml:space="preserve">
+    <value>TN</value>
+  </data>
+  <data name="&gt;&gt;TN.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;TN.Parent" xml:space="preserve">
+    <value>gradiantPanel1</value>
+  </data>
+  <data name="&gt;&gt;TN.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 287</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>0, 23</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>gradiantPanel1</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <data name="E.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="E.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="E.Location" type="System.Drawing.Point, System.Drawing">
+    <value>103, 239</value>
+  </data>
+  <data name="E.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 23</value>
+  </data>
+  <data name="E.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="E.Text" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+  <data name="&gt;&gt;E.Name" xml:space="preserve">
+    <value>E</value>
+  </data>
+  <data name="&gt;&gt;E.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;E.Parent" xml:space="preserve">
+    <value>gradiantPanel1</value>
+  </data>
+  <data name="&gt;&gt;E.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="KN.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="KN.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="KN.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 190</value>
+  </data>
+  <data name="KN.Size" type="System.Drawing.Size, System.Drawing">
+    <value>161, 23</value>
+  </data>
+  <data name="KN.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="KN.Text" xml:space="preserve">
+    <value>Kimlik Numarası:</value>
+  </data>
+  <data name="&gt;&gt;KN.Name" xml:space="preserve">
+    <value>KN</value>
+  </data>
+  <data name="&gt;&gt;KN.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;KN.Parent" xml:space="preserve">
+    <value>gradiantPanel1</value>
+  </data>
+  <data name="&gt;&gt;KN.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="Label2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="Label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="Label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>81, 146</value>
+  </data>
+  <data name="Label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>84, 23</value>
+  </data>
+  <data name="Label2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="Label2.Text" xml:space="preserve">
+    <value>Soyisim:</value>
+  </data>
+  <data name="&gt;&gt;Label2.Name" xml:space="preserve">
+    <value>Label2</value>
+  </data>
+  <data name="&gt;&gt;Label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;Label2.Parent" xml:space="preserve">
+    <value>gradiantPanel1</value>
+  </data>
+  <data name="&gt;&gt;Label2.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 12pt</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>112, 101</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>53, 23</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>İsim:</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>gradiantPanel1</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="gradiantPanel1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 12pt</value>
+  </data>
+  <data name="gradiantPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="gradiantPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>743, 505</value>
+  </data>
+  <data name="gradiantPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;gradiantPanel1.Name" xml:space="preserve">
+    <value>gradiantPanel1</value>
+  </data>
+  <data name="&gt;&gt;gradiantPanel1.Type" xml:space="preserve">
+    <value>BM102Proje.GradiantPanel, BM102Proje, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="&gt;&gt;gradiantPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;gradiantPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>11, 23</value>
+  </data>
+  <data name="$this.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>743, 504</value>
+  </data>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 12pt</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAEAIB8AAAEAIAAkEAAAFgAAACgAAAAgAAAAPgAAAAEAIAAAAAAAgA8AAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHty
+        ZwB3bWIzd21iLHpwZgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAApp+YAJaOhleVjYVLoZqSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAEs+MgDp5eIAi4F5a4uCeV7GwbwASjwvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAABPQTYAcWVcATssHjCNhXyDkIh/ek5AMywhDgAAQTInAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAF5TRgBkWU0SWEw/cpePh4GfmJF4eW9lcoB2bQtqX1QAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAXVFFAGFVSQpqX1ONgHZtvI+GfriNhXyFenFmBmle
+        UgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AADW1tYA1tbWANbW1gDW1tYAAAAAAAAAAAAAAAAAAAAAAAAAAAB/dGwAfXNrBYB3boVxZlz7bWJX+Wpf
+        VHY9LSECXFBFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANbW1gDW1tYA1tbWAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAf3VtAKulnwCRiYFZnpeQuaCZ
+        krSXj4etYVVJvXlvZUp7cmgA0MrGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB7cWkA////AKOc
+        lY2ln5iOnpeQkbWvqoNZTD+ccGVae3dsYgDRy8cAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAH93
+        bwCln5kAlIyFQaynoM6ln5jfi4J63VpNQMpTRjk1U0U4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAATkE1AP///wBYSz9GioF42amjnPm0r6n5qaKc0ZuUjDz///8ATUE3AAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAABJOi0ARDUnKHJnXdSSioKCn5iRp7SvqZu9uLONvrq1zZKLgx6Wj4YAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEY3KQBHOCpPXVFE219USB+tp6CVw765hHpwZiq5tK/fpZ6XQKeh
+        mgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAWEs+AFdKPSdPQTTYSTosh5mSiqiwqqSdh392k6Wf
+        mNCKgngdiIB2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAADU1NQA1NTUANTU1ADU1NQAAAAAAAAAAABeUkcAQTAcAFhLP1VlWU3oal5T+XNo
+        Xfh+dGrihXxzSKeflQA/Ny0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA2dnZAH92bQB7cmkNhXxziZOL
+        g+mCeW/wfHFn7lxQQ+dVSDt9UkU4CVBDNgAAAAAAAAAAANnZ2QDZ2dkA2dnZANnZ2QAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACtp6AA0c7LALKs
+        pl6po5zpgnhvXKKak6K0rqiUSzwuZ1dKPepaTkFOYFRIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAK2m
+        nwD///8Av7q1fbCqpNxJPC8doJiRmb24s4guHg4mSzwu5FVHOmtcT0IAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAALGspgCim5U3u7ey4aiinLqTi4LIlIyEwFhLPsFOPzLZQjMlK0M0JgAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAADQkFgAAAAABW09DO46GfZmdlo7op6Ga/7izrv61sKr+rKWf/56Xj+OUjYWTeW9mMwAA
+        AAAuIhcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAwGg8AUUM2AE9CNT+Mg3rhjYV8yWhcUYVeUUVkfnRqv5uUjLSwq6Vlu7eyicO/
+        us+yrafag3pxM4+HfgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAFJFOgAAAAAAbWJXm56Xj9FqYVgZdGleAAAAAACSioKfopuUj///
+        /wCFfHIAeW9lIqqkntyyraeJ////AFxRRwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAANXV1QDV1dUA////AFxSSABSSD8ARzouC0Q3KhNzaV61mJCI25uUjFaknpeDmJGJrJOL
+        hOCXj4jXmZKKqqagmn6RiYFbmJGJ5J6XkKUxIhQPRjksCmtlXwBeVEoAZV1TAAAAAAAAAAAA1tbWANbW
+        1gDW1tYAAAAAAAAAAAAAAAAAxM7JAEQ1JwBHOi4IXFBEDlpOQih+dGtTiH92fYqBeLCIf3b+hXty+qWf
+        mP6tp6L/nJWO/6ulnv+rpZ7/pZ+Y/YF4bvqUjIT8joZ+qId+dXx9c2pPVko+JFxRRQ5GOS0HQzUoAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAxJQA8LiILd21kNImBeTmDe3JtkoqCh5SMhKmXkIjji4N69Hxy
+        aP11amD/iH92/4yEe/92a2H/gHZs/4uCev+DeXD/cmdc/350av2MhHv0mJCI4JOMg6WTi4KHgXhvaI2F
+        fThyaF4yOCoeCEAyJgAAAAAAAAAAAGVYUgBmX0kAUkY5F4d/djaRioJXq6Wfo6SdlsCblIzmj4Z+731z
+        aft0aV7/eW5j/3twZv9+dGr/f3Vr/2hcUP9rX1T/gHZt/35zaf97cGb/eG1j/3RpX/9+dGr5kIh/75yU
+        jeKlnpi/qqWenpCIgFOFfHM1T0E1FEtALwBvYl8AWk5CCJGJgRR/dm0ul5CIeKqknsOel5DKj4d+6od9
+        dP9wZFn/em9l/4B2bP97cWf/dGle/3FmW/9qX1P/Y1dL/2VZTf9qXlP/cmdc/3RpXv98cWf/gHZt/3lu
+        ZP9wZVr/iH92/5CIf+egmZLKqqSev5SNhXGAd24qj4Z+E1ZJPgdbT0MvoJmSdbeyrbGwq6XRpp+Z8IqB
+        eP98cWf/em9l/4B3bf98cmj/dWpf/3JnXP+knZbajoZ9qWVZTc1jV0v9YFRH/GdbT8iSioKqoZqT329k
+        Wf93bGL/fHJo/4F3bv95bmT/fHJo/42Ee/+noJrtsaymz7eyra2clY1vVkk9KUc7LQB/dmwGmJCJGp+Z
+        kkSMhHueiYB255CIf/eYj4f+d2xi/3FlWv9yZ1z/gXhu1KWemC6EdGUAVkk8OlVHO6ZQQjWXUUQ4Kp2J
+        dACjnJU4fnVq3nNoXf9wZFn/eW9k/5mRif6Phn72iYB25I6GfZafmZJAl5CIGHxyaQU8MCIAAAAAAAAA
+        AAAHAgAA2cu4AEM1KQ2IgHcsiH92dJSLhNGHfnT5gXdu/3txZ/97cWecAAAAAFxPQwBZTEAwTUA0ID4v
+        IjpDNSgvRDUoAGBUSgR4bmSsfHFo/4F3bv+If3b4k4uDy4Z9dG2GfXUoPC4iC3pqWQACAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAHxAEAAQAAAFNQDQPkYmCKqKblV6RiYG6g3txt4Z9dVIoGA8BT0M3AE9D
+        NhRLPTIiSj0xPEg7LhtKPTAAWExDA4N6cluFfHO7kYmBtKGalFmNhX0nQTMnDgAAAAEeEAMAAAAAAAAA
+        AAAAAAAAAAAAAP/+f////n////5////4P///+B////gf///4H///+B////gf///4H///+B////AP///w
+        D///8A////gf///wD///8A////AP///wD///wAf//8AD///GY///AAD/+AAAH+AAAAfAAAADAAAAAAAA
+        AACABCAB8AwgD/gEIB8=
+</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>KayıtOlPaneli</value>
+  </data>
+  <data name="&gt;&gt;timer1.Name" xml:space="preserve">
+    <value>timer1</value>
+  </data>
+  <data name="&gt;&gt;timer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>KayıtOlPaneli</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+</root>
