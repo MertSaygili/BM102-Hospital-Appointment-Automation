@@ -14,7 +14,7 @@ namespace BM102Proje
 
     //merhaba
     //möerh
-
+//klşiklşklşlkş
 
     public partial class KullanıcıGirişiMenü : Form
     {
