@@ -15,7 +15,7 @@ namespace BM102Proje
     public partial class KayıtOlPaneli : Form
     {
         // !!!!!Şifrelerin textboxları değişebilir, sayı girişi, harf girişi sayısı ayarlanmalı, şifreleri yıldız olarak göstermeli !!!!!
-
+        // bir şeyler ekledim
 
         SqlConnection baglanti = new SqlConnection("Data Source = MSI\\SQLEXPRESS; Initial Catalog = BM102Proje; Integrated Security = True");
         MailMessage mesajım1 = new MailMessage();
