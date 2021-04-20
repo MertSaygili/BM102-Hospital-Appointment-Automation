@@ -189,6 +189,7 @@ namespace BM102Proje
             this.KullanıcıGirişPaneli.TabIndex = 2;
             this.KullanıcıGirişPaneli.Text = "Kullanıcı Giriş Paneli";
             this.KullanıcıGirişPaneli.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.KullanıcıGirişPaneli.Click += new System.EventHandler(this.KullanıcıGirişPaneli_Click);
             // 
             // KullanıcıGirişiMenü
             // 

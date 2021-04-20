@@ -14,7 +14,7 @@ namespace BM102Proje
 
     //merhaba
     //möerh
-//klşiklşklşlkş
+    //klşiklşklşlkş
 
     public partial class KullanıcıGirişiMenü : Form
     {
@@ -123,6 +123,11 @@ namespace BM102Proje
             SifremiUnuttumPaneli SUP = new SifremiUnuttumPaneli();
             SUP.Show();
             this.Hide();
+        }
+
+        private void KullanıcıGirişPaneli_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void gradiantPanel2_Paint(object sender, PaintEventArgs e)

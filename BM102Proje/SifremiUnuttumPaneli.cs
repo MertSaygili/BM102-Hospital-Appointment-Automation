@@ -8,69 +8,77 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Net.Mail;
+using System.Threading;
 
 namespace BM102Proje
 {
     public partial class SifremiUnuttumPaneli : Form
     {
-        //SqlConnection baglanti = new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=BM102Proje;Integrated Security=True");
-        //MailMessage mesajım1 = new MailMessage();
-        //public SifremiUnuttumPaneli()
-        //{
-        //    InitializeComponent();
-        //}
+        SqlConnection baglanti = new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=BM102Proje;Integrated Security=True");
+        public SifremiUnuttumPaneli()
+        {
+            InitializeComponent();
+        }
 
-        //private void SifremiUnuttumPaneli_Load(object sender, EventArgs e)
-        //{
-        //    TxtKimlikNumarası.PromptChar = ' ';
-        //    TxtSifre.PromptChar = ' ';
-        //}
-        //static string kimlikNo;
-        //private void Mail()
-        //{
-        //    string email;
-        //    baglanti.Open();
-        //    SqlCommand komut = new SqlCommand("Select * from HastaBilgiler where HastaKimlikNumarası=kimlikNo and HastaEmailAdresi=@a2",baglanti);
-        //    label3.Text = @a3;
-        //    //mesajım1.From = new MailAddress("csmk_csmk@outlook.com");
-        //    //mesajım1.To.Add("@a2");
-        //    //mesajım1.Subject = "Şifreyi paneldeki boşluğa giriniz";
-        //    //mesajım1.Body = " ";
+        private void gradiantPanel1_Paint(object sender, PaintEventArgs e)
+        {
 
-        //    //SmtpClient smtp = new SmtpClient();
-        //    //smtp.Credentials = new System.Net.NetworkCredential("csmk_csmk@outlook.com", "CSharpmail");
-        //    //smtp.Host = "smtp.live.com"; //  smtp.gmail.com -> gmail için
-        //    //smtp.EnableSsl = true;
-        //    //smtp.Port = 587;
+        }
 
-        //    //smtp.Send(mesajım1);
+        private void SifremiUnuttumPaneli_Load(object sender, EventArgs e)  
+        {
+            // textboxlardaki alt çizgilerin gözükmesini kapatıyor
+
+            TxtKimlikNo.PromptChar = ' ';
+            TxtSifre.PromptChar = ' ';
+            TxtSifreTekrar.PromptChar = ' ';
+
+        }
+        private void Temizle()  //temizleme
+        {
+            TxtKimlikNo.Text = " ";
+            TxtSifre.Text = " ";
+            TxtSifreTekrar.Text = " ";
+        }
+
+        private void Onayla_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+
+            SqlCommand kmt1 = new SqlCommand("Select * From HastaBilgileri where HastaKimlikNumarası=@a1 ", baglanti);  //ilk önce kimlik kontrolünü yapıyorum
+            kmt1.Parameters.AddWithValue("@a1", TxtKimlikNo.Text);
+            SqlDataReader dr1 = kmt1.ExecuteReader();
+            if (dr1.Read()) //kimlik sql'deki kodlarla eşleşiyorsa
+            {
+                baglanti.Close();
+                baglanti.Open();
+
+                //Buranın devamı email atımı veya telefona sms atımı şeklinde bir şey geliştirelibilir.-madem kullanıcıdan telefon alıyoruz kullanalım-
+
+                SqlCommand kmt2 = new SqlCommand("Update HastaBilgileri set HastaSifre=@a2 where HastaKimlikNumarası=@a3",baglanti);    //ikinci olarak kimlik numarasına ait sifreyi değiştiriyorum
+                if(TxtSifre.Text == TxtSifreTekrar.Text && TxtSifre.Text != null)   //şifreler birbiriyle işleşiyor mu? şifre null değil mi? Kontrol
+                {
+                    kmt2.Parameters.AddWithValue("@a3", TxtKimlikNo.Text);
+                    kmt2.Parameters.AddWithValue("@a2", TxtSifre.Text);
+                    kmt2.ExecuteNonQuery();     // Şifre'yi değiştirdi
+                }
+                else
+                {
+                    MessageBox.Show("Birbiriyle uyuşmayan şifreler!");
+                    Temizle();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Sistemde kayıtlı olmayan kimlik numarası!");
+                //-Threading(uyutma koyup - sayaç ile farklı bir şeyler yapabilirim)
+                Temizle();
+            }
 
 
-        //    baglanti.Close();
-
-        //}
-        //private void gönder_Click(object sender, EventArgs e)
-        //{
-        //    kimlikNo = TxtKimlikNumarası.Text;
-        //    baglanti.Open();
-
-        //    SqlCommand komut = new SqlCommand("Select * from HastaBilgileri where HastaKimlikNumarası=@a1 and HastaEmailAdresi=@a2",baglanti);
-        //    komut.Parameters.AddWithValue("@a1", TxtKimlikNumarası.Text);
-        //    SqlDataReader dr1 = komut.ExecuteReader();
-        //    if (dr1.Read())
-        //    {
-        //        baglanti.Close();
-        //        Mail();
-        //    }
-        //    else
-        //    {
-
-        //    }
 
 
-
-        //    baglanti.Close();
+            baglanti.Close();
         }
     }
-//}
+}
