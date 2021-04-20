@@ -12,10 +12,6 @@ using System.Data.SqlClient;
 namespace BM102Proje
 {
 
-    //merhaba
-    //möerh
-    //klşiklşklşlkş
-
     public partial class KullanıcıGirişiMenü : Form
     {
         SqlConnection baglanti =new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=BM102Proje;Integrated Security=True"); //SQL'lin bağlantısını yapıyoruz
