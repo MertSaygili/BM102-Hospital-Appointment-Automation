@@ -19,7 +19,7 @@ namespace BM102Proje
 
         private void YöneticiGirişiMenü_Load(object sender, EventArgs e)
         {
-
+            //lşllşş
         }
     }
 }
