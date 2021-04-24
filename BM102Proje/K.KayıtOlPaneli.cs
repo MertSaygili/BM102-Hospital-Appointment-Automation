@@ -152,6 +152,8 @@ namespace BM102Proje
 
             SayacSakla();
 
+            KullanıcıGirişiMenü kgm = new KullanıcıGirişiMenü();
+
         }
 
         private void Gönder_Click(object sender, EventArgs e)
@@ -159,7 +161,7 @@ namespace BM102Proje
             //Son aşama olan maile gönderilen kodla kullanıcının girdiği kodu karşılaştırıyorum ve kullanıcının boş kod girmesini önlüyorum
             if (String.Compare(RoboKod.Text, TxtKullanıcıRobosu.Text) == 0 && RoboKod.Text != " ")
             {
-                MessageBox.Show("kod doğru");
+                MessageBox.Show("Kaydınız başarıyla yapılmıştır.");
                 BilgiKaydet();      //Kullanıcının bilgilerini kaydediyorum
                 timer1.Stop();
                 i = 0;

@@ -94,12 +94,14 @@ namespace BM102Proje
             // 
             resources.ApplyResources(this.TxtŞifreTekrar, "TxtŞifreTekrar");
             this.TxtŞifreTekrar.Name = "TxtŞifreTekrar";
+            this.TxtŞifreTekrar.PasswordChar = '*';
             this.TxtŞifreTekrar.ValidatingType = typeof(int);
             // 
             // TxtŞifre
             // 
             resources.ApplyResources(this.TxtŞifre, "TxtŞifre");
             this.TxtŞifre.Name = "TxtŞifre";
+            this.TxtŞifre.PasswordChar = '*';
             this.TxtŞifre.ValidatingType = typeof(int);
             // 
             // Gönder
@@ -215,6 +217,7 @@ namespace BM102Proje
             // 
             // KayıtOlPaneli
             // 
+            this.AcceptButton = this.KayıtOl;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gradiantPanel1);

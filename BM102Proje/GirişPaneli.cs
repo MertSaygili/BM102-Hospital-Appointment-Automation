@@ -21,12 +21,14 @@ namespace BM102Proje
         {
             GradiantPanel grp = new GradiantPanel();
             
+            
         }
 
         private void KullanıcıGirişi_Click(object sender, EventArgs e)
         {
             KullanıcıGirişiMenü KGM = new KullanıcıGirişiMenü();
             KGM.Show();
+            
             this.Hide();
             
         }

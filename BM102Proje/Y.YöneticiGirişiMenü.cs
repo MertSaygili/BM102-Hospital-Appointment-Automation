@@ -16,5 +16,10 @@ namespace BM102Proje
         {
             InitializeComponent();
         }
+
+        private void YöneticiGirişiMenü_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

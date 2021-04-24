@@ -60,40 +60,49 @@
     <Compile Include="GradiantPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="KayıtOlPaneli.cs">
+    <Compile Include="K.KayıtOlPaneli.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KayıtOlPaneli.Designer.cs">
-      <DependentUpon>KayıtOlPaneli.cs</DependentUpon>
+    <Compile Include="K.KayıtOlPaneli.Designer.cs">
+      <DependentUpon>K.KayıtOlPaneli.cs</DependentUpon>
     </Compile>
-    <Compile Include="KullanıcıGirişiMenü.cs">
+    <Compile Include="K.KullanıcıGirişi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="KullanıcıGirişiMenü.Designer.cs">
-      <DependentUpon>KullanıcıGirişiMenü.cs</DependentUpon>
+    <Compile Include="K.KullanıcıGirişi.Designer.cs">
+      <DependentUpon>K.KullanıcıGirişi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="K.KullanıcıMenü.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="K.KullanıcıMenü.Designer.cs">
+      <DependentUpon>K.KullanıcıMenü.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SifremiUnuttumPaneli.cs">
+    <Compile Include="K.SifremiUnuttumPaneli.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SifremiUnuttumPaneli.Designer.cs">
-      <DependentUpon>SifremiUnuttumPaneli.cs</DependentUpon>
+    <Compile Include="K.SifremiUnuttumPaneli.Designer.cs">
+      <DependentUpon>K.SifremiUnuttumPaneli.cs</DependentUpon>
     </Compile>
-    <Compile Include="YöneticiGirişiMenü.cs">
+    <Compile Include="Y.YöneticiGirişiMenü.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="YöneticiGirişiMenü.Designer.cs">
-      <DependentUpon>YöneticiGirişiMenü.cs</DependentUpon>
+    <Compile Include="Y.YöneticiGirişiMenü.Designer.cs">
+      <DependentUpon>Y.YöneticiGirişiMenü.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="GirişPaneli.resx">
       <DependentUpon>GirişPaneli.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KayıtOlPaneli.resx">
-      <DependentUpon>KayıtOlPaneli.cs</DependentUpon>
+    <EmbeddedResource Include="K.KayıtOlPaneli.resx">
+      <DependentUpon>K.KayıtOlPaneli.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="KullanıcıGirişiMenü.resx">
-      <DependentUpon>KullanıcıGirişiMenü.cs</DependentUpon>
+    <EmbeddedResource Include="K.KullanıcıGirişi.resx">
+      <DependentUpon>K.KullanıcıGirişi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="K.KullanıcıMenü.resx">
+      <DependentUpon>K.KullanıcıMenü.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -105,8 +114,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SifremiUnuttumPaneli.resx">
-      <DependentUpon>SifremiUnuttumPaneli.cs</DependentUpon>
+    <EmbeddedResource Include="K.SifremiUnuttumPaneli.resx">
+      <DependentUpon>K.SifremiUnuttumPaneli.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Y.YöneticiGirişiMenü.resx">
+      <DependentUpon>Y.YöneticiGirişiMenü.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="BM102ProjeDataSet.xsc">
       <DependentUpon>BM102ProjeDataSet.xsd</DependentUpon>
@@ -119,6 +131,7 @@
     <None Include="BM102ProjeDataSet.xss">
       <DependentUpon>BM102ProjeDataSet.xsd</DependentUpon>
     </None>
+    <None Include="K.Designer.KullanıcıMenü" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -133,7 +146,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\tc-saglik-bakanligi-logo.png" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

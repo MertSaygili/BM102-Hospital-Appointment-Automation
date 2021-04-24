@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Threading;
 
 namespace BM102Proje
 {
@@ -20,7 +21,6 @@ namespace BM102Proje
         {
             InitializeComponent();
         }
-
         static string RoboKodd;
         private void temizle()      //TxtBoxları temizliyoruz
         {
@@ -60,6 +60,7 @@ namespace BM102Proje
         }
         public void okuma()
         {
+            
             baglanti.Open();
             SqlCommand KullanıcıGirişKomudu = new SqlCommand("Select * From HastaBilgileri where HastaKimlikNumarası=@a1 and HastaSifre=@a2", baglanti);
             KullanıcıGirişKomudu.Parameters.AddWithValue("@a1", TxtKimlikNumarası.Text); //@a1'e girilen kimlik numarasını atıyorum
@@ -97,8 +98,11 @@ namespace BM102Proje
         {
             if (RoboKodd == TxtRoboKodGiriş.Text)
             {
-                MessageBox.Show("Çalıştı");
-                //Kullanıcıyı yönlendir...
+                MessageBox.Show("Girişiniz yapılıyor...");
+                Thread.Sleep(3);
+                KullanıcıMenü KM = new KullanıcıMenü();
+                KM.Show();
+                this.Hide();
             }
             else
             {
@@ -120,16 +124,6 @@ namespace BM102Proje
             SifremiUnuttumPaneli SUP = new SifremiUnuttumPaneli();
             SUP.Show();
             this.Hide();
-        }
-
-        private void KullanıcıGirişPaneli_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gradiantPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

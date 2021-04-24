@@ -63,12 +63,12 @@ namespace BM102Proje
             this.gradiantPanel2.Controls.Add(this.label2);
             this.gradiantPanel2.Controls.Add(this.label1);
             this.gradiantPanel2.Controls.Add(this.KullanıcıGirişPaneli);
-            this.gradiantPanel2.Location = new System.Drawing.Point(-3, 0);
+            this.gradiantPanel2.Location = new System.Drawing.Point(-2, -1);
             this.gradiantPanel2.Margin = new System.Windows.Forms.Padding(4);
             this.gradiantPanel2.Name = "gradiantPanel2";
-            this.gradiantPanel2.Size = new System.Drawing.Size(758, 456);
+            this.gradiantPanel2.Size = new System.Drawing.Size(712, 455);
             this.gradiantPanel2.TabIndex = 1;
-            this.gradiantPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.gradiantPanel2_Paint);
+            //this.gradiantPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.gradiantPanel2_Paint);
             // 
             // TxtSifreGirisi
             // 
@@ -76,7 +76,7 @@ namespace BM102Proje
             this.TxtSifreGirisi.Mask = "000000";
             this.TxtSifreGirisi.Name = "TxtSifreGirisi";
             this.TxtSifreGirisi.PasswordChar = '*';
-            this.TxtSifreGirisi.Size = new System.Drawing.Size(331, 31);
+            this.TxtSifreGirisi.Size = new System.Drawing.Size(331, 26);
             this.TxtSifreGirisi.TabIndex = 1;
             this.TxtSifreGirisi.ValidatingType = typeof(int);
             // 
@@ -95,7 +95,7 @@ namespace BM102Proje
             // 
             this.TxtKimlikNumarası.Location = new System.Drawing.Point(244, 95);
             this.TxtKimlikNumarası.Name = "TxtKimlikNumarası";
-            this.TxtKimlikNumarası.Size = new System.Drawing.Size(331, 31);
+            this.TxtKimlikNumarası.Size = new System.Drawing.Size(331, 26);
             this.TxtKimlikNumarası.TabIndex = 3;
             // 
             // RoboKodGörünüm
@@ -103,7 +103,7 @@ namespace BM102Proje
             this.RoboKodGörünüm.AutoSize = true;
             this.RoboKodGörünüm.Location = new System.Drawing.Point(159, 238);
             this.RoboKodGörünüm.Name = "RoboKodGörünüm";
-            this.RoboKodGörünüm.Size = new System.Drawing.Size(62, 23);
+            this.RoboKodGörünüm.Size = new System.Drawing.Size(51, 19);
             this.RoboKodGörünüm.TabIndex = 12;
             this.RoboKodGörünüm.Text = "label4";
             // 
@@ -111,7 +111,7 @@ namespace BM102Proje
             // 
             this.TxtRoboKodGiriş.Location = new System.Drawing.Point(536, 232);
             this.TxtRoboKodGiriş.Name = "TxtRoboKodGiriş";
-            this.TxtRoboKodGiriş.Size = new System.Drawing.Size(130, 31);
+            this.TxtRoboKodGiriş.Size = new System.Drawing.Size(130, 26);
             this.TxtRoboKodGiriş.TabIndex = 11;
             // 
             // RoboKodBilgi
@@ -119,7 +119,7 @@ namespace BM102Proje
             this.RoboKodBilgi.AutoSize = true;
             this.RoboKodBilgi.Location = new System.Drawing.Point(240, 235);
             this.RoboKodBilgi.Name = "RoboKodBilgi";
-            this.RoboKodBilgi.Size = new System.Drawing.Size(273, 23);
+            this.RoboKodBilgi.Size = new System.Drawing.Size(221, 19);
             this.RoboKodBilgi.TabIndex = 10;
             this.RoboKodBilgi.Text = "Soldaki kodu sağ tarafa yazınız";
             // 
@@ -161,7 +161,7 @@ namespace BM102Proje
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(166, 153);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 23);
+            this.label2.Size = new System.Drawing.Size(45, 19);
             this.label2.TabIndex = 4;
             this.label2.Text = "Şifre:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -172,7 +172,7 @@ namespace BM102Proje
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(88, 98);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(161, 23);
+            this.label1.Size = new System.Drawing.Size(127, 19);
             this.label1.TabIndex = 3;
             this.label1.Text = "Kimlik Numarası:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -182,28 +182,30 @@ namespace BM102Proje
             this.KullanıcıGirişPaneli.BackColor = System.Drawing.Color.Transparent;
             this.KullanıcıGirişPaneli.Font = new System.Drawing.Font("Cambria", 16F);
             this.KullanıcıGirişPaneli.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.KullanıcıGirişPaneli.Location = new System.Drawing.Point(164, 9);
+            this.KullanıcıGirişPaneli.Location = new System.Drawing.Point(138, 10);
             this.KullanıcıGirişPaneli.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.KullanıcıGirişPaneli.Name = "KullanıcıGirişPaneli";
             this.KullanıcıGirişPaneli.Size = new System.Drawing.Size(411, 53);
             this.KullanıcıGirişPaneli.TabIndex = 2;
             this.KullanıcıGirişPaneli.Text = "Kullanıcı Giriş Paneli";
             this.KullanıcıGirişPaneli.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.KullanıcıGirişPaneli.Click += new System.EventHandler(this.KullanıcıGirişPaneli_Click);
+            //this.KullanıcıGirişPaneli.Click += new System.EventHandler(this.KullanıcıGirişPaneli_Click);
             // 
             // KullanıcıGirişiMenü
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AcceptButton = this.Gİriş1;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(752, 454);
+            this.ClientSize = new System.Drawing.Size(702, 447);
             this.Controls.Add(this.gradiantPanel2);
             this.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "KullanıcıGirişiMenü";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Kullanıcı Giriş Paneli";
             this.Load += new System.EventHandler(this.KullanıcıGirişiMenü_Load);
             this.gradiantPanel2.ResumeLayout(false);
             this.gradiantPanel2.PerformLayout();
