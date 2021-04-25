@@ -125,5 +125,12 @@ namespace BM102Proje
             SUP.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            GirişPaneli GP = new GirişPaneli();
+            GP.Show();
+            this.Hide();
+        }
     }
 }

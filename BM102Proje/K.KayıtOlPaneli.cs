@@ -178,5 +178,12 @@ namespace BM102Proje
                 KayıtOl.Enabled = true;
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            KullanıcıGirişiMenü KGM = new KullanıcıGirişiMenü();
+            KGM.Show();
+            this.Hide();
+        }
     }
 }

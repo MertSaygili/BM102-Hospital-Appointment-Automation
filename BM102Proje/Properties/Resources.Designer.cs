@@ -63,9 +63,9 @@ namespace BM102Proje.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap fantasy_art_the_wheel_of_time_perrin_battle_wallpaper_preview__1_ {
+        internal static System.Drawing.Bitmap back_button_computer_left_blue_116903 {
             get {
-                object obj = ResourceManager.GetObject("fantasy-art-the-wheel-of-time-perrin-battle-wallpaper-preview (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("back-button-computer-left-blue-116903", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

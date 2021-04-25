@@ -29,6 +29,7 @@ namespace BM102Proje
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SifremiUnuttumPaneli));
             this.gradiantPanel1 = new BM102Proje.GradiantPanel();
             this.TxtSifreTekrar = new System.Windows.Forms.MaskedTextBox();
             this.ŞifreTekrar = new System.Windows.Forms.Label();
@@ -38,6 +39,7 @@ namespace BM102Proje
             this.label1 = new System.Windows.Forms.Label();
             this.TxtSifre = new System.Windows.Forms.MaskedTextBox();
             this.TxtKimlikNo = new System.Windows.Forms.MaskedTextBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.gradiantPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +48,7 @@ namespace BM102Proje
             this.gradiantPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.gradiantPanel1.ColorBot = System.Drawing.Color.LightCyan;
             this.gradiantPanel1.ColorTop = System.Drawing.Color.LightSeaGreen;
+            this.gradiantPanel1.Controls.Add(this.button1);
             this.gradiantPanel1.Controls.Add(this.TxtSifreTekrar);
             this.gradiantPanel1.Controls.Add(this.ŞifreTekrar);
             this.gradiantPanel1.Controls.Add(this.label3);
@@ -56,7 +59,7 @@ namespace BM102Proje
             this.gradiantPanel1.Controls.Add(this.TxtKimlikNo);
             this.gradiantPanel1.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gradiantPanel1.Location = new System.Drawing.Point(0, 0);
-            this.gradiantPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gradiantPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.gradiantPanel1.Name = "gradiantPanel1";
             this.gradiantPanel1.Size = new System.Drawing.Size(601, 370);
             this.gradiantPanel1.TabIndex = 0;
@@ -65,7 +68,7 @@ namespace BM102Proje
             // TxtSifreTekrar
             // 
             this.TxtSifreTekrar.Location = new System.Drawing.Point(153, 206);
-            this.TxtSifreTekrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtSifreTekrar.Margin = new System.Windows.Forms.Padding(2);
             this.TxtSifreTekrar.Mask = "000000";
             this.TxtSifreTekrar.Name = "TxtSifreTekrar";
             this.TxtSifreTekrar.PasswordChar = '*';
@@ -100,7 +103,7 @@ namespace BM102Proje
             // 
             this.Onayla.BackColor = System.Drawing.Color.DarkGray;
             this.Onayla.Location = new System.Drawing.Point(435, 127);
-            this.Onayla.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Onayla.Margin = new System.Windows.Forms.Padding(2);
             this.Onayla.Name = "Onayla";
             this.Onayla.Size = new System.Drawing.Size(125, 58);
             this.Onayla.TabIndex = 5;
@@ -133,7 +136,7 @@ namespace BM102Proje
             // TxtSifre
             // 
             this.TxtSifre.Location = new System.Drawing.Point(153, 147);
-            this.TxtSifre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtSifre.Margin = new System.Windows.Forms.Padding(2);
             this.TxtSifre.Mask = "000000";
             this.TxtSifre.Name = "TxtSifre";
             this.TxtSifre.PasswordChar = '*';
@@ -144,12 +147,25 @@ namespace BM102Proje
             // TxtKimlikNo
             // 
             this.TxtKimlikNo.Location = new System.Drawing.Point(153, 84);
-            this.TxtKimlikNo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TxtKimlikNo.Margin = new System.Windows.Forms.Padding(2);
             this.TxtKimlikNo.Mask = "00000000000";
             this.TxtKimlikNo.Name = "TxtKimlikNo";
             this.TxtKimlikNo.Size = new System.Drawing.Size(232, 26);
             this.TxtKimlikNo.TabIndex = 1;
             this.TxtKimlikNo.ValidatingType = typeof(int);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(37, 35);
+            this.button1.TabIndex = 16;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // SifremiUnuttumPaneli
             // 
@@ -159,7 +175,7 @@ namespace BM102Proje
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.gradiantPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SifremiUnuttumPaneli";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SifremiUnuttumPaneli";
@@ -181,5 +197,6 @@ namespace BM102Proje
         private System.Windows.Forms.MaskedTextBox TxtSifreTekrar;
         private System.Windows.Forms.Label ŞifreTekrar;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
     }
 }

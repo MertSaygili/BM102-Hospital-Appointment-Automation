@@ -80,5 +80,12 @@ namespace BM102Proje
 
             baglanti.Close();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            KullanıcıGirişiMenü KGM = new KullanıcıGirişiMenü();
+            KGM.Show();
+            this.Hide();
+        }
     }
 }

@@ -54,6 +54,7 @@ namespace BM102Proje
             this.KN = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.gradiantPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +67,7 @@ namespace BM102Proje
             // 
             this.gradiantPanel1.ColorBot = System.Drawing.Color.LightCyan;
             this.gradiantPanel1.ColorTop = System.Drawing.Color.LightSeaGreen;
+            this.gradiantPanel1.Controls.Add(this.button1);
             this.gradiantPanel1.Controls.Add(this.TxtŞifreTekrar);
             this.gradiantPanel1.Controls.Add(this.TxtŞifre);
             this.gradiantPanel1.Controls.Add(this.Gönder);
@@ -215,6 +217,14 @@ namespace BM102Proje
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Name = "label1";
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // KayıtOlPaneli
             // 
             this.AcceptButton = this.KayıtOl;
@@ -254,5 +264,6 @@ namespace BM102Proje
         private System.Windows.Forms.Label RoboKod;
         private System.Windows.Forms.MaskedTextBox TxtŞifre;
         private System.Windows.Forms.MaskedTextBox TxtŞifreTekrar;
+        private System.Windows.Forms.Button button1;
     }
 }
