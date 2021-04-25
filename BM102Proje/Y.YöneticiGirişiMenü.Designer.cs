@@ -29,13 +29,31 @@ namespace BM102Proje
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YöneticiGirişiMenü));
+            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.SuspendLayout();
+            // 
+            // bunifuGradientPanel1
+            // 
+            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
+            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.LightCyan;
+            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.LightCyan;
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.LightSeaGreen;
+            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.LightSeaGreen;
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(-4, -1);
+            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
+            this.bunifuGradientPanel1.Quality = 10;
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(604, 367);
+            this.bunifuGradientPanel1.TabIndex = 0;
             // 
             // YöneticiGirişiMenü
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.bunifuGradientPanel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "YöneticiGirişiMenü";
             this.Text = "YöneticiGirişiMenü";
             this.Load += new System.EventHandler(this.YöneticiGirişiMenü_Load);
@@ -44,5 +62,7 @@ namespace BM102Proje
         }
 
         #endregion
+
+        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
     }
 }
