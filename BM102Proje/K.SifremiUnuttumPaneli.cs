@@ -27,6 +27,7 @@ namespace BM102Proje
 
         private void SifremiUnuttumPaneli_Load(object sender, EventArgs e)  
         {
+            
             // textboxlardaki alt çizgilerin gözükmesini kapatıyor
 
             TxtKimlikNo.PromptChar = ' ';

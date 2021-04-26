@@ -41,21 +41,23 @@ namespace BM102Proje
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.LightCyan;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.LightSeaGreen;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.LightSeaGreen;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(-4, -1);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(-5, -1);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(604, 367);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(805, 452);
             this.bunifuGradientPanel1.TabIndex = 0;
             // 
             // YöneticiGirişiMenü
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.bunifuGradientPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "YöneticiGirişiMenü";
-            this.Text = "YöneticiGirişiMenü";
+            this.Text = "Yönetici Girişi Menü";
             this.Load += new System.EventHandler(this.YöneticiGirişiMenü_Load);
             this.ResumeLayout(false);
 

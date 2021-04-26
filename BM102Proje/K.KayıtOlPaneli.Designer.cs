@@ -33,6 +33,7 @@ namespace BM102Proje
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KayıtOlPaneli));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.gradiantPanel1 = new BM102Proje.GradiantPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.TxtŞifreTekrar = new System.Windows.Forms.MaskedTextBox();
             this.TxtŞifre = new System.Windows.Forms.MaskedTextBox();
             this.Gönder = new System.Windows.Forms.Button();
@@ -54,7 +55,6 @@ namespace BM102Proje
             this.KN = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.gradiantPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -91,6 +91,14 @@ namespace BM102Proje
             this.gradiantPanel1.Controls.Add(this.label1);
             resources.ApplyResources(this.gradiantPanel1, "gradiantPanel1");
             this.gradiantPanel1.Name = "gradiantPanel1";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            resources.ApplyResources(this.button1, "button1");
+            this.button1.Name = "button1";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // TxtŞifreTekrar
             // 
@@ -216,14 +224,6 @@ namespace BM102Proje
             resources.ApplyResources(this.label1, "label1");
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Name = "label1";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // KayıtOlPaneli
             // 
