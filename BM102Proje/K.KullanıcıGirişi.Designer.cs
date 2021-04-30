@@ -31,6 +31,7 @@ namespace BM102Proje
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KullanıcıGirişiMenü));
             this.gradiantPanel2 = new BM102Proje.GradiantPanel();
+            this.button1 = new System.Windows.Forms.Button();
             this.TxtSifreGirisi = new System.Windows.Forms.MaskedTextBox();
             this.Giriş2 = new System.Windows.Forms.Button();
             this.TxtKimlikNumarası = new System.Windows.Forms.MaskedTextBox();
@@ -43,7 +44,6 @@ namespace BM102Proje
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.KullanıcıGirişPaneli = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.gradiantPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,13 +71,25 @@ namespace BM102Proje
             this.gradiantPanel2.Size = new System.Drawing.Size(712, 455);
             this.gradiantPanel2.TabIndex = 1;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button1.Location = new System.Drawing.Point(14, 10);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(37, 35);
+            this.button1.TabIndex = 14;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // TxtSifreGirisi
             // 
             this.TxtSifreGirisi.Location = new System.Drawing.Point(244, 150);
             this.TxtSifreGirisi.Mask = "000000";
             this.TxtSifreGirisi.Name = "TxtSifreGirisi";
             this.TxtSifreGirisi.PasswordChar = '*';
-            this.TxtSifreGirisi.Size = new System.Drawing.Size(331, 26);
+            this.TxtSifreGirisi.Size = new System.Drawing.Size(331, 31);
             this.TxtSifreGirisi.TabIndex = 1;
             this.TxtSifreGirisi.ValidatingType = typeof(int);
             // 
@@ -96,15 +108,16 @@ namespace BM102Proje
             // 
             this.TxtKimlikNumarası.Location = new System.Drawing.Point(244, 95);
             this.TxtKimlikNumarası.Name = "TxtKimlikNumarası";
-            this.TxtKimlikNumarası.Size = new System.Drawing.Size(331, 26);
+            this.TxtKimlikNumarası.Size = new System.Drawing.Size(331, 31);
             this.TxtKimlikNumarası.TabIndex = 3;
+            this.TxtKimlikNumarası.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.TxtKimlikNumarası_MaskInputRejected);
             // 
             // RoboKodGörünüm
             // 
             this.RoboKodGörünüm.AutoSize = true;
             this.RoboKodGörünüm.Location = new System.Drawing.Point(159, 238);
             this.RoboKodGörünüm.Name = "RoboKodGörünüm";
-            this.RoboKodGörünüm.Size = new System.Drawing.Size(51, 19);
+            this.RoboKodGörünüm.Size = new System.Drawing.Size(62, 23);
             this.RoboKodGörünüm.TabIndex = 12;
             this.RoboKodGörünüm.Text = "label4";
             // 
@@ -112,7 +125,7 @@ namespace BM102Proje
             // 
             this.TxtRoboKodGiriş.Location = new System.Drawing.Point(536, 232);
             this.TxtRoboKodGiriş.Name = "TxtRoboKodGiriş";
-            this.TxtRoboKodGiriş.Size = new System.Drawing.Size(130, 26);
+            this.TxtRoboKodGiriş.Size = new System.Drawing.Size(130, 31);
             this.TxtRoboKodGiriş.TabIndex = 11;
             // 
             // RoboKodBilgi
@@ -120,7 +133,7 @@ namespace BM102Proje
             this.RoboKodBilgi.AutoSize = true;
             this.RoboKodBilgi.Location = new System.Drawing.Point(240, 235);
             this.RoboKodBilgi.Name = "RoboKodBilgi";
-            this.RoboKodBilgi.Size = new System.Drawing.Size(221, 19);
+            this.RoboKodBilgi.Size = new System.Drawing.Size(273, 23);
             this.RoboKodBilgi.TabIndex = 10;
             this.RoboKodBilgi.Text = "Soldaki kodu sağ tarafa yazınız";
             // 
@@ -162,7 +175,7 @@ namespace BM102Proje
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(166, 153);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 19);
+            this.label2.Size = new System.Drawing.Size(55, 23);
             this.label2.TabIndex = 4;
             this.label2.Text = "Şifre:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -173,7 +186,7 @@ namespace BM102Proje
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(88, 98);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 19);
+            this.label1.Size = new System.Drawing.Size(161, 23);
             this.label1.TabIndex = 3;
             this.label1.Text = "Kimlik Numarası:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -191,22 +204,10 @@ namespace BM102Proje
             this.KullanıcıGirişPaneli.Text = "Kullanıcı Giriş Paneli";
             this.KullanıcıGirişPaneli.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(14, 10);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(37, 35);
-            this.button1.TabIndex = 14;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // KullanıcıGirişiMenü
             // 
             this.AcceptButton = this.Gİriş1;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;

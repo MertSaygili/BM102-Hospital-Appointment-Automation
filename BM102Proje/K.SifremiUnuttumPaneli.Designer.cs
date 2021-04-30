@@ -63,7 +63,6 @@ namespace BM102Proje
             this.gradiantPanel1.Name = "gradiantPanel1";
             this.gradiantPanel1.Size = new System.Drawing.Size(801, 455);
             this.gradiantPanel1.TabIndex = 0;
-            this.gradiantPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.gradiantPanel1_Paint);
             // 
             // button1
             // 

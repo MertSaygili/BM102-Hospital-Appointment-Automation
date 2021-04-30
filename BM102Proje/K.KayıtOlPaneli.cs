@@ -98,9 +98,9 @@ namespace BM102Proje
         {
             KayıtOl.Enabled = false;    //Kayıt ol'a tekrar basılmasını önlüyorum
 
-            if(TxtVatandaşİsmi.Text != " " && Label2.Text != " " && KN.Text != " " && E.Text != " " && TN.Text != " " && S.Text != " ")  //Kullanıcının boşlukları boş bırakmasını önlüyorum
+            if(TxtVatandaşİsmi.Text != "" && TxtVatandaşSoyİsim.Text != "" && TxtVatandaşKimlikNumarası.Text != "" && TxtVatandaşEmail.Text!= "" && TxtVatandaşTelNumarası.Text != "")  //Kullanıcının boşlukları boş bırakmasını önlüyorum
             {
-                if (TxtŞifre.Text==TxtŞifreTekrar.Text)     //Girdiği şifrelerin uyumuna bakıyorum
+                if (TxtŞifre.Text==TxtŞifreTekrar.Text && TxtŞifre.Text != "")     //Girdiği şifrelerin uyumuna bakıyorum
                 {
                     mail();
                     MessageBox.Show("Mailinize gönderilmiş olan kodu boşluğa giriniz.");

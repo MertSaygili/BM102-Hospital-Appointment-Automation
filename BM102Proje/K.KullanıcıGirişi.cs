@@ -17,9 +17,14 @@ namespace BM102Proje
     public partial class KullanıcıGirişiMenü : Form
     {
         SqlConnection baglanti =new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=BM102Proje;Integrated Security=True"); //SQL'lin bağlantısını yapıyoruz
+        public static string ilet;
         public KullanıcıGirişiMenü()
         {
             InitializeComponent();
+        }
+        private void TxtKimlikNumarası_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
         static string RoboKodd;
         private void temizle()      //TxtBoxları temizliyoruz
@@ -58,9 +63,9 @@ namespace BM102Proje
             }
             return stringbuild.ToString();
         }
+
         public void okuma()
         {
-            
             baglanti.Open();
             SqlCommand KullanıcıGirişKomudu = new SqlCommand("Select * From HastaBilgileri where HastaKimlikNumarası=@a1 and HastaSifre=@a2", baglanti);
             KullanıcıGirişKomudu.Parameters.AddWithValue("@a1", TxtKimlikNumarası.Text); //@a1'e girilen kimlik numarasını atıyorum
@@ -93,13 +98,14 @@ namespace BM102Proje
         {
             okuma();
         }
-
         private void Giriş2_Click(object sender, EventArgs e)
         {
+            
             if (RoboKodd == TxtRoboKodGiriş.Text)
             {
                 MessageBox.Show("Girişiniz yapılıyor...");
                 Thread.Sleep(3);
+                ilet = TxtKimlikNumarası.Text;
                 KullanıcıMenü KM = new KullanıcıMenü();
                 KM.Show();
                 this.Hide();
@@ -125,7 +131,6 @@ namespace BM102Proje
             SUP.Show();
             this.Hide();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             GirişPaneli GP = new GirişPaneli();

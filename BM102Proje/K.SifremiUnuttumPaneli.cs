@@ -19,21 +19,13 @@ namespace BM102Proje
         {
             InitializeComponent();
         }
-
-        private void gradiantPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void SifremiUnuttumPaneli_Load(object sender, EventArgs e)  
-        {
-            
+        {      
             // textboxlardaki alt çizgilerin gözükmesini kapatıyor
 
             TxtKimlikNo.PromptChar = ' ';
             TxtSifre.PromptChar = ' ';
             TxtSifreTekrar.PromptChar = ' ';
-
         }
         private void Temizle()  //temizleme
         {
@@ -54,14 +46,18 @@ namespace BM102Proje
                 baglanti.Close();
                 baglanti.Open();
 
-                //Buranın devamı email atımı veya telefona sms atımı şeklinde bir şey geliştirelibilir.-madem kullanıcıdan telefon alıyoruz kullanalım-
+                //Buranın devamı email atımı veya telefona sms atımı şeklinde bir şey geliştirilebilir.-madem kullanıcıdan telefon alıyoruz kullanalım-
 
                 SqlCommand kmt2 = new SqlCommand("Update HastaBilgileri set HastaSifre=@a2 where HastaKimlikNumarası=@a3",baglanti);    //ikinci olarak kimlik numarasına ait sifreyi değiştiriyorum
-                if(TxtSifre.Text == TxtSifreTekrar.Text && TxtSifre.Text != null)   //şifreler birbiriyle işleşiyor mu? şifre null değil mi? Kontrol
+                if(TxtSifre.Text == TxtSifreTekrar.Text && TxtSifre.Text != null)   //şifreler birbiriyle eşleşiyor mu? şifre null değil mi? Kontrol
                 {
                     kmt2.Parameters.AddWithValue("@a3", TxtKimlikNo.Text);
                     kmt2.Parameters.AddWithValue("@a2", TxtSifre.Text);
                     kmt2.ExecuteNonQuery();     // Şifre'yi değiştirdi
+                    MessageBox.Show("Şifreniz başarıyla değiştirilmiştir.");
+                    KullanıcıGirişiMenü KGM = new KullanıcıGirişiMenü(); //Menüye giriş yapabilmesi için yönlendiriyor
+                    KGM.Show();
+                    this.Hide();
                 }
                 else
                 {
@@ -75,14 +71,10 @@ namespace BM102Proje
                 //-Threading(uyutma koyup - sayaç ile farklı bir şeyler yapabilirim)
                 Temizle();
             }
-
-
-
-
             baglanti.Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) //geri butonu
         {
             KullanıcıGirişiMenü KGM = new KullanıcıGirişiMenü();
             KGM.Show();
