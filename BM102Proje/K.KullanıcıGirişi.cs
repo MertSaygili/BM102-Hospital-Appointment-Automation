@@ -27,6 +27,7 @@ namespace BM102Proje
 
         }
         static string RoboKodd;
+        public static string ilet;
         private void temizle()      //TxtBoxları temizliyoruz
         {
             TxtKimlikNumarası.Text = " ";
@@ -71,7 +72,7 @@ namespace BM102Proje
             SqlCommand KullanıcıGirişKomudu = new SqlCommand("Select * From HastaBilgileri where HastaKimlikNumarası=@a1 and HastaSifre=@a2", baglanti);
             KullanıcıGirişKomudu.Parameters.AddWithValue("@a1", TxtKimlikNumarası.Text); //@a1'e girilen kimlik numarasını atıyorum
             KullanıcıGirişKomudu.Parameters.AddWithValue("@a2", TxtSifreGirisi.Text);   //@a2'ye girilen şifreyi atıyorum
-            SqlDataReader dr = KullanıcıGirişKomudu.ExecuteReader(); */
+            SqlDataReader dr = KullanıcıGirişKomudu.ExecuteReader();
             if (dr.Read())      // @a1 ile @a2 Sql'deki dosyada varsa çalışır
             {
                 Gİriş1.Visible = false;
@@ -87,7 +88,7 @@ namespace BM102Proje
                 MessageBox.Show("Hatalı Giriş");
                 temizle();              //TextBoxları temizledik
             }
-            baglantı.Close();
+            baglanti.Close();
         }
         private void KullanıcıGirişiMenü_Load(object sender, EventArgs e)
         {
