@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Threading;
+using System.Data.OleDb;
 
 namespace BM102Proje
 {
@@ -16,7 +17,8 @@ namespace BM102Proje
 
     public partial class KullanıcıGirişiMenü : Form
     {
-        SqlConnection baglanti =new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=BM102Proje;Integrated Security=True"); //SQL'lin bağlantısını yapıyoruz
+        //SqlConnection baglanti =new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=BM102Proje;Integrated Security=True"); //SQL'lin bağlantısını yapıyoruz
+        OleDbConnection baglantı = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\veriler\\veritabani_access.mdb");
         public KullanıcıGirişiMenü()
         {
             InitializeComponent();
@@ -60,12 +62,16 @@ namespace BM102Proje
         }
         public void okuma()
         {
-            
-            baglanti.Open();
+            baglantı.Open();
+            OleDbCommand KullanıcıGirişKomudu = new OleDbCommand("Select * From HastaBilgileri where HastaKimlikNumarası=@a1 and HastaSifre=@a2", baglantı);
+            KullanıcıGirişKomudu.Parameters.AddWithValue("@a1", TxtKimlikNumarası.Text); //@a1'e girilen kimlik numarasını atıyorum
+            KullanıcıGirişKomudu.Parameters.AddWithValue("@a2", TxtSifreGirisi.Text);   //@a2'ye girilen şifreyi atıyorum
+            OleDbDataReader dr = KullanıcıGirişKomudu.ExecuteReader();
+            /* baglanti.Open();
             SqlCommand KullanıcıGirişKomudu = new SqlCommand("Select * From HastaBilgileri where HastaKimlikNumarası=@a1 and HastaSifre=@a2", baglanti);
             KullanıcıGirişKomudu.Parameters.AddWithValue("@a1", TxtKimlikNumarası.Text); //@a1'e girilen kimlik numarasını atıyorum
             KullanıcıGirişKomudu.Parameters.AddWithValue("@a2", TxtSifreGirisi.Text);   //@a2'ye girilen şifreyi atıyorum
-            SqlDataReader dr = KullanıcıGirişKomudu.ExecuteReader();
+            SqlDataReader dr = KullanıcıGirişKomudu.ExecuteReader(); */
             if (dr.Read())      // @a1 ile @a2 Sql'deki dosyada varsa çalışır
             {
                 Gİriş1.Visible = false;
@@ -81,7 +87,7 @@ namespace BM102Proje
                 MessageBox.Show("Hatalı Giriş");
                 temizle();              //TextBoxları temizledik
             }
-            baglanti.Close();
+            baglantı.Close();
         }
         private void KullanıcıGirişiMenü_Load(object sender, EventArgs e)
         {
