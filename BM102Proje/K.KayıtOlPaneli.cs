@@ -9,14 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Net.Mail;
+using System.Data.OleDb;
 
 namespace BM102Proje
 {
     public partial class KayıtOlPaneli : Form
     {
         // !!!!!Şifrelerin textboxları değişebilir, sayı girişi, harf girişi sayısı ayarlanmalı, şifreleri yıldız olarak göstermeli !!!!!
-
-        SqlConnection baglanti = new SqlConnection("Data Source = MSI\\SQLEXPRESS; Initial Catalog = BM102Proje; Integrated Security = True");
+        OleDbConnection baglantı = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\veriler\\veritabani_access.mdb");
+        //SqlConnection baglanti = new SqlConnection("Data Source = MSI\\SQLEXPRESS; Initial Catalog = BM102Proje; Integrated Security = True");
         MailMessage mesajım1 = new MailMessage();
         string kod1;
         int i = 0;
@@ -80,7 +81,12 @@ namespace BM102Proje
         {
             //Kullanıcının girdiği girdiler 2 aşamadanda doğru olarak geçerse, kullanıcının verilerinin kayıt edilmesini sağlar
 
-            baglanti.Open();
+            baglantı.Open();
+            OleDbCommand komut = new OleDbCommand("insert into HastaBilgileri (HastaAdı, HastaSoyadı, HastaKimlikNumarası, HastaEmailAdresi, TelefonNumarası, HastaSifre) values ('" + TxtVatandaşİsmi.Text.ToString() + "','" + TxtVatandaşSoyİsim.Text.ToString() + "','" + TxtVatandaşKimlikNumarası.Text.ToString() + "','" + TxtVatandaşEmail.Text.ToString() + "','" + TxtVatandaşTelNumarası.Text.ToString() + "','" + TxtŞifre.Text.ToString() + "')", baglantı);
+            komut.ExecuteNonQuery();
+            baglantı.Close();
+
+          /*  baglanti.Open();
 
             SqlCommand cmd1 = new SqlCommand("insert into HastaBilgileri (HastaAdı,HastaSoyadı,HastaKimlikNumarası,HastaEmailAdresi,TelefonNumarası,HastaSifre) values (@p1,@p2,@p3,@p4,@p5,@p6)",baglanti);
             cmd1.Parameters.AddWithValue("@p1", TxtVatandaşİsmi.Text);
@@ -92,7 +98,7 @@ namespace BM102Proje
 
             cmd1.ExecuteNonQuery();
 
-            baglanti.Close();
+            baglanti.Close(); */
         }
         private void KayıtOl_Click(object sender, EventArgs e)
         {
@@ -103,6 +109,7 @@ namespace BM102Proje
                 if (TxtŞifre.Text==TxtŞifreTekrar.Text && TxtŞifre.Text != "")     //Girdiği şifrelerin uyumuna bakıyorum
                 {
                     mail();
+                    Console.WriteLine(kod1);
                     MessageBox.Show("Mailinize gönderilmiş olan kodu boşluğa giriniz.");
                     SayacGöster();
                     RoboKod.Text = kod1;
