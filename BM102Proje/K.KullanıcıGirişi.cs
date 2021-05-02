@@ -17,8 +17,8 @@ namespace BM102Proje
 
     public partial class KullanıcıGirişiMenü : Form
     {
-        OleDbConnection baglantı = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\veriler\\veritabani_access.mdb");
-        SqlConnection baglanti =new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=BM102Proje;Integrated Security=True"); //SQL'lin bağlantısını yapıyoruz
+        OleDbConnection baglantı = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\veriler\\veritabani_access.mdb"); //OleDb bağlantısı
+        //SqlConnection baglanti =new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=BM102Proje;Integrated Security=True"); //SQL'lin bağlantısını yapıyoruz
         public KullanıcıGirişiMenü()
         {
             InitializeComponent();
@@ -73,11 +73,13 @@ namespace BM102Proje
             KGK.Parameters.AddWithValue("@a1", TxtKimlikNumarası.Text); //@a1'e girilen kimlik numarasını atıyorum
             KGK.Parameters.AddWithValue("@a2", TxtSifreGirisi.Text);   //@a2'ye girilen şifreyi atıyorum
             OleDbDataReader dr = KGK.ExecuteReader();
+
            /* baglanti.Open();
             SqlCommand KullanıcıGirişKomudu = new SqlCommand("Select * From HastaBilgileri where HastaKimlikNumarası=@a1 and HastaSifre=@a2", baglanti);
             KullanıcıGirişKomudu.Parameters.AddWithValue("@a1", TxtKimlikNumarası.Text); //@a1'e girilen kimlik numarasını atıyorum
             KullanıcıGirişKomudu.Parameters.AddWithValue("@a2", TxtSifreGirisi.Text);   //@a2'ye girilen şifreyi atıyorum
             SqlDataReader dr = KullanıcıGirişKomudu.ExecuteReader(); */
+
             if (dr.Read())      // @a1 ile @a2 Sql'deki dosyada varsa çalışır
             {
                 Gİriş1.Visible = false;
@@ -93,7 +95,7 @@ namespace BM102Proje
                 MessageBox.Show("Hatalı Giriş");
                 temizle();              //TextBoxları temizledik
             }
-            baglanti.Close();
+            baglantı.Close();
         }
         private void KullanıcıGirişiMenü_Load(object sender, EventArgs e)
         {
