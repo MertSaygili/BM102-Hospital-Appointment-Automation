@@ -93,7 +93,7 @@ namespace BM102Proje
                 MessageBox.Show("Hatalı Giriş");
                 temizle();              //TextBoxları temizledik
             }
-            baglanti.Close();
+            baglantı.Close();
         }
         private void KullanıcıGirişiMenü_Load(object sender, EventArgs e)
         {
@@ -110,7 +110,7 @@ namespace BM102Proje
             
             if (RoboKodd == TxtRoboKodGiriş.Text)
             {
-                MessageBox.Show("Girişiniz yapılıyor...");
+                //MessageBox.Show("Girişiniz yapılıyor...");
                 Thread.Sleep(3);
                 ilet = TxtKimlikNumarası.Text;
                 KullanıcıMenü KM = new KullanıcıMenü();
