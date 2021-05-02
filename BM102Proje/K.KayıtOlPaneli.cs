@@ -81,7 +81,15 @@ namespace BM102Proje
             //Kullanıcının girdiği girdiler 2 aşamadanda doğru olarak geçerse, kullanıcının verilerinin kayıt edilmesini sağlar
 
             baglantı.Open();
-            OleDbCommand komut = new OleDbCommand("insert into HastaBilgileri (HastaAdı, HastaSoyadı, HastaKimlikNumarası, HastaEmailAdresi, TelefonNumarası, HastaSifre) values ('" + TxtVatandaşİsmi.Text.ToString() + "','" + TxtVatandaşSoyİsim.Text.ToString() + "','" + TxtVatandaşKimlikNumarası.Text.ToString() + "','" + TxtVatandaşEmail.Text.ToString() + "','" + TxtVatandaşTelNumarası.Text.ToString() + "','" + TxtŞifre.Text.ToString() + "')", baglantı);
+            //OleDbCommand komut = new OleDbCommand("insert into HastaBilgileri (HastaAdı, HastaSoyadı, HastaKimlikNumarası, HastaEmailAdresi, TelefonNumarası, HastaSifre) values ('" + TxtVatandaşİsmi.Text.ToString() + "','" + TxtVatandaşSoyİsim.Text.ToString() + "','" + TxtVatandaşKimlikNumarası.Text.ToString() + "','" + TxtVatandaşEmail.Text.ToString() + "','" + TxtVatandaşTelNumarası.Text.ToString() + "','" + TxtŞifre.Text.ToString() + "')", baglantı);
+            OleDbCommand komut = new OleDbCommand("insert into HastaBilgileri (HastaAdı,HastaSoyadı,HastaKimlikNumarası,HastaEmailAdresi,TelefonNumarası,HastaSifre) values (@p1,@p2,@p3,@p4,@p5,@p6)", baglantı);
+            komut.Parameters.AddWithValue("@p1", TxtVatandaşİsmi.Text);
+            komut.Parameters.AddWithValue("@p2", TxtVatandaşSoyİsim.Text);
+            komut.Parameters.AddWithValue("@p3", TxtVatandaşKimlikNumarası.Text);
+            komut.Parameters.AddWithValue("@p4", TxtVatandaşEmail.Text);
+            komut.Parameters.AddWithValue("@p5", TxtVatandaşTelNumarası.Text);
+            komut.Parameters.AddWithValue("@p6", TxtŞifre.Text);
+
             komut.ExecuteNonQuery();
             baglantı.Close();
 
