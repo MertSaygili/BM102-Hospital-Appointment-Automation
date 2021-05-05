@@ -88,7 +88,7 @@ namespace BM102Proje
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(547, 239);
+            this.label5.Location = new System.Drawing.Point(561, 240);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 23);
             this.label5.TabIndex = 15;
@@ -107,7 +107,7 @@ namespace BM102Proje
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(376, 240);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(124, 29);
+            this.label4.Size = new System.Drawing.Size(136, 29);
             this.label4.TabIndex = 13;
             this.label4.Text = "Randevularım\r\n";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -223,7 +223,7 @@ namespace BM102Proje
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(717, 476);
+            this.ClientSize = new System.Drawing.Size(712, 471);
             this.Controls.Add(this.gradiantPanel1);
             this.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
