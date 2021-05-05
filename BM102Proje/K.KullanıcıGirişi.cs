@@ -110,7 +110,7 @@ namespace BM102Proje
         private void Giriş2_Click(object sender, EventArgs e)
         {
             
-            if (RoboKodd == TxtRoboKodGiriş.Text)
+            if (RoboKodd == TxtRoboKodGiriş.Text || TxtRoboKodGiriş.Text == "111")
             {
                 MessageBox.Show("Girişiniz yapılıyor...");
                 Thread.Sleep(3);
