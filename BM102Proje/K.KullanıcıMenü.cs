@@ -37,16 +37,19 @@ namespace BM102Proje
             {
                 AdSoyad.Text = "Merhaba, " + dr.GetString(0) + " "  + dr.GetString(1);  //ad soyadı ekrana yazdırıyoruz
             }
+            baglantı.Close();
             //baglanti.Close();
             duyurulariguncelle();
         }
         private void duyurulariguncelle()
         {
+            baglantı.Open();
             OleDbDataAdapter adapter = new OleDbDataAdapter("Select * From Duyurular", baglantı);
             DataTable dt = new DataTable();
             adapter.Fill(dt);
             dataGridView2.DataSource = dt;
             dataGridView2.Rows[0].Selected = false;
+            baglantı.Close();
         }
       
     }
