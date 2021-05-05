@@ -81,7 +81,7 @@ namespace BM102Proje
             this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Location = new System.Drawing.Point(346, 89);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(324, 31);
+            this.dateTimePicker1.Size = new System.Drawing.Size(324, 26);
             this.dateTimePicker1.TabIndex = 16;
             // 
             // label5
@@ -90,7 +90,7 @@ namespace BM102Proje
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Location = new System.Drawing.Point(547, 239);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 23);
+            this.label5.Size = new System.Drawing.Size(75, 19);
             this.label5.TabIndex = 15;
             this.label5.Text = "Bilgilerim";
             // 
@@ -118,7 +118,7 @@ namespace BM102Proje
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(209, 243);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 23);
+            this.label3.Size = new System.Drawing.Size(88, 19);
             this.label3.TabIndex = 12;
             this.label3.Text = "Randevu Al";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -129,7 +129,7 @@ namespace BM102Proje
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(23, 245);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 23);
+            this.label2.Size = new System.Drawing.Size(111, 19);
             this.label2.TabIndex = 11;
             this.label2.Text = "Aşı Randevusu";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -173,9 +173,14 @@ namespace BM102Proje
             // 
             // dataGridView2
             // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.ColumnHeadersVisible = false;
             this.dataGridView2.Location = new System.Drawing.Point(0, 25);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.ReadOnly = true;
+            this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.Size = new System.Drawing.Size(259, 135);
             this.dataGridView2.TabIndex = 5;
@@ -220,7 +225,7 @@ namespace BM102Proje
             // 
             // KullanıcıMenü
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(717, 476);
