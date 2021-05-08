@@ -33,7 +33,7 @@ namespace BM102Proje
             this.gradiantPanel1 = new BM102Proje.GradiantPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.BilgilerimButtonBox = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
@@ -49,7 +49,7 @@ namespace BM102Proje
             this.AdSoyad = new System.Windows.Forms.Label();
             this.gradiantPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BilgilerimButtonBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -66,7 +66,7 @@ namespace BM102Proje
             this.gradiantPanel1.ColorTop = System.Drawing.Color.LightSeaGreen;
             this.gradiantPanel1.Controls.Add(this.button1);
             this.gradiantPanel1.Controls.Add(this.pictureBox5);
-            this.gradiantPanel1.Controls.Add(this.pictureBox4);
+            this.gradiantPanel1.Controls.Add(this.BilgilerimButtonBox);
             this.gradiantPanel1.Controls.Add(this.pictureBox3);
             this.gradiantPanel1.Controls.Add(this.pictureBox2);
             this.gradiantPanel1.Controls.Add(this.dateTimePicker1);
@@ -106,16 +106,17 @@ namespace BM102Proje
             this.pictureBox5.TabIndex = 20;
             this.pictureBox5.TabStop = false;
             // 
-            // pictureBox4
+            // BilgilerimButtonBox
             // 
-            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox4.Location = new System.Drawing.Point(518, 124);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(152, 121);
-            this.pictureBox4.TabIndex = 19;
-            this.pictureBox4.TabStop = false;
+            this.BilgilerimButtonBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BilgilerimButtonBox.BackgroundImage")));
+            this.BilgilerimButtonBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BilgilerimButtonBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BilgilerimButtonBox.Location = new System.Drawing.Point(518, 124);
+            this.BilgilerimButtonBox.Name = "BilgilerimButtonBox";
+            this.BilgilerimButtonBox.Size = new System.Drawing.Size(152, 121);
+            this.BilgilerimButtonBox.TabIndex = 19;
+            this.BilgilerimButtonBox.TabStop = false;
+            this.BilgilerimButtonBox.Click += new System.EventHandler(this.BilgilerimButtonBox_Click);
             // 
             // pictureBox3
             // 
@@ -145,7 +146,7 @@ namespace BM102Proje
             this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Location = new System.Drawing.Point(346, 75);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(324, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(324, 31);
             this.dateTimePicker1.TabIndex = 16;
             // 
             // label5
@@ -154,7 +155,7 @@ namespace BM102Proje
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Location = new System.Drawing.Point(551, 248);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 19);
+            this.label5.Size = new System.Drawing.Size(95, 23);
             this.label5.TabIndex = 15;
             this.label5.Text = "Bilgilerim";
             // 
@@ -174,7 +175,7 @@ namespace BM102Proje
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(220, 248);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 19);
+            this.label3.Size = new System.Drawing.Size(106, 23);
             this.label3.TabIndex = 12;
             this.label3.Text = "Randevu Al";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -185,7 +186,7 @@ namespace BM102Proje
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(66, 248);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 19);
+            this.label2.Size = new System.Drawing.Size(136, 23);
             this.label2.TabIndex = 11;
             this.label2.Text = "Aşı Randevusu";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -260,7 +261,7 @@ namespace BM102Proje
             // 
             // KullanıcıMenü
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(712, 471);
@@ -275,7 +276,7 @@ namespace BM102Proje
             this.gradiantPanel1.ResumeLayout(false);
             this.gradiantPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BilgilerimButtonBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.groupBox2.ResumeLayout(false);
@@ -303,7 +304,7 @@ namespace BM102Proje
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox BilgilerimButtonBox;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button button1;
     }

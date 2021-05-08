@@ -199,5 +199,6 @@ namespace BM102Proje
             KGM.Show();
             this.Hide();
         }
+
     }
 }

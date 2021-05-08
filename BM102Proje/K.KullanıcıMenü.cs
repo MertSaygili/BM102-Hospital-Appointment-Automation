@@ -63,5 +63,12 @@ namespace BM102Proje
             KGM.Show();
             this.Hide();
         }
+
+        private void BilgilerimButtonBox_Click(object sender, EventArgs e)
+        {
+            BilgilerimiGüncelle bm = new BilgilerimiGüncelle();
+            bm.Show();
+            this.Hide();
+        }
     }
 }
