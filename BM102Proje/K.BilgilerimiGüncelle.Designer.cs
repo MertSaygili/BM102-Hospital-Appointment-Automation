@@ -31,9 +31,9 @@ namespace BM102Proje
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BilgilerimiGüncelle));
             this.gradiantPanel1 = new BM102Proje.GradiantPanel();
+            this.GeriDön = new System.Windows.Forms.PictureBox();
             this.TxtOnayla = new System.Windows.Forms.TextBox();
             this.Onayla = new System.Windows.Forms.Button();
-            this.GeriDön = new System.Windows.Forms.Button();
             this.Değiştir = new System.Windows.Forms.Button();
             this.TxtSoyad = new System.Windows.Forms.TextBox();
             this.TxtTelefon = new System.Windows.Forms.TextBox();
@@ -49,15 +49,16 @@ namespace BM102Proje
             this.SoyadLabel = new System.Windows.Forms.Label();
             this.AdLabel = new System.Windows.Forms.Label();
             this.gradiantPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GeriDön)).BeginInit();
             this.SuspendLayout();
             // 
             // gradiantPanel1
             // 
             this.gradiantPanel1.ColorBot = System.Drawing.Color.LightCyan;
             this.gradiantPanel1.ColorTop = System.Drawing.Color.LightSeaGreen;
+            this.gradiantPanel1.Controls.Add(this.GeriDön);
             this.gradiantPanel1.Controls.Add(this.TxtOnayla);
             this.gradiantPanel1.Controls.Add(this.Onayla);
-            this.gradiantPanel1.Controls.Add(this.GeriDön);
             this.gradiantPanel1.Controls.Add(this.Değiştir);
             this.gradiantPanel1.Controls.Add(this.TxtSoyad);
             this.gradiantPanel1.Controls.Add(this.TxtTelefon);
@@ -78,11 +79,24 @@ namespace BM102Proje
             this.gradiantPanel1.Size = new System.Drawing.Size(459, 513);
             this.gradiantPanel1.TabIndex = 0;
             // 
+            // GeriDön
+            // 
+            this.GeriDön.BackColor = System.Drawing.Color.Transparent;
+            this.GeriDön.BackgroundImage = global::BM102Proje.Properties.Resources.back_button_computer_left_blue_116903;
+            this.GeriDön.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GeriDön.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GeriDön.Location = new System.Drawing.Point(15, 16);
+            this.GeriDön.Name = "GeriDön";
+            this.GeriDön.Size = new System.Drawing.Size(37, 35);
+            this.GeriDön.TabIndex = 19;
+            this.GeriDön.TabStop = false;
+            this.GeriDön.Click += new System.EventHandler(this.GeriDön_Click_1);
+            // 
             // TxtOnayla
             // 
             this.TxtOnayla.Location = new System.Drawing.Point(65, 403);
             this.TxtOnayla.Name = "TxtOnayla";
-            this.TxtOnayla.Size = new System.Drawing.Size(125, 31);
+            this.TxtOnayla.Size = new System.Drawing.Size(125, 26);
             this.TxtOnayla.TabIndex = 18;
             // 
             // Onayla
@@ -94,21 +108,6 @@ namespace BM102Proje
             this.Onayla.Text = "Onayla";
             this.Onayla.UseVisualStyleBackColor = true;
             this.Onayla.Click += new System.EventHandler(this.Onayla_Click);
-            // 
-            // GeriDön
-            // 
-            this.GeriDön.BackColor = System.Drawing.Color.Transparent;
-            this.GeriDön.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("GeriDön.BackgroundImage")));
-            this.GeriDön.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.GeriDön.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GeriDön.Location = new System.Drawing.Point(27, 16);
-            this.GeriDön.Margin = new System.Windows.Forms.Padding(4);
-            this.GeriDön.Name = "GeriDön";
-            this.GeriDön.Size = new System.Drawing.Size(45, 42);
-            this.GeriDön.TabIndex = 16;
-            this.GeriDön.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.GeriDön.UseVisualStyleBackColor = false;
-            this.GeriDön.Click += new System.EventHandler(this.GeriDön_Click);
             // 
             // Değiştir
             // 
@@ -124,42 +123,42 @@ namespace BM102Proje
             // 
             this.TxtSoyad.Location = new System.Drawing.Point(212, 138);
             this.TxtSoyad.Name = "TxtSoyad";
-            this.TxtSoyad.Size = new System.Drawing.Size(192, 31);
+            this.TxtSoyad.Size = new System.Drawing.Size(192, 26);
             this.TxtSoyad.TabIndex = 13;
             // 
             // TxtTelefon
             // 
             this.TxtTelefon.Location = new System.Drawing.Point(212, 254);
             this.TxtTelefon.Name = "TxtTelefon";
-            this.TxtTelefon.Size = new System.Drawing.Size(192, 31);
+            this.TxtTelefon.Size = new System.Drawing.Size(192, 26);
             this.TxtTelefon.TabIndex = 12;
             // 
             // TxtSifre
             // 
             this.TxtSifre.Location = new System.Drawing.Point(212, 217);
             this.TxtSifre.Name = "TxtSifre";
-            this.TxtSifre.Size = new System.Drawing.Size(192, 31);
+            this.TxtSifre.Size = new System.Drawing.Size(192, 26);
             this.TxtSifre.TabIndex = 11;
             // 
             // TxtKimlik
             // 
             this.TxtKimlik.Location = new System.Drawing.Point(212, 180);
             this.TxtKimlik.Name = "TxtKimlik";
-            this.TxtKimlik.Size = new System.Drawing.Size(192, 31);
+            this.TxtKimlik.Size = new System.Drawing.Size(192, 26);
             this.TxtKimlik.TabIndex = 10;
             // 
             // TxtEmail
             // 
             this.TxtEmail.Location = new System.Drawing.Point(212, 300);
             this.TxtEmail.Name = "TxtEmail";
-            this.TxtEmail.Size = new System.Drawing.Size(192, 31);
+            this.TxtEmail.Size = new System.Drawing.Size(192, 26);
             this.TxtEmail.TabIndex = 9;
             // 
             // TxtAd
             // 
             this.TxtAd.Location = new System.Drawing.Point(212, 95);
             this.TxtAd.Name = "TxtAd";
-            this.TxtAd.Size = new System.Drawing.Size(192, 31);
+            this.TxtAd.Size = new System.Drawing.Size(192, 26);
             this.TxtAd.TabIndex = 7;
             // 
             // label7
@@ -169,7 +168,7 @@ namespace BM102Proje
             this.label7.Font = new System.Drawing.Font("Cambria", 16F);
             this.label7.Location = new System.Drawing.Point(170, 16);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(129, 32);
+            this.label7.Size = new System.Drawing.Size(104, 26);
             this.label7.TabIndex = 6;
             this.label7.Text = "Bilgilerim";
             // 
@@ -179,7 +178,7 @@ namespace BM102Proje
             this.EmailLabel.BackColor = System.Drawing.Color.Transparent;
             this.EmailLabel.Location = new System.Drawing.Point(81, 308);
             this.EmailLabel.Name = "EmailLabel";
-            this.EmailLabel.Size = new System.Drawing.Size(125, 23);
+            this.EmailLabel.Size = new System.Drawing.Size(100, 19);
             this.EmailLabel.TabIndex = 5;
             this.EmailLabel.Text = "Email Adresi:";
             // 
@@ -189,7 +188,7 @@ namespace BM102Proje
             this.TelefonLabel.BackColor = System.Drawing.Color.Transparent;
             this.TelefonLabel.Location = new System.Drawing.Point(39, 262);
             this.TelefonLabel.Name = "TelefonLabel";
-            this.TelefonLabel.Size = new System.Drawing.Size(167, 23);
+            this.TelefonLabel.Size = new System.Drawing.Size(135, 19);
             this.TelefonLabel.TabIndex = 4;
             this.TelefonLabel.Text = "Telefon Numarası:";
             // 
@@ -199,7 +198,7 @@ namespace BM102Proje
             this.SifreLabel.BackColor = System.Drawing.Color.Transparent;
             this.SifreLabel.Location = new System.Drawing.Point(127, 225);
             this.SifreLabel.Name = "SifreLabel";
-            this.SifreLabel.Size = new System.Drawing.Size(55, 23);
+            this.SifreLabel.Size = new System.Drawing.Size(45, 19);
             this.SifreLabel.TabIndex = 3;
             this.SifreLabel.Text = "Şifre:";
             // 
@@ -210,7 +209,7 @@ namespace BM102Proje
             this.KimlikLabel.Location = new System.Drawing.Point(44, 188);
             this.KimlikLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.KimlikLabel.Name = "KimlikLabel";
-            this.KimlikLabel.Size = new System.Drawing.Size(161, 23);
+            this.KimlikLabel.Size = new System.Drawing.Size(127, 19);
             this.KimlikLabel.TabIndex = 2;
             this.KimlikLabel.Text = "Kimlik Numarası:";
             // 
@@ -221,7 +220,7 @@ namespace BM102Proje
             this.SoyadLabel.Location = new System.Drawing.Point(123, 146);
             this.SoyadLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SoyadLabel.Name = "SoyadLabel";
-            this.SoyadLabel.Size = new System.Drawing.Size(67, 23);
+            this.SoyadLabel.Size = new System.Drawing.Size(55, 19);
             this.SoyadLabel.TabIndex = 1;
             this.SoyadLabel.Text = "Soyad:";
             // 
@@ -232,13 +231,13 @@ namespace BM102Proje
             this.AdLabel.Location = new System.Drawing.Point(152, 103);
             this.AdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.AdLabel.Name = "AdLabel";
-            this.AdLabel.Size = new System.Drawing.Size(38, 23);
+            this.AdLabel.Size = new System.Drawing.Size(32, 19);
             this.AdLabel.TabIndex = 0;
             this.AdLabel.Text = "Ad:";
             // 
             // BilgilerimiGüncelle
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(455, 510);
@@ -252,6 +251,7 @@ namespace BM102Proje
             this.Load += new System.EventHandler(this.BilgilerimiGüncelle_Load);
             this.gradiantPanel1.ResumeLayout(false);
             this.gradiantPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GeriDön)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -273,8 +273,8 @@ namespace BM102Proje
         private System.Windows.Forms.TextBox TxtKimlik;
         private System.Windows.Forms.TextBox TxtEmail;
         private System.Windows.Forms.TextBox TxtAd;
-        private System.Windows.Forms.Button GeriDön;
         private System.Windows.Forms.Button Onayla;
         private System.Windows.Forms.TextBox TxtOnayla;
+        private System.Windows.Forms.PictureBox GeriDön;
     }
 }

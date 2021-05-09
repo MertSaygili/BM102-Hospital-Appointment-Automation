@@ -81,5 +81,12 @@ namespace BM102Proje
             KGM.Show();
             this.Hide();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            KullanıcıGirişiMenü KGM = new KullanıcıGirişiMenü();
+            KGM.Show();
+            this.Hide();
+        }
     }
 }

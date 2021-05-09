@@ -33,7 +33,7 @@ namespace BM102Proje
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KayıtOlPaneli));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.gradiantPanel1 = new BM102Proje.GradiantPanel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.PictureBox();
             this.TxtŞifreTekrar = new System.Windows.Forms.MaskedTextBox();
             this.TxtŞifre = new System.Windows.Forms.MaskedTextBox();
             this.Gönder = new System.Windows.Forms.Button();
@@ -56,6 +56,7 @@ namespace BM102Proje
             this.Label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gradiantPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.button1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -95,10 +96,12 @@ namespace BM102Proje
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::BM102Proje.Properties.Resources.back_button_computer_left_blue_116903;
             resources.ApplyResources(this.button1, "button1");
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.TabStop = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // TxtŞifreTekrar
             // 
@@ -235,6 +238,7 @@ namespace BM102Proje
             this.Load += new System.EventHandler(this.KayıtOlPaneli_Load);
             this.gradiantPanel1.ResumeLayout(false);
             this.gradiantPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.button1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -264,6 +268,6 @@ namespace BM102Proje
         private System.Windows.Forms.Label RoboKod;
         private System.Windows.Forms.MaskedTextBox TxtŞifre;
         private System.Windows.Forms.MaskedTextBox TxtŞifreTekrar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox button1;
     }
 }

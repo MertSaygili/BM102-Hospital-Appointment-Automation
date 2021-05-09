@@ -31,7 +31,7 @@ namespace BM102Proje
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KullanıcıMenü));
             this.gradiantPanel1 = new BM102Proje.GradiantPanel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.BilgilerimButtonBox = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -48,6 +48,7 @@ namespace BM102Proje
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.AdSoyad = new System.Windows.Forms.Label();
             this.gradiantPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.button1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BilgilerimButtonBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -87,13 +88,14 @@ namespace BM102Proje
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.Location = new System.Drawing.Point(12, 31);
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(12, 28);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(37, 35);
             this.button1.TabIndex = 21;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button1.TabStop = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // pictureBox5
             // 
@@ -146,7 +148,7 @@ namespace BM102Proje
             this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Location = new System.Drawing.Point(346, 75);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(324, 31);
+            this.dateTimePicker1.Size = new System.Drawing.Size(324, 26);
             this.dateTimePicker1.TabIndex = 16;
             // 
             // label5
@@ -155,7 +157,7 @@ namespace BM102Proje
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Location = new System.Drawing.Point(551, 248);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(95, 23);
+            this.label5.Size = new System.Drawing.Size(75, 19);
             this.label5.TabIndex = 15;
             this.label5.Text = "Bilgilerim";
             // 
@@ -175,7 +177,7 @@ namespace BM102Proje
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(220, 248);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 23);
+            this.label3.Size = new System.Drawing.Size(88, 19);
             this.label3.TabIndex = 12;
             this.label3.Text = "Randevu Al";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -186,7 +188,7 @@ namespace BM102Proje
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(66, 248);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(136, 23);
+            this.label2.Size = new System.Drawing.Size(111, 19);
             this.label2.TabIndex = 11;
             this.label2.Text = "Aşı Randevusu";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -261,7 +263,7 @@ namespace BM102Proje
             // 
             // KullanıcıMenü
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(712, 471);
@@ -275,6 +277,7 @@ namespace BM102Proje
             this.Load += new System.EventHandler(this.KullanıcıMenü_Load);
             this.gradiantPanel1.ResumeLayout(false);
             this.gradiantPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.button1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BilgilerimButtonBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -306,6 +309,6 @@ namespace BM102Proje
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox BilgilerimButtonBox;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox button1;
     }
 }

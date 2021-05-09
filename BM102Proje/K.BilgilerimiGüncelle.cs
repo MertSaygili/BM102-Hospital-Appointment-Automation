@@ -161,5 +161,12 @@ namespace BM102Proje
                 sıfırdan_ekle();
             }
         }
+
+        private void GeriDön_Click_1(object sender, EventArgs e)
+        {
+            KullanıcıMenü KM = new KullanıcıMenü();
+            KM.Show();
+            this.Hide();
+        }
     }
 }
