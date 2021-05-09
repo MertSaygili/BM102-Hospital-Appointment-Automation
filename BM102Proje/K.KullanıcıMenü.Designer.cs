@@ -107,6 +107,7 @@ namespace BM102Proje
             this.pictureBox5.Size = new System.Drawing.Size(152, 121);
             this.pictureBox5.TabIndex = 20;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // BilgilerimButtonBox
             // 
@@ -148,7 +149,7 @@ namespace BM102Proje
             this.dateTimePicker1.Enabled = false;
             this.dateTimePicker1.Location = new System.Drawing.Point(346, 75);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(324, 26);
+            this.dateTimePicker1.Size = new System.Drawing.Size(324, 31);
             this.dateTimePicker1.TabIndex = 16;
             // 
             // label5
@@ -157,7 +158,7 @@ namespace BM102Proje
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Location = new System.Drawing.Point(551, 248);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 19);
+            this.label5.Size = new System.Drawing.Size(95, 23);
             this.label5.TabIndex = 15;
             this.label5.Text = "Bilgilerim";
             // 
@@ -177,7 +178,7 @@ namespace BM102Proje
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(220, 248);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 19);
+            this.label3.Size = new System.Drawing.Size(106, 23);
             this.label3.TabIndex = 12;
             this.label3.Text = "Randevu Al";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -188,7 +189,7 @@ namespace BM102Proje
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(66, 248);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 19);
+            this.label2.Size = new System.Drawing.Size(136, 23);
             this.label2.TabIndex = 11;
             this.label2.Text = "Aşı Randevusu";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -263,7 +264,7 @@ namespace BM102Proje
             // 
             // KullanıcıMenü
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(712, 471);

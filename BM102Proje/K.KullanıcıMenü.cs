@@ -54,7 +54,9 @@ namespace BM102Proje
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("merhaba");
+            AsiRandevusu ar = new AsiRandevusu();
+            ar.Show();
+            this.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -76,6 +78,11 @@ namespace BM102Proje
             KullanıcıGirişiMenü KGM = new KullanıcıGirişiMenü();
             KGM.Show();
             this.Hide();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
