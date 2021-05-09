@@ -63,10 +63,11 @@ namespace BM102Proje
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.LightCyan;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.LightSeaGreen;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.LightSeaGreen;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(-4, -1);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(-5, -1);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(604, 367);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(682, 331);
             this.bunifuGradientPanel1.TabIndex = 0;
             // 
             // robokod
@@ -75,26 +76,29 @@ namespace BM102Proje
             this.robokod.BackColor = System.Drawing.Color.Transparent;
             this.robokod.Font = new System.Drawing.Font("Cambria", 12F);
             this.robokod.ForeColor = System.Drawing.Color.Black;
-            this.robokod.Location = new System.Drawing.Point(151, 201);
+            this.robokod.Location = new System.Drawing.Point(201, 247);
+            this.robokod.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.robokod.Name = "robokod";
-            this.robokod.Size = new System.Drawing.Size(49, 19);
+            this.robokod.Size = new System.Drawing.Size(60, 23);
             this.robokod.TabIndex = 29;
             this.robokod.Text = "xxxxx";
             // 
             // robokutu
             // 
-            this.robokutu.Location = new System.Drawing.Point(217, 202);
+            this.robokutu.Location = new System.Drawing.Point(289, 249);
+            this.robokutu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.robokutu.Name = "robokutu";
-            this.robokutu.Size = new System.Drawing.Size(85, 20);
+            this.robokutu.Size = new System.Drawing.Size(112, 22);
             this.robokutu.TabIndex = 28;
             // 
             // giris1
             // 
             this.giris1.BackColor = System.Drawing.Color.DarkGray;
             this.giris1.Font = new System.Drawing.Font("Cambria", 12.25F);
-            this.giris1.Location = new System.Drawing.Point(333, 183);
+            this.giris1.Location = new System.Drawing.Point(444, 225);
+            this.giris1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.giris1.Name = "giris1";
-            this.giris1.Size = new System.Drawing.Size(126, 54);
+            this.giris1.Size = new System.Drawing.Size(168, 66);
             this.giris1.TabIndex = 27;
             this.giris1.Text = "Giriş";
             this.giris1.UseVisualStyleBackColor = false;
@@ -104,9 +108,10 @@ namespace BM102Proje
             // 
             this.giris2.BackColor = System.Drawing.Color.DarkGray;
             this.giris2.Font = new System.Drawing.Font("Cambria", 12.25F);
-            this.giris2.Location = new System.Drawing.Point(333, 183);
+            this.giris2.Location = new System.Drawing.Point(444, 225);
+            this.giris2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.giris2.Name = "giris2";
-            this.giris2.Size = new System.Drawing.Size(126, 54);
+            this.giris2.Size = new System.Drawing.Size(168, 66);
             this.giris2.TabIndex = 26;
             this.giris2.Text = "Giriş";
             this.giris2.UseVisualStyleBackColor = false;
@@ -114,10 +119,11 @@ namespace BM102Proje
             // 
             // Sifre
             // 
-            this.Sifre.Location = new System.Drawing.Point(216, 134);
+            this.Sifre.Location = new System.Drawing.Point(288, 165);
+            this.Sifre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Sifre.Name = "Sifre";
             this.Sifre.PasswordChar = '*';
-            this.Sifre.Size = new System.Drawing.Size(243, 20);
+            this.Sifre.Size = new System.Drawing.Size(323, 22);
             this.Sifre.TabIndex = 25;
             // 
             // label3
@@ -126,17 +132,19 @@ namespace BM102Proje
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Cambria", 12F);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(161, 133);
+            this.label3.Location = new System.Drawing.Point(215, 164);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 19);
+            this.label3.Size = new System.Drawing.Size(59, 23);
             this.label3.TabIndex = 24;
             this.label3.Text = "Şifre: ";
             // 
             // KimlikNo
             // 
-            this.KimlikNo.Location = new System.Drawing.Point(217, 92);
+            this.KimlikNo.Location = new System.Drawing.Point(289, 113);
+            this.KimlikNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.KimlikNo.Name = "KimlikNo";
-            this.KimlikNo.Size = new System.Drawing.Size(243, 20);
+            this.KimlikNo.Size = new System.Drawing.Size(323, 22);
             this.KimlikNo.TabIndex = 23;
             // 
             // label2
@@ -145,9 +153,10 @@ namespace BM102Proje
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Cambria", 12F);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(83, 94);
+            this.label2.Location = new System.Drawing.Point(111, 116);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 19);
+            this.label2.Size = new System.Drawing.Size(161, 23);
             this.label2.TabIndex = 22;
             this.label2.Text = "Kimlik Numarası:";
             // 
@@ -157,9 +166,10 @@ namespace BM102Proje
             this.button1.BackgroundImage = global::BM102Proje.Properties.Resources.back_button_computer_left_blue_116903;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(16, 16);
+            this.button1.Location = new System.Drawing.Point(21, 20);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(37, 35);
+            this.button1.Size = new System.Drawing.Size(49, 43);
             this.button1.TabIndex = 21;
             this.button1.TabStop = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
@@ -170,20 +180,22 @@ namespace BM102Proje
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.label1.Location = new System.Drawing.Point(160, 26);
+            this.label1.Location = new System.Drawing.Point(213, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(221, 25);
+            this.label1.Size = new System.Drawing.Size(282, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Yönetici Personel Girişi";
             // 
             // YöneticiGirişiMenü
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(505, 267);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(673, 329);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "YöneticiGirişiMenü";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Yönetici Girişi Menü";

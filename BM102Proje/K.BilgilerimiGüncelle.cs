@@ -25,25 +25,25 @@ namespace BM102Proje
         String a = KullanıcıGirişiMenü.ilet; //kullanıcı giriş menüsündeki tc kimlik numarasını aldık
         private void sıfırdan_ekle()
         {
-        //    baglanti.Open();
+            //baglanti.Open();
 
-        //    SqlCommand kmt = new SqlCommand("Select HastaAdı, HastaSoyadı, HastaEmailAdresi, TelefonNumarası, HastaSifre From HastaBilgileri where HastaKimlikNumarası=@a1", baglanti);
-        //    kmt.Parameters.AddWithValue("@a1", a);
-        //    SqlDataReader dr = kmt.ExecuteReader();
-        //    if (dr.Read())
-        //    {
-        //        TxtAd.Text = dr.GetString(0);
-        //        TxtSoyad.Text = dr.GetString(1);
-        //        TxtEmail.Text = dr.GetString(2);
-        //        TxtTelefon.Text = dr.GetString(3);
-        //        TxtSifre.Text = dr.GetString(4);
-        //        TxtKimlik.Text = a;
-        //    }
+            //SqlCommand kmt = new SqlCommand("Select HastaAdı, HastaSoyadı, HastaEmailAdresi, TelefonNumarası, HastaSifre From HastaBilgileri where HastaKimlikNumarası=@a1", baglanti);
+            //kmt.Parameters.AddWithValue("@a1", a);
+            //SqlDataReader dr = kmt.ExecuteReader();
+            //if (dr.Read())
+            //{
+            //    TxtAd.Text = dr.GetString(0);
+            //    TxtSoyad.Text = dr.GetString(1);
+            //    TxtEmail.Text = dr.GetString(2);
+            //    TxtTelefon.Text = dr.GetString(3);
+            //    TxtSifre.Text = dr.GetString(4);
+            //    TxtKimlik.Text = a;
+            //}
 
-        //    baglanti.Close();
+            //baglanti.Close();
 
             baglantı.Open();
-
+            //sistemdeki bilgileri ekrana yazdırmasını sağlıyor.
             OleDbCommand kmt = new OleDbCommand("Select HastaAdı, HastaSoyadı, HastaEmailAdresi, TelefonNumarası, HastaSifre From HastaBilgileri where HastaKimlikNumarası=@a1", baglantı);
             kmt.Parameters.AddWithValue("@a1", a);
             OleDbDataReader dr = kmt.ExecuteReader();
@@ -75,7 +75,7 @@ namespace BM102Proje
 
 
             baglantı.Open();
-
+            //Data kodlarıyla apılmış değişikleri dataya atıyoruz
             OleDbCommand kmt = new OleDbCommand("Update HastaBilgileri Set HastaSifre=@a1, HastaEmailAdresi=@a2, TelefonNumarası=@a3 where HastaKimlikNumarası = @a4", baglantı);
             kmt.Parameters.AddWithValue("@a1", TxtSifre.Text);
             kmt.Parameters.AddWithValue("@a2", TxtEmail.Text);
@@ -129,10 +129,10 @@ namespace BM102Proje
         private void Değiştir_Click(object sender, EventArgs e)
         {
 
-            if(TxtEmail.Text!="" || TxtTelefon.Text!="" || TxtSifre.Text != "")
+            if(TxtEmail.Text!="" || TxtTelefon.Text!="" || TxtSifre.Text != "") //Hataları girişleri önlüyoruz
             {
-                MessageBox.Show("Mail adresinize bir adet mail atılmıştır...");
-                mail_at();
+                MessageBox.Show("Mail adresinize bir adet mail atılmıştır...");     
+                mail_at();      // mail at methodunu çağırarak mail atıyoruz
                 Değiştir.Visible = false;
                 Onayla.Visible = true;
                 TxtOnayla.Visible = true;
@@ -146,11 +146,11 @@ namespace BM102Proje
 
         private void Onayla_Click(object sender, EventArgs e)
         {
-            if (string.Compare(TxtOnayla.Text, "ONAYLA") == 0)
+            if (string.Compare(TxtOnayla.Text, "ONAYLA") == 0) //Kullanıcı tarafından girilen girdi 'ONAYLA' ya eşitse 0 döndürür
             {
                 MessageBox.Show("Değişiklikleriniz başarıyla yapılmıştır.");
                 değişiklik_yap();
-                Onayla.Visible = false;
+                Onayla.Visible = false; 
                 TxtOnayla.Visible = false;
                 Değiştir.Visible = true;
                 sıfırdan_ekle();
