@@ -55,7 +55,6 @@ namespace BM102Proje
             this.AsiTarih.MinDate = new System.DateTime(2021, 5, 9, 18, 3, 50, 0);
             this.AsiTarih.Name = "AsiTarih";
             this.AsiTarih.Value = new System.DateTime(2021, 5, 9, 18, 3, 50, 0);
-            this.AsiTarih.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // GeriDon
             // 
@@ -92,7 +91,6 @@ namespace BM102Proje
             resources.GetString("AsiSaat.Items10"),
             resources.GetString("AsiSaat.Items11")});
             this.AsiSaat.Name = "AsiSaat";
-            this.AsiSaat.SelectedIndexChanged += new System.EventHandler(this.AsiSaat_SelectedIndexChanged);
             // 
             // OnaylaButon
             // 
@@ -200,13 +198,11 @@ namespace BM102Proje
             resources.GetString("AsiSehir.Items79"),
             resources.GetString("AsiSehir.Items80")});
             this.AsiSehir.Name = "AsiSehir";
-            this.AsiSehir.SelectedIndexChanged += new System.EventHandler(this.AsiSehir_SelectedIndexChanged);
             // 
             // AsiHastane
             // 
             resources.ApplyResources(this.AsiHastane, "AsiHastane");
             this.AsiHastane.Name = "AsiHastane";
-            this.AsiHastane.TextChanged += new System.EventHandler(this.AsiHastane_TextChanged);
             // 
             // bunifuGradientPanel1
             // 
@@ -225,7 +221,7 @@ namespace BM102Proje
             this.bunifuGradientPanel1.Controls.Add(this.AsiTarih);
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.LightSeaGreen;
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.LightCyan;
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.LightSeaGreen;
+            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.LightCyan;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.LightCyan;
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 8;

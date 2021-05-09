@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="K.RandevuAl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="K.RandevuAl.Designer.cs">
+      <DependentUpon>K.RandevuAl.cs</DependentUpon>
+    </Compile>
     <Compile Include="K.AşıRandevusuAl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,8 +128,12 @@
     <Compile Include="YoneticiMenu.Designer.cs">
       <DependentUpon>YoneticiMenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="K.RandevuAl.resx">
+      <DependentUpon>K.RandevuAl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="K.AşıRandevusuAl.resx">
       <DependentUpon>K.AşıRandevusuAl.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="GirişPaneli.resx">
       <DependentUpon>GirişPaneli.cs</DependentUpon>

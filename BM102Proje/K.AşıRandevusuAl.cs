@@ -25,11 +25,6 @@ namespace BM102Proje
 
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-            //*
-        }
-
         private void temizle()
         {
             AsiSehir.SelectedIndex = -1;
@@ -41,21 +36,6 @@ namespace BM102Proje
             KullanıcıMenü KM = new KullanıcıMenü();
             KM.Show();
             this.Hide();
-        }
-
-        private void AsiSehir_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //*
-        }
-
-        private void AsiHastane_TextChanged(object sender, EventArgs e)
-        {
-            //*
-        }
-
-        private void AsiSaat_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //*
         }
 
         private int kontrolsagla()

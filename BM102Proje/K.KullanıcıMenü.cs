@@ -82,7 +82,9 @@ namespace BM102Proje
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-
+            RandevuAl randevu = new RandevuAl();
+            randevu.Show();
+            this.Hide();
         }
     }
 }
