@@ -31,34 +31,164 @@ namespace BM102Proje
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YöneticiGirişiMenü));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.KimlikNo = new System.Windows.Forms.MaskedTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.Sifre = new System.Windows.Forms.MaskedTextBox();
+            this.giris2 = new System.Windows.Forms.Button();
+            this.giris1 = new System.Windows.Forms.Button();
+            this.robokutu = new System.Windows.Forms.MaskedTextBox();
+            this.robokod = new System.Windows.Forms.Label();
+            this.bunifuGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.button1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel1
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.robokod);
+            this.bunifuGradientPanel1.Controls.Add(this.robokutu);
+            this.bunifuGradientPanel1.Controls.Add(this.giris1);
+            this.bunifuGradientPanel1.Controls.Add(this.giris2);
+            this.bunifuGradientPanel1.Controls.Add(this.Sifre);
+            this.bunifuGradientPanel1.Controls.Add(this.label3);
+            this.bunifuGradientPanel1.Controls.Add(this.KimlikNo);
+            this.bunifuGradientPanel1.Controls.Add(this.label2);
+            this.bunifuGradientPanel1.Controls.Add(this.button1);
+            this.bunifuGradientPanel1.Controls.Add(this.label1);
             this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.LightCyan;
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.LightCyan;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.LightSeaGreen;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.LightSeaGreen;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(-5, -1);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(-4, -1);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(805, 452);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(604, 367);
             this.bunifuGradientPanel1.TabIndex = 0;
+            // 
+            // KimlikNo
+            // 
+            this.KimlikNo.Location = new System.Drawing.Point(217, 92);
+            this.KimlikNo.Name = "KimlikNo";
+            this.KimlikNo.Size = new System.Drawing.Size(243, 20);
+            this.KimlikNo.TabIndex = 23;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Cambria", 12F);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(83, 94);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(127, 19);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "Kimlik Numarası:";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::BM102Proje.Properties.Resources.back_button_computer_left_blue_116903;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(16, 16);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(37, 35);
+            this.button1.TabIndex = 21;
+            this.button1.TabStop = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Cambria", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label1.Location = new System.Drawing.Point(160, 26);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(221, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Yönetici Personel Girişi";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Cambria", 12F);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(161, 133);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 19);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Şifre: ";
+            // 
+            // Sifre
+            // 
+            this.Sifre.Location = new System.Drawing.Point(216, 134);
+            this.Sifre.Name = "Sifre";
+            this.Sifre.Size = new System.Drawing.Size(243, 20);
+            this.Sifre.TabIndex = 25;
+            // 
+            // giris2
+            // 
+            this.giris2.BackColor = System.Drawing.Color.DarkGray;
+            this.giris2.Font = new System.Drawing.Font("Cambria", 12.25F);
+            this.giris2.Location = new System.Drawing.Point(333, 183);
+            this.giris2.Name = "giris2";
+            this.giris2.Size = new System.Drawing.Size(126, 54);
+            this.giris2.TabIndex = 26;
+            this.giris2.Text = "Giriş";
+            this.giris2.UseVisualStyleBackColor = false;
+            this.giris2.Click += new System.EventHandler(this.giris2_Click);
+            // 
+            // giris1
+            // 
+            this.giris1.BackColor = System.Drawing.Color.DarkGray;
+            this.giris1.Font = new System.Drawing.Font("Cambria", 12.25F);
+            this.giris1.Location = new System.Drawing.Point(333, 183);
+            this.giris1.Name = "giris1";
+            this.giris1.Size = new System.Drawing.Size(126, 54);
+            this.giris1.TabIndex = 27;
+            this.giris1.Text = "Giriş";
+            this.giris1.UseVisualStyleBackColor = false;
+            this.giris1.Click += new System.EventHandler(this.giris1_Click);
+            // 
+            // robokutu
+            // 
+            this.robokutu.Location = new System.Drawing.Point(217, 202);
+            this.robokutu.Name = "robokutu";
+            this.robokutu.Size = new System.Drawing.Size(85, 20);
+            this.robokutu.TabIndex = 28;
+            // 
+            // robokod
+            // 
+            this.robokod.AutoSize = true;
+            this.robokod.BackColor = System.Drawing.Color.Transparent;
+            this.robokod.Font = new System.Drawing.Font("Cambria", 12F);
+            this.robokod.ForeColor = System.Drawing.Color.Black;
+            this.robokod.Location = new System.Drawing.Point(151, 201);
+            this.robokod.Name = "robokod";
+            this.robokod.Size = new System.Drawing.Size(49, 19);
+            this.robokod.TabIndex = 29;
+            this.robokod.Text = "xxxxx";
             // 
             // YöneticiGirişiMenü
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(505, 267);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "YöneticiGirişiMenü";
             this.Text = "Yönetici Girişi Menü";
             this.Load += new System.EventHandler(this.YöneticiGirişiMenü_Load);
+            this.bunifuGradientPanel1.ResumeLayout(false);
+            this.bunifuGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.button1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -66,5 +196,15 @@ namespace BM102Proje
         #endregion
 
         private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox button1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.MaskedTextBox KimlikNo;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.MaskedTextBox Sifre;
+        private System.Windows.Forms.Button giris2;
+        private System.Windows.Forms.Button giris1;
+        private System.Windows.Forms.Label robokod;
+        private System.Windows.Forms.MaskedTextBox robokutu;
     }
 }

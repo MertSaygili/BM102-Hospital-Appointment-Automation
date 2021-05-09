@@ -110,6 +110,12 @@
     <Compile Include="Y.YöneticiGirişiMenü.Designer.cs">
       <DependentUpon>Y.YöneticiGirişiMenü.cs</DependentUpon>
     </Compile>
+    <Compile Include="YoneticiMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YoneticiMenu.Designer.cs">
+      <DependentUpon>YoneticiMenu.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="GirişPaneli.resx">
       <DependentUpon>GirişPaneli.cs</DependentUpon>
     </EmbeddedResource>
@@ -135,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Y.YöneticiGirişiMenü.resx">
       <DependentUpon>Y.YöneticiGirişiMenü.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YoneticiMenu.resx">
+      <DependentUpon>YoneticiMenu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="BM102ProjeDataSet.xsc">
       <DependentUpon>BM102ProjeDataSet.xsd</DependentUpon>
