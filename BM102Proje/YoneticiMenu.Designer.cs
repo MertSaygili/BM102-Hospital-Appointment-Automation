@@ -37,6 +37,7 @@ namespace BM102Proje
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "YoneticiMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "YoneticiMenu";
             this.Load += new System.EventHandler(this.YoneticiMenu_Load);
             this.ResumeLayout(false);

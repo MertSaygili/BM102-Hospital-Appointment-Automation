@@ -31,16 +31,16 @@ namespace BM102Proje
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YöneticiGirişiMenü));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.robokod = new System.Windows.Forms.Label();
+            this.robokutu = new System.Windows.Forms.MaskedTextBox();
+            this.giris1 = new System.Windows.Forms.Button();
+            this.giris2 = new System.Windows.Forms.Button();
+            this.Sifre = new System.Windows.Forms.MaskedTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.KimlikNo = new System.Windows.Forms.MaskedTextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.Sifre = new System.Windows.Forms.MaskedTextBox();
-            this.giris2 = new System.Windows.Forms.Button();
-            this.giris1 = new System.Windows.Forms.Button();
-            this.robokutu = new System.Windows.Forms.MaskedTextBox();
-            this.robokod = new System.Windows.Forms.Label();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.button1)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +68,69 @@ namespace BM102Proje
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(604, 367);
             this.bunifuGradientPanel1.TabIndex = 0;
+            // 
+            // robokod
+            // 
+            this.robokod.AutoSize = true;
+            this.robokod.BackColor = System.Drawing.Color.Transparent;
+            this.robokod.Font = new System.Drawing.Font("Cambria", 12F);
+            this.robokod.ForeColor = System.Drawing.Color.Black;
+            this.robokod.Location = new System.Drawing.Point(151, 201);
+            this.robokod.Name = "robokod";
+            this.robokod.Size = new System.Drawing.Size(49, 19);
+            this.robokod.TabIndex = 29;
+            this.robokod.Text = "xxxxx";
+            // 
+            // robokutu
+            // 
+            this.robokutu.Location = new System.Drawing.Point(217, 202);
+            this.robokutu.Name = "robokutu";
+            this.robokutu.Size = new System.Drawing.Size(85, 20);
+            this.robokutu.TabIndex = 28;
+            // 
+            // giris1
+            // 
+            this.giris1.BackColor = System.Drawing.Color.DarkGray;
+            this.giris1.Font = new System.Drawing.Font("Cambria", 12.25F);
+            this.giris1.Location = new System.Drawing.Point(333, 183);
+            this.giris1.Name = "giris1";
+            this.giris1.Size = new System.Drawing.Size(126, 54);
+            this.giris1.TabIndex = 27;
+            this.giris1.Text = "Giriş";
+            this.giris1.UseVisualStyleBackColor = false;
+            this.giris1.Click += new System.EventHandler(this.giris1_Click);
+            // 
+            // giris2
+            // 
+            this.giris2.BackColor = System.Drawing.Color.DarkGray;
+            this.giris2.Font = new System.Drawing.Font("Cambria", 12.25F);
+            this.giris2.Location = new System.Drawing.Point(333, 183);
+            this.giris2.Name = "giris2";
+            this.giris2.Size = new System.Drawing.Size(126, 54);
+            this.giris2.TabIndex = 26;
+            this.giris2.Text = "Giriş";
+            this.giris2.UseVisualStyleBackColor = false;
+            this.giris2.Click += new System.EventHandler(this.giris2_Click);
+            // 
+            // Sifre
+            // 
+            this.Sifre.Location = new System.Drawing.Point(216, 134);
+            this.Sifre.Name = "Sifre";
+            this.Sifre.PasswordChar = '*';
+            this.Sifre.Size = new System.Drawing.Size(243, 20);
+            this.Sifre.TabIndex = 25;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Cambria", 12F);
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(161, 133);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 19);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Şifre: ";
             // 
             // KimlikNo
             // 
@@ -113,68 +176,6 @@ namespace BM102Proje
             this.label1.TabIndex = 0;
             this.label1.Text = "Yönetici Personel Girişi";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Cambria", 12F);
-            this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(161, 133);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 19);
-            this.label3.TabIndex = 24;
-            this.label3.Text = "Şifre: ";
-            // 
-            // Sifre
-            // 
-            this.Sifre.Location = new System.Drawing.Point(216, 134);
-            this.Sifre.Name = "Sifre";
-            this.Sifre.Size = new System.Drawing.Size(243, 20);
-            this.Sifre.TabIndex = 25;
-            // 
-            // giris2
-            // 
-            this.giris2.BackColor = System.Drawing.Color.DarkGray;
-            this.giris2.Font = new System.Drawing.Font("Cambria", 12.25F);
-            this.giris2.Location = new System.Drawing.Point(333, 183);
-            this.giris2.Name = "giris2";
-            this.giris2.Size = new System.Drawing.Size(126, 54);
-            this.giris2.TabIndex = 26;
-            this.giris2.Text = "Giriş";
-            this.giris2.UseVisualStyleBackColor = false;
-            this.giris2.Click += new System.EventHandler(this.giris2_Click);
-            // 
-            // giris1
-            // 
-            this.giris1.BackColor = System.Drawing.Color.DarkGray;
-            this.giris1.Font = new System.Drawing.Font("Cambria", 12.25F);
-            this.giris1.Location = new System.Drawing.Point(333, 183);
-            this.giris1.Name = "giris1";
-            this.giris1.Size = new System.Drawing.Size(126, 54);
-            this.giris1.TabIndex = 27;
-            this.giris1.Text = "Giriş";
-            this.giris1.UseVisualStyleBackColor = false;
-            this.giris1.Click += new System.EventHandler(this.giris1_Click);
-            // 
-            // robokutu
-            // 
-            this.robokutu.Location = new System.Drawing.Point(217, 202);
-            this.robokutu.Name = "robokutu";
-            this.robokutu.Size = new System.Drawing.Size(85, 20);
-            this.robokutu.TabIndex = 28;
-            // 
-            // robokod
-            // 
-            this.robokod.AutoSize = true;
-            this.robokod.BackColor = System.Drawing.Color.Transparent;
-            this.robokod.Font = new System.Drawing.Font("Cambria", 12F);
-            this.robokod.ForeColor = System.Drawing.Color.Black;
-            this.robokod.Location = new System.Drawing.Point(151, 201);
-            this.robokod.Name = "robokod";
-            this.robokod.Size = new System.Drawing.Size(49, 19);
-            this.robokod.TabIndex = 29;
-            this.robokod.Text = "xxxxx";
-            // 
             // YöneticiGirişiMenü
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -184,6 +185,7 @@ namespace BM102Proje
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "YöneticiGirişiMenü";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Yönetici Girişi Menü";
             this.Load += new System.EventHandler(this.YöneticiGirişiMenü_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
