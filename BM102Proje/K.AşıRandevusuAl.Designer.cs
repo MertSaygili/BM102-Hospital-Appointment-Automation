@@ -51,7 +51,10 @@ namespace BM102Proje
             // AsiTarih
             // 
             resources.ApplyResources(this.AsiTarih, "AsiTarih");
+            this.AsiTarih.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.AsiTarih.MinDate = new System.DateTime(2021, 5, 9, 18, 3, 50, 0);
             this.AsiTarih.Name = "AsiTarih";
+            this.AsiTarih.Value = new System.DateTime(2021, 5, 9, 18, 3, 50, 0);
             this.AsiTarih.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // GeriDon
