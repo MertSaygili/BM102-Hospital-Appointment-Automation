@@ -14,7 +14,6 @@ namespace BM102Proje
     
     public partial class RandevuAl : Form
     {
-        static int sayi;
         OleDbConnection baglantı = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\veriler\\veritabani_access.mdb");
         public RandevuAl()
         {
@@ -25,10 +24,7 @@ namespace BM102Proje
         {
             if (RandevuHastaneAdiText.Text != "" && RandevuSehir.SelectedIndex >= 0 && RandevuSaat.SelectedIndex >= 0 && RandevuPolAdi.SelectedIndex >= 0)
             {
-                //KONTROL AMAÇLI MESSAGEBOX. SONRA SİLİNECEK.
-                //int a = kontrol();
-                //MessageBox.Show("bu kadar "+a);
-                if (kontrol() < 1)
+                if (kontrol() == 1) // KONTROLDEN BİR GELİRSE BAŞARIYLA YAZABİLİR
                 {
                     randevuyaz();
                     MessageBox.Show("Randevunuz oluşturulmuştur.");
@@ -36,7 +32,7 @@ namespace BM102Proje
                 }
                 else
                 {
-                    MessageBox.Show("Bu saatte doktorun randevusu bulunmaktadır. Lütfen başka bir saat ya başka bir hekim deneyiniz.");
+                    MessageBox.Show("Bu saatte doktorun randevusu bulunmaktadır. Lütfen başka bir saat ya başka bir hekim deneyiniz."); // ÖBÜRTÜRLÜ DATABASEDA VERİ VAR DEMEK
                     temizlesaat();
                 }
             }
@@ -55,19 +51,46 @@ namespace BM102Proje
             komut.Parameters.AddWithValue("@p3", RandevuHastaneAdiText.Text);
             komut.Parameters.AddWithValue("@p4", RandevuPolAdi.SelectedItem);
             komut.Parameters.AddWithValue("@p5", RandevuDoktorAdi.SelectedItem);
-            komut.Parameters.AddWithValue("@p6", RandevuTarih.Value);
+            komut.Parameters.AddWithValue("@p6", Convert.ToString(RandevuTarih.Value));
             komut.Parameters.AddWithValue("@p7", RandevuSaat.SelectedItem);
             komut.ExecuteNonQuery();
             baglantı.Close();
         }
         private int kontrol()
         {
-            //BU KISIMLA ALAKALI ÇÖZÜM DEVAM EDİYOR. O YÜZDEN HEP 0 DÖNDERİYOR DÜZELENE KADAR.
-            /*baglantı.Open();
-            OleDbCommand komut = new OleDbCommand("SELECT count (KimlikNumarası,Sehir,Hastane,Polikinlik,DoktorAdi,Tarih,Saat) from Randevular", baglantı);
-            sayi = System.Convert.ToInt32(komut.ExecuteScalar());
-            baglantı.Close();*/
-            return 0;
+            int total = 0;
+            baglantı.Open();
+            OleDbCommand komut = new OleDbCommand("Select Sehir, Hastane, Tarih, Saat, Polikinlik, DoktorAdi from Randevular", baglantı);
+            OleDbDataReader dr = komut.ExecuteReader();
+
+            while (dr.Read())
+            {
+                string sehir = dr.GetString(0);
+                string hastane = dr.GetString(1);
+                string tarih = dr.GetString(2);         // SOL TARAFTAKİLER DATABASEDEN GELEN VERİYİ TEMSİL EDİYOR
+                string saat = dr.GetString(3);
+                string pol = dr.GetString(4);
+                string doktor = dr.GetString(5);
+                if (sehir == Convert.ToString(RandevuSehir.SelectedItem) &&
+                    hastane == RandevuHastaneAdiText.Text &&
+                    tarih.Substring(0, 10) == Convert.ToString(RandevuTarih.Value).Substring(0, 10) &&     // BURADA DA KULLANICININ SEÇTİKLERİ İLE DATABASEI KARŞILAŞTIRIYORUM
+                    saat == Convert.ToString(RandevuSaat.SelectedItem) && 
+                    pol == Convert.ToString(RandevuPolAdi.SelectedItem) &&
+                    doktor == Convert.ToString(RandevuDoktorAdi.SelectedItem)
+                    )
+                {
+                    total += 1; // EĞER GİRİLEN VERİ DATABASEDE VARSA TOTALİ 1 KEZ ARTIRIYORUM
+                }
+            }
+            baglantı.Close();
+            if (total >= 1)
+            {
+                return 0; // EĞER EN AZ 1 KERE o VERİ BULUNDUYSA 0 döndürüyor
+            }
+            else
+            {
+                return 1; // EĞER SEÇİLEN VERİYİ DATABASEDE BULAMADIYSA 1 döndürüyor
+            }
         }
 
         private void RandevuIptalButon_Click(object sender, EventArgs e)
@@ -92,5 +115,11 @@ namespace BM102Proje
             KM.Show();
             this.Hide();
         }
+
+        private void RandevuAl_Load(object sender, EventArgs e)
+        {
+
+        }
+        
     }
 }
