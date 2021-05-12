@@ -40,6 +40,7 @@ namespace BM102Proje
             baglantı.Close();
             //baglanti.Close();
             duyurulariguncelle();
+            aktifrandevuupdate();
         }
         private void duyurulariguncelle()
         {
@@ -51,7 +52,25 @@ namespace BM102Proje
             dataGridView2.Rows[0].Selected = false;
             baglantı.Close();
         }
-
+        private void aktifrandevuupdate()
+        {
+            baglantı.Open();
+            OleDbCommand komut = new OleDbCommand("Select Sehir,Hastane,Polikinlik,DoktorAdi,Tarih,Saat From Randevular where KimlikNumarası=@a1", baglantı);
+            komut.Parameters.AddWithValue("@a1", KullanıcıGirişiMenü.ilet); // DataBase Komutu ayarlanıyor
+            OleDbDataAdapter da = new OleDbDataAdapter();
+            DataTable dt = new DataTable(); // bir data table oluşturdum
+            da.SelectCommand = komut;
+            da.Fill(dt);    // datatable'ı databasedan aldığımız veriler ile dolduruyoruz
+            dataGridView1.DataSource = dt; // veri kaynağı belirleniyor
+            dataGridView1.Rows[0].Selected = false; // daha hoş görünmesi için yapıyorum bunu
+            dataGridView1.Columns[0].HeaderText = "Şehir";
+            dataGridView1.Columns[1].HeaderText = "Hastane";
+            dataGridView1.Columns[2].HeaderText = "Polikinlik";
+            dataGridView1.Columns[3].HeaderText = "Doktor Adı";
+            dataGridView1.Columns[4].HeaderText = "Tarih";
+            dataGridView1.Columns[5].HeaderText = "Saat";
+            baglantı.Close();
+        }
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             AsiRandevusu ar = new AsiRandevusu();
