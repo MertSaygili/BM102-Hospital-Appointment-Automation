@@ -16,6 +16,7 @@ namespace BM102Proje
     {
         OleDbConnection baglantı = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\veriler\\veritabani_access.mdb"); //OleDb bağlantısı
         static string RoboKodd;
+        static public string kimlikno;
         public YöneticiGirişiMenü()
         {
             InitializeComponent();
@@ -56,6 +57,7 @@ namespace BM102Proje
                 giris1.Visible = false;
                 giris2.Visible = true;
                 KullanıcıGirişiMenü KGM = new KullanıcıGirişiMenü();
+                kimlikno = KimlikNo.Text;
                 RoboKodd = KGM.RoboKod();       //RoboKodd adlı değişkene robotkodunu atıyorum
                 robokod.Text = RoboKodd;   //RoboKodu'un gereçlerini görünür yapıyorum
                 robokod.Visible = true;

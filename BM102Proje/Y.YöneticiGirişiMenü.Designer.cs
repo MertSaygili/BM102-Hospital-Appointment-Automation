@@ -64,7 +64,7 @@ namespace BM102Proje
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.LightSeaGreen;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.LightSeaGreen;
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(-5, -1);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(682, 331);
@@ -85,10 +85,11 @@ namespace BM102Proje
             // 
             // robokutu
             // 
+            this.robokutu.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.robokutu.Location = new System.Drawing.Point(289, 249);
-            this.robokutu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.robokutu.Margin = new System.Windows.Forms.Padding(4);
             this.robokutu.Name = "robokutu";
-            this.robokutu.Size = new System.Drawing.Size(112, 22);
+            this.robokutu.Size = new System.Drawing.Size(112, 31);
             this.robokutu.TabIndex = 28;
             // 
             // giris1
@@ -96,7 +97,7 @@ namespace BM102Proje
             this.giris1.BackColor = System.Drawing.Color.DarkGray;
             this.giris1.Font = new System.Drawing.Font("Cambria", 12.25F);
             this.giris1.Location = new System.Drawing.Point(444, 225);
-            this.giris1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.giris1.Margin = new System.Windows.Forms.Padding(4);
             this.giris1.Name = "giris1";
             this.giris1.Size = new System.Drawing.Size(168, 66);
             this.giris1.TabIndex = 27;
@@ -109,7 +110,7 @@ namespace BM102Proje
             this.giris2.BackColor = System.Drawing.Color.DarkGray;
             this.giris2.Font = new System.Drawing.Font("Cambria", 12.25F);
             this.giris2.Location = new System.Drawing.Point(444, 225);
-            this.giris2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.giris2.Margin = new System.Windows.Forms.Padding(4);
             this.giris2.Name = "giris2";
             this.giris2.Size = new System.Drawing.Size(168, 66);
             this.giris2.TabIndex = 26;
@@ -119,11 +120,12 @@ namespace BM102Proje
             // 
             // Sifre
             // 
+            this.Sifre.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Sifre.Location = new System.Drawing.Point(288, 165);
-            this.Sifre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Sifre.Margin = new System.Windows.Forms.Padding(4);
             this.Sifre.Name = "Sifre";
             this.Sifre.PasswordChar = '*';
-            this.Sifre.Size = new System.Drawing.Size(323, 22);
+            this.Sifre.Size = new System.Drawing.Size(323, 31);
             this.Sifre.TabIndex = 25;
             // 
             // label3
@@ -141,10 +143,11 @@ namespace BM102Proje
             // 
             // KimlikNo
             // 
+            this.KimlikNo.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.KimlikNo.Location = new System.Drawing.Point(289, 113);
-            this.KimlikNo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.KimlikNo.Margin = new System.Windows.Forms.Padding(4);
             this.KimlikNo.Name = "KimlikNo";
-            this.KimlikNo.Size = new System.Drawing.Size(323, 22);
+            this.KimlikNo.Size = new System.Drawing.Size(323, 31);
             this.KimlikNo.TabIndex = 23;
             // 
             // label2
@@ -167,7 +170,7 @@ namespace BM102Proje
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Location = new System.Drawing.Point(21, 20);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(49, 43);
             this.button1.TabIndex = 21;
