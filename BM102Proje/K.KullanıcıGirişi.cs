@@ -31,11 +31,11 @@ namespace BM102Proje
         public static string ilet;
         private void temizle()      //TxtBoxları temizliyoruz
         {
-            TxtKimlikNumarası.Text = " ";
-            TxtSifreGirisi.Text = " ";
-            TxtRoboKodGiriş.Text = " ";
-            RoboKodGörünüm.Text = " ";
-            TxtRoboKodGiriş.Text = " ";
+            TxtKimlikNumarası.Text = "";
+            TxtSifreGirisi.Text = "";
+            TxtRoboKodGiriş.Text = "";
+            RoboKodGörünüm.Text = "";
+            TxtRoboKodGiriş.Text = "";
         }
         private void RoboKodSaklama()
         {
@@ -101,7 +101,6 @@ namespace BM102Proje
         private void KullanıcıGirişiMenü_Load(object sender, EventArgs e)
         {
             RoboKodSaklama();
-            TxtSifreGirisi.PromptChar = ' ';
         }
 
         private void Gİriş1_Click(object sender, EventArgs e)

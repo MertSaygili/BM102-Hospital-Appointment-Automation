@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Y.DoktorEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Y.DoktorEkle.Designer.cs">
+      <DependentUpon>Y.DoktorEkle.cs</DependentUpon>
+    </Compile>
     <Compile Include="K.RandevuAl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,11 +128,11 @@
     <Compile Include="Y.YöneticiGirişiMenü.Designer.cs">
       <DependentUpon>Y.YöneticiGirişiMenü.cs</DependentUpon>
     </Compile>
-    <Compile Include="YoneticiMenu.cs">
+    <Compile Include="Y.YoneticiMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="YoneticiMenu.Designer.cs">
-      <DependentUpon>YoneticiMenu.cs</DependentUpon>
+    <Compile Include="Y.YoneticiMenu.Designer.cs">
+      <DependentUpon>Y.YoneticiMenu.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="K.RandevuAl.resx">
       <DependentUpon>K.RandevuAl.cs</DependentUpon>
@@ -158,11 +164,14 @@
     <EmbeddedResource Include="K.SifremiUnuttumPaneli.resx">
       <DependentUpon>K.SifremiUnuttumPaneli.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Y.DoktorEkle.resx">
+      <DependentUpon>Y.DoktorEkle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Y.YöneticiGirişiMenü.resx">
       <DependentUpon>Y.YöneticiGirişiMenü.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="YoneticiMenu.resx">
-      <DependentUpon>YoneticiMenu.cs</DependentUpon>
+    <EmbeddedResource Include="Y.YoneticiMenu.resx">
+      <DependentUpon>Y.YoneticiMenu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="BM102ProjeDataSet.xsc">
       <DependentUpon>BM102ProjeDataSet.xsd</DependentUpon>

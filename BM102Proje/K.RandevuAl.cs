@@ -118,8 +118,22 @@ namespace BM102Proje
 
         private void RandevuAl_Load(object sender, EventArgs e)
         {
-
+            doktorlariyukle(); // doktorlar veritabanından çeker
         }
         
+        private void doktorlariyukle()
+        {
+            baglantı.Open();
+            OleDbCommand komut = new OleDbCommand("Select * from Doktorlar", baglantı);
+            OleDbDataReader dr = komut.ExecuteReader();
+
+            while (dr.Read())
+            {
+                string isim = dr.GetString(1);
+                string soyisim = dr.GetString(2);
+                RandevuDoktorAdi.Items.Add(isim+" "+soyisim);   
+            }
+            baglantı.Close();
+        }
     }
 }
