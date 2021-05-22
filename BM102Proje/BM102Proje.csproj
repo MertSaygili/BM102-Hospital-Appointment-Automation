@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="K.Sikayet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="K.Sikayet.Designer.cs">
+      <DependentUpon>K.Sikayet.cs</DependentUpon>
+    </Compile>
     <Compile Include="Y.DoktorEkle.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     <Compile Include="Y.YoneticiMenu.Designer.cs">
       <DependentUpon>Y.YoneticiMenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="K.Sikayet.resx">
+      <DependentUpon>K.Sikayet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="K.RandevuAl.resx">
       <DependentUpon>K.RandevuAl.cs</DependentUpon>
     </EmbeddedResource>
