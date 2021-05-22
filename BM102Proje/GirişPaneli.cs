@@ -19,11 +19,8 @@ namespace BM102Proje
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            GradiantPanel grp = new GradiantPanel();
-            
-            
+            GradiantPanel grp = new GradiantPanel();   
         }
-
         private void KullanıcıGirişi_Click(object sender, EventArgs e)
         {
             KullanıcıGirişiMenü KGM = new KullanıcıGirişiMenü();
