@@ -24,7 +24,7 @@ namespace BM102Proje
         {
             baglantı.Open();
             string tcno = KullanıcıGirişiMenü.ilet;
-            OleDbCommand komut = new OleDbCommand("insert into Randevular (KimlikNumarası,Sehir,Hastane,Polikinlik,DoktorAdi,Tarih,Saat) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7)", baglantı);
+            OleDbCommand komut = new OleDbCommand("insert into Randevular (KimlikNumarası,Sehir,Hastane,Polikinlik,DoktorAdi,Tarih,Saat,Sikayet) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8)", baglantı);
             komut.Parameters.AddWithValue("@p1", tcno);
             komut.Parameters.AddWithValue("@p2", RandevuSehir.SelectedItem);
             komut.Parameters.AddWithValue("@p3", RandevuHastaneAdiText.Text);
@@ -32,6 +32,7 @@ namespace BM102Proje
             komut.Parameters.AddWithValue("@p5", RandevuDoktorAdi.SelectedItem);
             komut.Parameters.AddWithValue("@p6", Convert.ToString(RandevuTarih.Value));
             komut.Parameters.AddWithValue("@p7", RandevuSaat.SelectedItem);
+            komut.Parameters.AddWithValue("@p8", RandevuSikayet.Text);
             komut.ExecuteNonQuery();
             baglantı.Close();
         }
