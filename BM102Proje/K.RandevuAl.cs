@@ -8,13 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.OleDb;
-
+using System.Net.Mail;
+using System.Net;
 namespace BM102Proje
 {
     
     public partial class RandevuAl : Form
     {
         OleDbConnection baglantı = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\veriler\\veritabani_access.mdb");
+        MailMessage mesajım1 = new MailMessage();
         public RandevuAl()
         {
             InitializeComponent();
@@ -119,6 +121,7 @@ namespace BM102Proje
                 if (kontrol() == 1) // KONTROLDEN BİR GELİRSE BAŞARIYLA YAZABİLİR
                 {
                     randevuyaz();
+                    Mail_at();
                     MessageBox.Show("Randevunuz oluşturulmuştur.");
                     temizle();
                 }
@@ -133,7 +136,23 @@ namespace BM102Proje
                 MessageBox.Show("Girdilerde eksik var!");
             }
         }
+        private void Mail_at()
+        {
+            //Mail atımı
+            mesajım1.From = new MailAddress("csmk_csmk@outlook.com");
+            mesajım1.To.Add(""); //mail gelecek
+            mesajım1.IsBodyHtml = true;     // 'body' kısmını HTML'e açık hale getiriyorum ki html kullanılabilsin 
+            mesajım1.Subject = "BM102 Hastane Randevu Sistemi"; //"Robot Kodunu paneldeki boşluğa giriniz";
+            mesajım1.Body = "";
 
+            SmtpClient smtp = new SmtpClient();
+            smtp.Credentials = new System.Net.NetworkCredential("csmk_csmk@outlook.com", "CSharpmail");
+            smtp.Host = "smtp.live.com"; //  smtp.gmail.com -> gmail için
+            smtp.EnableSsl = true;
+            smtp.Port = 587;
+
+            smtp.Send(mesajım1);
+        }
         private void iptalbutton_Click(object sender, EventArgs e)
         {
             temizle();
