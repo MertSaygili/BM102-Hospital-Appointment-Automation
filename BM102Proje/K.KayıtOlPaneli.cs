@@ -47,9 +47,9 @@ namespace BM102Proje
             isim = TxtVatandaşİsmi.Text.Split(' '); // kullanıcının girdiği isimleri böldüm
             
 
-            StringBuilder Sb = new StringBuilder(); //Sb adında stringbuilder ile string oluşturudum
+            StringBuilder Sb = new StringBuilder(); //Sb adında stringbuilder ile string oluşturdum
 
-            for(int i=0; i<isim.Length; i++)        // for döngüsüyle her ismi char arrayine dönüştürdüm ardından ilkk harfleri büyüterek hepsini stringe geri çevirdim ve stringleri topladım
+            for(int i=0; i<isim.Length; i++)        // for döngüsüyle her ismi char arrayine dönüştürdüm ardından ilk harfleri büyüterek hepsini stringe geri çevirdim ve stringleri topladım
             {
                 char[] ad = isim[i].ToCharArray();
                 ad[0] = char.ToUpper(ad[0]);
@@ -75,17 +75,17 @@ namespace BM102Proje
             mesajım1.Subject = "BM102 Hastane Randevu Sistemi"; //"Robot Kodunu paneldeki boşluğa giriniz";
             mesajım1.Body = 
                 "<html>" +
-                    "<body style = ' font family: Cambria; '>" +
-                        "<div style='border-color:red; height:50%; margin-left:30%; margin-right:30%; margin-top:7%; width:50%; '>" +
+                    "<body style = ' font family:Cambria; '>" +
+                        "<div style='border-color:red; height:50%; margin-left:30%; margin-right:30%; margin-top:5%; width:50%; '>" +
                             "<p style = ' text-align:left; font-size:160%; '>" + "Sayın, " + Sb.ToString() + " " + TxtVatandaşSoyİsim.Text.ToUpper() +  "</p>" +
                             "<hr>" + "<br>" +
-                            "<p style = 'font-size: 130%; '>" + "Sizin email adresiniz kullanılarak BM102 Hastane Randevu Sistemin'e kayıt olmaya çalışılmaktadır." + "</p>" + 
+                            "<p style = 'font-size:130%; text-align:justify;'>" + "Sizin email adresiniz kullanılarak BM102 Hastane Randevu Sistemin'e kayıt olmaya çalışılmaktadır." + "</p>" + 
                             "<br>" +
-                            "<p style = 'font-size:130%;'>" + "Kayıt olmaya çalışan kişi sizseniz aktivaston kodunuz aşağıdadır, lütfen bu kodu sisteme giriniz. Kodu girdikten sonra kaydınız başarıyla yapılmış olacaktır." + "</p>" +
+                            "<p style = 'font-size:130%; text-align:justify;'>" + "Kayıt olmaya çalışan kişi sizseniz aktivaston kodunuz aşağıdadır, lütfen bu kodu sisteme giriniz. Kodun aktivasyon süresi 120 saniyedir, 120 saniye sonra aktivasyon kodu iptal olacaktır! Kodu girdikten sonra kaydınız başarıyla yapılmış olacaktır." + "</p>" +
                             "<p style ='font-size:200%; text-align:center;  color:red; '> " + "<bold>" + "<mark style ='background-color: yellow; color:red;  '>" + kod1 + "</mark>" + "</bold>" + "</p>" +
                             "<br>" +
                             "<p>" + "İletişime geçmek için: sedanurgfb6671@hotmail.com ,absaltukab@gmail.com, mert71719601@gmail.com" + "</p>" +
-                            "<p style = 'text-align: bottom; font-size:80%; font-style: italic;'>" + "Otomatik bir mesajdır, lütfen bu mesaj üzerinden cevap vermeyiniz" + "</p>" +
+                            "<p style = 'text-align: bottom; font-size:80%; font-style: italic;'>" + "Otomatik bir mesajdır, lütfen bu mesaj üzerinden cevap vermeyiniz!" + "</p>" +
                         "</div>" +
                     "</body>" +
                 "</html>";

@@ -87,14 +87,43 @@ namespace BM102Proje
         }
         private void mail_at()
         {
+            //birden fazla ismi olan insanlar için isimlerinin ilk harfini büyük yapmaya çalışıyorum
+            string[] isim;
+            isim = TxtAd.Text.Split(' '); // kullanıcının girdiği isimleri böldüm
+
+
+            StringBuilder Sb = new StringBuilder(); //Sb adında stringbuilder ile string oluşturdum
+
+            for (int i = 0; i < isim.Length; i++)        // for döngüsüyle her ismi char arrayine dönüştürdüm ardından ilk harfleri büyüterek hepsini stringe geri çevirdim ve stringleri topladım
+            {
+                char[] ad = isim[i].ToCharArray();
+                ad[0] = char.ToUpper(ad[0]);
+                isim[i] = new string(ad);
+                Sb.Append(isim[i] + " ");
+            }
+
             //Mail atmak için gereken ayarlamalar
 
             KullanıcıGirişiMenü KGM = new KullanıcıGirişiMenü();
 
             mesajım1.From = new MailAddress("csmk_csmk@outlook.com");
             mesajım1.To.Add(TxtEmail.Text);
-            mesajım1.Subject = "Bilgileriniz hakkında değişiklik yapılmaya çalışılıyor...";
-            mesajım1.Body = "Değişiklikleri onaylamak için 'ONAYLA' yazınız.";
+            mesajım1.IsBodyHtml = true;
+            mesajım1.Subject = "BM102 Hastane Randevu Sistemi";
+            mesajım1.Body =
+                 "<html>" +
+                    "<body style = ' font family:Cambria; '>" +
+                        "<div style='border-color:red; height:50%; margin-left:30%; margin-right:30%; margin-top:5%; width:50%; '>" +
+                            "<p style = ' text-align:left; font-size:160%; '>" + "Sayın, " + Sb.ToString() + " " + TxtSoyad.Text.ToUpper() + "</p>" +
+                            "<hr>" + "<br>" +
+                            "<p style = 'font-size:130%; text-align:justify;'>" + "BM102 Hastane Randevu Sistemi'ndeki bilgileriniz güncellenmeye çalışılıyor. Güncelleme yapan siz değilseniz lütfen iletişim sekmesinden bize ulaşınız!" + "</p>" +
+                            "<br>" + 
+                            "<p style = 'font-size:130%; text-align:justify;'>" + "Kayıt olmaya çalışan kişi sizseniz lütfen Bilgileri Güncelle ekranındaki boşluğa 'ONAYLA' yazınız. 'ONAYLA' yazıldıktan sonra bilgileriniz başarıyla güncellenmiş olacaktır." + "</p>" +
+                            "<p>" + "İletişime geçmek için: sedanurgfb6671@hotmail.com ,absaltukab@gmail.com, mert71719601@gmail.com" + "</p>" +
+                            "<p style = 'text-align: bottom; font-size:80%; font-style: italic;'>" + "Otomatik bir mesajdır, lütfen bu mesaj üzerinden cevap vermeyiniz!" + "</p>" +
+                        "</div>" +
+                    "</body>" +
+                "</html>"; ;
 
             SmtpClient smtp = new SmtpClient();
             smtp.Credentials = new System.Net.NetworkCredential("csmk_csmk@outlook.com", "CSharpmail");
