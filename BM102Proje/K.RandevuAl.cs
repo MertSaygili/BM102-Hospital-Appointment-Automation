@@ -20,27 +20,6 @@ namespace BM102Proje
             InitializeComponent();
         }
 
-        private void RandevuOnaylaButon_Click(object sender, EventArgs e)
-        {
-            if (RandevuHastaneAdiText.Text != "" && RandevuSehir.SelectedIndex >= 0 && RandevuSaat.SelectedIndex >= 0 && RandevuPolAdi.SelectedIndex >= 0)
-            {
-                if (kontrol() == 1) // KONTROLDEN BİR GELİRSE BAŞARIYLA YAZABİLİR
-                {
-                    randevuyaz();
-                    MessageBox.Show("Randevunuz oluşturulmuştur.");
-                    temizle();
-                }
-                else
-                {
-                    MessageBox.Show("Bu saatte doktorun randevusu bulunmaktadır. Lütfen başka bir saat ya başka bir hekim deneyiniz."); // ÖBÜRTÜRLÜ DATABASEDA VERİ VAR DEMEK
-                    temizlesaat();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Girdilerde eksik var!");
-            }
-        }
         private void randevuyaz()
         {
             baglantı.Open();
@@ -93,10 +72,6 @@ namespace BM102Proje
             }
         }
 
-        private void RandevuIptalButon_Click(object sender, EventArgs e)
-        {
-            temizle();
-        }
         private void temizle()
         {
             RandevuDoktorAdi.SelectedIndex = -1;
@@ -134,6 +109,33 @@ namespace BM102Proje
                 RandevuDoktorAdi.Items.Add(isim+" "+soyisim);   
             }
             baglantı.Close();
+        }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            if (RandevuHastaneAdiText.Text != "" && RandevuSehir.SelectedIndex >= 0 && RandevuSaat.SelectedIndex >= 0 && RandevuPolAdi.SelectedIndex >= 0)
+            {
+                if (kontrol() == 1) // KONTROLDEN BİR GELİRSE BAŞARIYLA YAZABİLİR
+                {
+                    randevuyaz();
+                    MessageBox.Show("Randevunuz oluşturulmuştur.");
+                    temizle();
+                }
+                else
+                {
+                    MessageBox.Show("Bu saatte doktorun randevusu bulunmaktadır. Lütfen başka bir saat ya başka bir hekim deneyiniz."); // ÖBÜRTÜRLÜ DATABASEDA VERİ VAR DEMEK
+                    temizlesaat();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Girdilerde eksik var!");
+            }
+        }
+
+        private void iptalbutton_Click(object sender, EventArgs e)
+        {
+            temizle();
         }
     }
 }
