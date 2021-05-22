@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Net.Mail;
 using System.Data.OleDb;
+using System.Net;
 
 namespace BM102Proje
 {
@@ -39,6 +40,30 @@ namespace BM102Proje
         }
         public void mail()
         {
+            string soyisim = TxtVatandaşSoyİsim.Text;
+            
+            //birden fazla ismi olan insanlar için isimlerinin ilk harfini büyük yapmaya çalışıyorum
+            string[] isim;
+            isim = TxtVatandaşİsmi.Text.Split(' '); // kullanıcının girdiği isimleri böldüm
+            
+
+            StringBuilder Sb = new StringBuilder(); //Sb adında stringbuilder ile string oluşturudum
+
+            for(int i=0; i<isim.Length; i++)        // for döngüsüyle her ismi char arrayine dönüştürdüm ardından ilkk harfleri büyüterek hepsini stringe geri çevirdim ve stringleri topladım
+            {
+                char[] ad = isim[i].ToCharArray();
+                ad[0] = char.ToUpper(ad[0]);
+                isim[i] = new string(ad);
+                Sb.Append(isim[i] + " ");
+            }
+
+
+            /*  tek isimli insanlar için ismin ilk harfini büyütüyor
+            char[] isim = TxtVatandaşİsmi.Text.ToCharArray();
+            isim[0] = char.ToUpper(isim[0]);
+            string ad = new string(isim);
+            */
+
             //Mail atmak için gereken ayarlamalar
 
             KullanıcıGirişiMenü KGM = new KullanıcıGirişiMenü();
@@ -46,8 +71,24 @@ namespace BM102Proje
 
             mesajım1.From = new MailAddress("csmk_csmk@outlook.com");
             mesajım1.To.Add(TxtVatandaşEmail.Text);
-            mesajım1.Subject = "Robot Kodunu paneldeki boşluğa giriniz";
-            mesajım1.Body = kod1;
+            mesajım1.IsBodyHtml = true;     // 'body' kısmını HTML'e açık hale getiriyorum ki html kullanılabilsin 
+            mesajım1.Subject = "BM102 Hastane Randevu Sistemi"; //"Robot Kodunu paneldeki boşluğa giriniz";
+            mesajım1.Body = 
+                "<html>" +
+                    "<body style = ' font family: Cambria; '>" +
+                        "<div style='border-color:red; height:50%; margin-left:30%; margin-right:30%; margin-top:7%; width:50%; '>" +
+                            "<p style = ' text-align:left; font-size:160%; '>" + "Sayın, " + Sb.ToString() + " " + TxtVatandaşSoyİsim.Text.ToUpper() +  "</p>" +
+                            "<hr>" + "<br>" +
+                            "<p style = 'font-size: 130%; '>" + "Sizin email adresiniz kullanılarak BM102 Hastane Randevu Sistemin'e kayıt olmaya çalışılmaktadır." + "</p>" + 
+                            "<br>" +
+                            "<p style = 'font-size:130%;'>" + "Kayıt olmaya çalışan kişi sizseniz aktivaston kodunuz aşağıdadır, lütfen bu kodu sisteme giriniz. Kodu girdikten sonra kaydınız başarıyla yapılmış olacaktır." + "</p>" +
+                            "<p style ='font-size:200%; text-align:center;  color:red; '> " + "<bold>" + "<mark style ='background-color: yellow; color:red;  '>" + kod1 + "</mark>" + "</bold>" + "</p>" +
+                            "<br>" +
+                            "<p>" + "İletişime geçmek için: sedanurgfb6671@hotmail.com ,absaltukab@gmail.com, mert71719601@gmail.com" + "</p>" +
+                            "<p style = 'text-align: bottom; font-size:80%; font-style: italic;'>" + "Otomatik bir mesajdır, lütfen bu mesaj üzerinden cevap vermeyiniz" + "</p>" +
+                        "</div>" +
+                    "</body>" +
+                "</html>";
 
             SmtpClient smtp = new SmtpClient();
             smtp.Credentials = new System.Net.NetworkCredential("csmk_csmk@outlook.com", "CSharpmail");
