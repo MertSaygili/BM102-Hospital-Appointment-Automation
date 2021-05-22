@@ -13,6 +13,8 @@ namespace BM102Proje
 {
     public partial class KullanıcıMenü : Form
     {
+        public static string ad;
+        public static string soyad;
         OleDbConnection baglantı = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\veriler\\veritabani_access.mdb");  //OleDb bağlantısı
         //SqlConnection baglanti = new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=BM102Proje;Integrated Security=True"); SQl Bağlantısı
         public KullanıcıMenü()
@@ -36,6 +38,8 @@ namespace BM102Proje
             while (dr.Read())
             {
                 AdSoyad.Text = "Merhaba, " + dr.GetString(0) + " "  + dr.GetString(1);  //ad soyadı ekrana yazdırıyoruz
+                ad = dr.GetString(0);
+                soyad = dr.GetString(1);
             }
             baglantı.Close();
             //baglanti.Close();
@@ -104,6 +108,12 @@ namespace BM102Proje
             RandevuAl randevu = new RandevuAl();
             randevu.Show();
             this.Hide();
+        }
+
+        private void Sikayet_Click(object sender, EventArgs e)
+        {
+            Sikayetİstek sikayetistek = new Sikayetİstek();
+            sikayetistek.Show();
         }
     }
 }

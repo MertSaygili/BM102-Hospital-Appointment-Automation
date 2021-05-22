@@ -31,6 +31,7 @@ namespace BM102Proje
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KullanıcıMenü));
             this.gradiantPanel1 = new BM102Proje.GradiantPanel();
+            this.Sikayet = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.BilgilerimButtonBox = new System.Windows.Forms.PictureBox();
@@ -45,9 +46,9 @@ namespace BM102Proje
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.AdSoyad = new System.Windows.Forms.Label();
             this.gradiantPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Sikayet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BilgilerimButtonBox)).BeginInit();
@@ -57,7 +58,6 @@ namespace BM102Proje
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gradiantPanel1
@@ -65,6 +65,7 @@ namespace BM102Proje
             this.gradiantPanel1.BackColor = System.Drawing.Color.Transparent;
             this.gradiantPanel1.ColorBot = System.Drawing.Color.LightCyan;
             this.gradiantPanel1.ColorTop = System.Drawing.Color.LightSeaGreen;
+            this.gradiantPanel1.Controls.Add(this.Sikayet);
             this.gradiantPanel1.Controls.Add(this.button1);
             this.gradiantPanel1.Controls.Add(this.pictureBox5);
             this.gradiantPanel1.Controls.Add(this.BilgilerimButtonBox);
@@ -77,12 +78,22 @@ namespace BM102Proje
             this.gradiantPanel1.Controls.Add(this.label2);
             this.gradiantPanel1.Controls.Add(this.groupBox2);
             this.gradiantPanel1.Controls.Add(this.groupBox1);
-            this.gradiantPanel1.Controls.Add(this.pictureBox1);
             this.gradiantPanel1.Controls.Add(this.AdSoyad);
             this.gradiantPanel1.Location = new System.Drawing.Point(0, 0);
             this.gradiantPanel1.Name = "gradiantPanel1";
-            this.gradiantPanel1.Size = new System.Drawing.Size(717, 476);
+            this.gradiantPanel1.Size = new System.Drawing.Size(849, 514);
             this.gradiantPanel1.TabIndex = 0;
+            // 
+            // Sikayet
+            // 
+            this.Sikayet.Image = ((System.Drawing.Image)(resources.GetObject("Sikayet.Image")));
+            this.Sikayet.Location = new System.Drawing.Point(782, 13);
+            this.Sikayet.Name = "Sikayet";
+            this.Sikayet.Size = new System.Drawing.Size(50, 50);
+            this.Sikayet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.Sikayet.TabIndex = 22;
+            this.Sikayet.TabStop = false;
+            this.Sikayet.Click += new System.EventHandler(this.Sikayet_Click);
             // 
             // button1
             // 
@@ -90,7 +101,7 @@ namespace BM102Proje
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(12, 28);
+            this.button1.Location = new System.Drawing.Point(16, 21);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(37, 35);
             this.button1.TabIndex = 21;
@@ -102,7 +113,7 @@ namespace BM102Proje
             this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Location = new System.Drawing.Point(202, 119);
+            this.pictureBox5.Location = new System.Drawing.Point(245, 119);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(152, 121);
             this.pictureBox5.TabIndex = 20;
@@ -114,7 +125,7 @@ namespace BM102Proje
             this.BilgilerimButtonBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BilgilerimButtonBox.BackgroundImage")));
             this.BilgilerimButtonBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.BilgilerimButtonBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BilgilerimButtonBox.Location = new System.Drawing.Point(518, 124);
+            this.BilgilerimButtonBox.Location = new System.Drawing.Point(652, 119);
             this.BilgilerimButtonBox.Name = "BilgilerimButtonBox";
             this.BilgilerimButtonBox.Size = new System.Drawing.Size(152, 121);
             this.BilgilerimButtonBox.TabIndex = 19;
@@ -126,7 +137,7 @@ namespace BM102Proje
             this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Location = new System.Drawing.Point(360, 119);
+            this.pictureBox3.Location = new System.Drawing.Point(442, 119);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(152, 121);
             this.pictureBox3.TabIndex = 18;
@@ -137,7 +148,7 @@ namespace BM102Proje
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Location = new System.Drawing.Point(44, 119);
+            this.pictureBox2.Location = new System.Drawing.Point(50, 119);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(152, 121);
             this.pictureBox2.TabIndex = 17;
@@ -147,16 +158,16 @@ namespace BM102Proje
             // dateTimePicker1
             // 
             this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(346, 75);
+            this.dateTimePicker1.Location = new System.Drawing.Point(555, 69);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(324, 31);
+            this.dateTimePicker1.Size = new System.Drawing.Size(277, 31);
             this.dateTimePicker1.TabIndex = 16;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Location = new System.Drawing.Point(551, 248);
+            this.label5.Location = new System.Drawing.Point(680, 243);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(95, 23);
             this.label5.TabIndex = 15;
@@ -165,7 +176,7 @@ namespace BM102Proje
             // label4
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(365, 248);
+            this.label4.Location = new System.Drawing.Point(449, 243);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(136, 29);
             this.label4.TabIndex = 13;
@@ -176,7 +187,7 @@ namespace BM102Proje
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(220, 248);
+            this.label3.Location = new System.Drawing.Point(263, 243);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(106, 23);
             this.label3.TabIndex = 12;
@@ -187,7 +198,7 @@ namespace BM102Proje
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Location = new System.Drawing.Point(66, 248);
+            this.label2.Location = new System.Drawing.Point(57, 243);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(136, 23);
             this.label2.TabIndex = 11;
@@ -200,9 +211,9 @@ namespace BM102Proje
             this.groupBox2.BackColor = System.Drawing.Color.Transparent;
             this.groupBox2.Controls.Add(this.dataGridView2);
             this.groupBox2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox2.Location = new System.Drawing.Point(16, 304);
+            this.groupBox2.Location = new System.Drawing.Point(16, 327);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(259, 160);
+            this.groupBox2.Size = new System.Drawing.Size(324, 160);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Duyurular";
@@ -218,7 +229,7 @@ namespace BM102Proje
             this.dataGridView2.ReadOnly = true;
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(259, 135);
+            this.dataGridView2.Size = new System.Drawing.Size(324, 135);
             this.dataGridView2.TabIndex = 5;
             // 
             // groupBox1
@@ -226,9 +237,9 @@ namespace BM102Proje
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.dataGridView1);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox1.Location = new System.Drawing.Point(303, 304);
+            this.groupBox1.Location = new System.Drawing.Point(360, 327);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(402, 160);
+            this.groupBox1.Size = new System.Drawing.Size(475, 160);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Aktif Randevularım";
@@ -243,18 +254,8 @@ namespace BM102Proje
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(402, 135);
+            this.dataGridView1.Size = new System.Drawing.Size(475, 135);
             this.dataGridView1.TabIndex = 4;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(613, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(57, 51);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // AdSoyad
             // 
@@ -271,7 +272,7 @@ namespace BM102Proje
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(712, 471);
+            this.ClientSize = new System.Drawing.Size(847, 513);
             this.Controls.Add(this.gradiantPanel1);
             this.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -282,6 +283,7 @@ namespace BM102Proje
             this.Load += new System.EventHandler(this.KullanıcıMenü_Load);
             this.gradiantPanel1.ResumeLayout(false);
             this.gradiantPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Sikayet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.button1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BilgilerimButtonBox)).EndInit();
@@ -291,7 +293,6 @@ namespace BM102Proje
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -302,7 +303,6 @@ namespace BM102Proje
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label AdSoyad;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label5;
@@ -315,5 +315,6 @@ namespace BM102Proje
         private System.Windows.Forms.PictureBox BilgilerimButtonBox;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox button1;
+        private System.Windows.Forms.PictureBox Sikayet;
     }
 }
