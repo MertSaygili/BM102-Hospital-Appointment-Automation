@@ -43,6 +43,8 @@ namespace BM102Proje
             this.AsiHastaneText = new System.Windows.Forms.Label();
             this.AsiTarihText = new System.Windows.Forms.Label();
             this.AsiSehirText = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.AsiTipi = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.GeriDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AsiLogo)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -207,6 +209,8 @@ namespace BM102Proje
             // bunifuGradientPanel1
             // 
             resources.ApplyResources(this.bunifuGradientPanel1, "bunifuGradientPanel1");
+            this.bunifuGradientPanel1.Controls.Add(this.AsiTipi);
+            this.bunifuGradientPanel1.Controls.Add(this.label1);
             this.bunifuGradientPanel1.Controls.Add(this.AsiSaatText);
             this.bunifuGradientPanel1.Controls.Add(this.AsiHastaneText);
             this.bunifuGradientPanel1.Controls.Add(this.AsiTarihText);
@@ -250,6 +254,21 @@ namespace BM102Proje
             this.AsiSehirText.BackColor = System.Drawing.Color.Transparent;
             this.AsiSehirText.Name = "AsiSehirText";
             // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Name = "label1";
+            // 
+            // AsiTipi
+            // 
+            resources.ApplyResources(this.AsiTipi, "AsiTipi");
+            this.AsiTipi.FormattingEnabled = true;
+            this.AsiTipi.Items.AddRange(new object[] {
+            resources.GetString("AsiTipi.Items"),
+            resources.GetString("AsiTipi.Items1")});
+            this.AsiTipi.Name = "AsiTipi";
+            // 
             // AsiRandevusu
             // 
             this.AcceptButton = this.OnaylaButon;
@@ -284,5 +303,7 @@ namespace BM102Proje
         private System.Windows.Forms.Label AsiSaatText;
         private System.Windows.Forms.Label AsiHastaneText;
         private System.Windows.Forms.Label AsiTarihText;
+        private System.Windows.Forms.ComboBox AsiTipi;
+        private System.Windows.Forms.Label label1;
     }
 }

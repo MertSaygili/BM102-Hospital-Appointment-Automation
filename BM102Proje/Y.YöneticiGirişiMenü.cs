@@ -37,10 +37,10 @@ namespace BM102Proje
         }
         private void temizle()      //TxtBoxları temizliyoruz
         {
-            KimlikNo.Text = " ";
-            Sifre.Text = " ";
-            robokutu.Text = " ";
-            robokod.Text = " ";
+            KimlikNo.Text = "";
+            Sifre.Text = "";
+            robokutu.Text = "";
+            robokod.Text = "";
         }
 
 
@@ -80,7 +80,7 @@ namespace BM102Proje
         private void giris2_Click(object sender, EventArgs e)
         {
 
-            if (RoboKodd == robokod.Text || robokod.Text == "111")
+            if (RoboKodd == robokutu.Text || robokutu.Text == "111")
             {
                 MessageBox.Show("Girişiniz yapılıyor...");
                 Thread.Sleep(3);

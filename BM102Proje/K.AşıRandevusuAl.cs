@@ -42,19 +42,20 @@ namespace BM102Proje
         {
             baglantı.Open();
             OleDbCommand komut = new OleDbCommand("SELECT count (KimlikNumarası) from AsiRandevulari", baglantı);
-            adet = System.Convert.ToInt32(komut.ExecuteScalar());
+            adet = System.Convert.ToInt32(komut.ExecuteScalar()); // BURAYA BAKILACAK
             baglantı.Close();
             return adet;
         }
         private void bilgileriyaz() {
             baglantı.Open();
             string tcno = KullanıcıGirişiMenü.ilet;
-            OleDbCommand komut = new OleDbCommand("insert into AsiRandevulari (KimlikNumarası,Sehir,Hastane,Saat,Tarih) values (@p1,@p2,@p3,@p4,@p5)", baglantı);
+            OleDbCommand komut = new OleDbCommand("insert into AsiRandevulari (KimlikNumarası,Sehir,Hastane,Saat,Tarih,AsiTipi) values (@p1,@p2,@p3,@p4,@p5,@p6)", baglantı);
             komut.Parameters.AddWithValue("@p1", tcno);
             komut.Parameters.AddWithValue("@p2", AsiSehir.SelectedItem);
             komut.Parameters.AddWithValue("@p3", AsiHastane.Text);
             komut.Parameters.AddWithValue("@p4", AsiSaat.SelectedItem);
             komut.Parameters.AddWithValue("@p5", AsiTarih.Value);
+            komut.Parameters.AddWithValue("@p6", AsiTipi.SelectedItem);
             komut.ExecuteNonQuery();
             baglantı.Close();
         }

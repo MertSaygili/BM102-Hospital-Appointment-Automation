@@ -62,5 +62,12 @@ namespace BM102Proje
             this.Hide();
             DM.Show();
         }
+
+        private void bilgiguncelle_Click(object sender, EventArgs e)
+        {
+            YoneticiBilgileri YB = new YoneticiBilgileri();
+            this.Hide();
+            YB.Show();
+        }
     }
 }

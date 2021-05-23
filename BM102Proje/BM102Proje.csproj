@@ -53,6 +53,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Y.DuyuruEkleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Y.DuyuruEkleme.Designer.cs">
+      <DependentUpon>Y.DuyuruEkleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Y.AsiStok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Y.AsiStok.Designer.cs">
+      <DependentUpon>Y.AsiStok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Y.YoneticiBilgileri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Y.YoneticiBilgileri.Designer.cs">
+      <DependentUpon>Y.YoneticiBilgileri.cs</DependentUpon>
+    </Compile>
     <Compile Include="K.Sikayet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +158,15 @@
     <Compile Include="Y.YoneticiMenu.Designer.cs">
       <DependentUpon>Y.YoneticiMenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Y.DuyuruEkleme.resx">
+      <DependentUpon>Y.DuyuruEkleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Y.AsiStok.resx">
+      <DependentUpon>Y.AsiStok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Y.YoneticiBilgileri.resx">
+      <DependentUpon>Y.YoneticiBilgileri.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="K.Sikayet.resx">
       <DependentUpon>K.Sikayet.cs</DependentUpon>
     </EmbeddedResource>

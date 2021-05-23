@@ -122,14 +122,14 @@
     <value>Cambria, 10.8pt</value>
   </data>
   <data name="AsiTarih.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 171</value>
+    <value>167, 129</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="AsiTarih.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="AsiTarih.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 29</value>
+    <value>222, 24</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="AsiTarih.TabIndex" type="System.Int32, mscorlib">
@@ -145,7 +145,7 @@
     <value>bunifuGradientPanel1</value>
   </data>
   <data name="&gt;&gt;AsiTarih.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>13</value>
   </data>
   <data name="GeriDon.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
@@ -154,13 +154,10 @@
     <value>NoControl</value>
   </data>
   <data name="GeriDon.Location" type="System.Drawing.Point, System.Drawing">
-    <value>13, 9</value>
-  </data>
-  <data name="GeriDon.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>10, 7</value>
   </data>
   <data name="GeriDon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 42</value>
+    <value>34, 34</value>
   </data>
   <data name="GeriDon.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -175,7 +172,7 @@
     <value>bunifuGradientPanel1</value>
   </data>
   <data name="&gt;&gt;GeriDon.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>12</value>
   </data>
   <data name="AsiLogo.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2231,13 +2228,13 @@
     <value>NoControl</value>
   </data>
   <data name="AsiLogo.Location" type="System.Drawing.Point, System.Drawing">
-    <value>496, 9</value>
+    <value>372, 7</value>
   </data>
   <data name="AsiLogo.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="AsiLogo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>57, 50</value>
+    <value>43, 41</value>
   </data>
   <data name="AsiLogo.TabIndex" type="System.Int32, mscorlib">
     <value>27</value>
@@ -2252,7 +2249,7 @@
     <value>bunifuGradientPanel1</value>
   </data>
   <data name="&gt;&gt;AsiLogo.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>11</value>
   </data>
   <data name="AsiSaat.Font" type="System.Drawing.Font, System.Drawing">
     <value>Cambria, 12pt</value>
@@ -2294,13 +2291,13 @@
     <value>21.00</value>
   </data>
   <data name="AsiSaat.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 206</value>
+    <value>167, 157</value>
   </data>
   <data name="AsiSaat.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="AsiSaat.Size" type="System.Drawing.Size, System.Drawing">
-    <value>173, 31</value>
+    <value>131, 27</value>
   </data>
   <data name="AsiSaat.TabIndex" type="System.Int32, mscorlib">
     <value>29</value>
@@ -2315,7 +2312,7 @@
     <value>bunifuGradientPanel1</value>
   </data>
   <data name="&gt;&gt;AsiSaat.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>10</value>
   </data>
   <data name="OnaylaButon.Font" type="System.Drawing.Font, System.Drawing">
     <value>Cambria, 7.8pt</value>
@@ -2324,13 +2321,13 @@
     <value>NoControl</value>
   </data>
   <data name="OnaylaButon.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 273</value>
+    <value>197, 234</value>
   </data>
   <data name="OnaylaButon.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="OnaylaButon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 46</value>
+    <value>94, 37</value>
   </data>
   <data name="OnaylaButon.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
@@ -2348,7 +2345,7 @@
     <value>bunifuGradientPanel1</value>
   </data>
   <data name="&gt;&gt;OnaylaButon.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>9</value>
   </data>
   <data name="IptalButon.Font" type="System.Drawing.Font, System.Drawing">
     <value>Cambria, 7.8pt</value>
@@ -2357,13 +2354,13 @@
     <value>NoControl</value>
   </data>
   <data name="IptalButon.Location" type="System.Drawing.Point, System.Drawing">
-    <value>393, 273</value>
+    <value>295, 234</value>
   </data>
   <data name="IptalButon.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="IptalButon.Size" type="System.Drawing.Size, System.Drawing">
-    <value>125, 46</value>
+    <value>94, 37</value>
   </data>
   <data name="IptalButon.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
@@ -2381,7 +2378,7 @@
     <value>bunifuGradientPanel1</value>
   </data>
   <data name="&gt;&gt;IptalButon.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>8</value>
   </data>
   <data name="AsiSehir.Font" type="System.Drawing.Font, System.Drawing">
     <value>Cambria, 12pt</value>
@@ -2630,13 +2627,13 @@
     <value>Zonguldak </value>
   </data>
   <data name="AsiSehir.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 95</value>
+    <value>167, 67</value>
   </data>
   <data name="AsiSehir.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="AsiSehir.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 31</value>
+    <value>222, 27</value>
   </data>
   <data name="AsiSehir.TabIndex" type="System.Int32, mscorlib">
     <value>35</value>
@@ -2651,19 +2648,19 @@
     <value>bunifuGradientPanel1</value>
   </data>
   <data name="&gt;&gt;AsiSehir.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>7</value>
   </data>
   <data name="AsiHastane.Font" type="System.Drawing.Font, System.Drawing">
     <value>Cambria, 12pt</value>
   </data>
   <data name="AsiHastane.Location" type="System.Drawing.Point, System.Drawing">
-    <value>223, 132</value>
+    <value>167, 97</value>
   </data>
   <data name="AsiHastane.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="AsiHastane.Size" type="System.Drawing.Size, System.Drawing">
-    <value>295, 31</value>
+    <value>222, 26</value>
   </data>
   <data name="AsiHastane.TabIndex" type="System.Int32, mscorlib">
     <value>36</value>
@@ -2678,17 +2675,86 @@
     <value>bunifuGradientPanel1</value>
   </data>
   <data name="&gt;&gt;AsiHastane.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>6</value>
   </data>
   <data name="bunifuGradientPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAABESURBVChTY2i4ceU/PszQfffmf3yYYcaj+//xYYYlz5/8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABESURBVChTY2i4ceU/PszQfffmf3yYYcaj+//xYYYlz5/8
         x4cZNrx++R8fZtj94f1/fJjhxNcv//Fhhiu/fv3HjX/9BwCtGt4h30KhLAAAAABJRU5ErkJggg==
 </value>
   </data>
   <data name="bunifuGradientPanel1.BackgroundImageLayout" type="System.Windows.Forms.ImageLayout, System.Windows.Forms">
     <value>Stretch</value>
+  </data>
+  <data name="AsiTipi.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 12pt</value>
+  </data>
+  <data name="AsiTipi.Items" xml:space="preserve">
+    <value>Biontech</value>
+  </data>
+  <data name="AsiTipi.Items1" xml:space="preserve">
+    <value>Sinovac</value>
+  </data>
+  <data name="AsiTipi.Location" type="System.Drawing.Point, System.Drawing">
+    <value>167, 191</value>
+  </data>
+  <data name="AsiTipi.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
+  </data>
+  <data name="AsiTipi.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 27</value>
+  </data>
+  <data name="AsiTipi.TabIndex" type="System.Int32, mscorlib">
+    <value>42</value>
+  </data>
+  <data name="&gt;&gt;AsiTipi.Name" xml:space="preserve">
+    <value>AsiTipi</value>
+  </data>
+  <data name="&gt;&gt;AsiTipi.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;AsiTipi.Parent" xml:space="preserve">
+    <value>bunifuGradientPanel1</value>
+  </data>
+  <data name="&gt;&gt;AsiTipi.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Cambria, 12pt</value>
+  </data>
+  <data name="label1.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 194</value>
+  </data>
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>115, 19</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>41</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Aşı Tipi Seçiniz:</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>bunifuGradientPanel1</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="AsiSaatText.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2700,10 +2766,13 @@
     <value>NoControl</value>
   </data>
   <data name="AsiSaatText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 214</value>
+    <value>46, 164</value>
+  </data>
+  <data name="AsiSaatText.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="AsiSaatText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 23</value>
+    <value>92, 19</value>
   </data>
   <data name="AsiSaatText.TabIndex" type="System.Int32, mscorlib">
     <value>40</value>
@@ -2721,7 +2790,7 @@
     <value>bunifuGradientPanel1</value>
   </data>
   <data name="&gt;&gt;AsiSaatText.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>2</value>
   </data>
   <data name="AsiHastaneText.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2733,10 +2802,13 @@
     <value>NoControl</value>
   </data>
   <data name="AsiHastaneText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 140</value>
+    <value>46, 104</value>
+  </data>
+  <data name="AsiHastaneText.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="AsiHastaneText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>146, 23</value>
+    <value>116, 19</value>
   </data>
   <data name="AsiHastaneText.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
@@ -2754,7 +2826,7 @@
     <value>bunifuGradientPanel1</value>
   </data>
   <data name="&gt;&gt;AsiHastaneText.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
   </data>
   <data name="AsiTarihText.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2766,10 +2838,13 @@
     <value>NoControl</value>
   </data>
   <data name="AsiTarihText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 177</value>
+    <value>46, 134</value>
+  </data>
+  <data name="AsiTarihText.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="AsiTarihText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 23</value>
+    <value>99, 19</value>
   </data>
   <data name="AsiTarihText.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
@@ -2787,7 +2862,7 @@
     <value>bunifuGradientPanel1</value>
   </data>
   <data name="&gt;&gt;AsiTarihText.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>4</value>
   </data>
   <data name="AsiSehirText.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -2799,10 +2874,13 @@
     <value>NoControl</value>
   </data>
   <data name="AsiSehirText.Location" type="System.Drawing.Point, System.Drawing">
-    <value>61, 103</value>
+    <value>46, 74</value>
+  </data>
+  <data name="AsiSehirText.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="AsiSehirText.Size" type="System.Drawing.Size, System.Drawing">
-    <value>124, 23</value>
+    <value>99, 19</value>
   </data>
   <data name="AsiSehirText.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -2820,7 +2898,7 @@
     <value>bunifuGradientPanel1</value>
   </data>
   <data name="&gt;&gt;AsiSehirText.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>5</value>
   </data>
   <data name="bunifuGradientPanel1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 7.8pt, style=Italic</value>
@@ -2829,10 +2907,10 @@
     <value>-1, -1</value>
   </data>
   <data name="bunifuGradientPanel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="bunifuGradientPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>940, 497</value>
+    <value>705, 404</value>
   </data>
   <data name="bunifuGradientPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -2853,7 +2931,7 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>8, 16</value>
+    <value>6, 13</value>
   </data>
   <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
@@ -2862,7 +2940,7 @@
     <value>Center</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>579, 346</value>
+    <value>434, 281</value>
   </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
@@ -2939,7 +3017,7 @@
 </value>
   </data>
   <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 2, 3, 2</value>
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
     <value>CenterScreen</value>
