@@ -138,12 +138,30 @@ namespace BM102Proje
         }
         private void Mail_at()
         {
+            //verilerimizden mail isim ve soyad bilgilerini alıyoruz
+            string email = KullanıcıMenü.mail;
+            string isim = KullanıcıMenü.ad;
+            string soyisim = KullanıcıMenü.soyad;
             //Mail atımı
             mesajım1.From = new MailAddress("csmk_csmk@outlook.com");
-            mesajım1.To.Add(""); //mail gelecek
+            mesajım1.To.Add(email); //mail gelecek
             mesajım1.IsBodyHtml = true;     // 'body' kısmını HTML'e açık hale getiriyorum ki html kullanılabilsin 
             mesajım1.Subject = "BM102 Hastane Randevu Sistemi"; //"Robot Kodunu paneldeki boşluğa giriniz";
-            mesajım1.Body = "";
+            mesajım1.Body = 
+                "<html>" +
+                    "<body style = ' font family:Cambria; '>" +
+                        "<div style='border-color:red; height:50%; margin-left:30%; margin-right:30%; margin-top:5%; width:50%; '>" +
+                            "<p style = ' text-align:left; font-size:160%; '>" + "Sayın, " + isim.ToUpper() + " " + soyisim.ToUpper() + "</p>" +
+                            "<hr>" + "<br>" +
+                            "<p style = 'font-size:130%; text-align:justify;'>" + "Randevunuz, " + RandevuHastaneAdiText.Text + " " + RandevuPolAdi.SelectedItem + " Doktor " + RandevuDoktorAdi.SelectedItem + " ile " + Convert.ToString(RandevuTarih.Value).Substring(0, 10) + " tarihinde saat " + RandevuSaat.SelectedItem + "'da oluşturulmuştur." + "</p>" +
+                            "<br>" +
+                            "<p style = 'font-size:130%; text-align:justify;'>" + "Lütfen randevu saatinizden en geç 15 dakika önce hastanenize giderek gerekli birimden randevunuzu onaylayınız." + "</p>" +
+                            "<br>" +
+                            "<p>" + "Herhangi bir hata bulunuyorsa iletişime geçmek için: sedanurgfb6671@hotmail.com ,absaltukab@gmail.com, mert71719601@gmail.com" + "</p>" +
+                            "<p style = 'text-align: bottom; font-size:80%; font-style: italic;'>" + "Otomatik bir mesajdır, lütfen bu mesaj üzerinden cevap vermeyiniz!" + "</p>" +
+                        "</div>" +
+                    "</body>" +
+                "</html>";
 
             SmtpClient smtp = new SmtpClient();
             smtp.Credentials = new System.Net.NetworkCredential("csmk_csmk@outlook.com", "CSharpmail");

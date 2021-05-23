@@ -15,6 +15,7 @@ namespace BM102Proje
     {
         public static string ad;
         public static string soyad;
+        public static string mail;
         OleDbConnection baglantı = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\veriler\\veritabani_access.mdb");  //OleDb bağlantısı
         //SqlConnection baglanti = new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=BM102Proje;Integrated Security=True"); SQl Bağlantısı
         public KullanıcıMenü()
@@ -26,7 +27,7 @@ namespace BM102Proje
         { 
             string a = KullanıcıGirişiMenü.ilet;    //Kullanıcı giriş menüsünden  ilet adlı stringi a adlı stringde atıyoruz
             baglantı.Open();
-            OleDbCommand komut = new OleDbCommand("Select HastaAdı, HastaSoyadı from HastaBilgileri where HastaKimlikNumarası=@a1", baglantı);
+            OleDbCommand komut = new OleDbCommand("Select HastaAdı, HastaSoyadı, HastaEmailAdresi from HastaBilgileri where HastaKimlikNumarası=@a1", baglantı);
             komut.Parameters.AddWithValue("@a1", a);
             OleDbDataReader dr = komut.ExecuteReader();
 
@@ -40,6 +41,7 @@ namespace BM102Proje
                 AdSoyad.Text = "Merhaba, " + dr.GetString(0) + " "  + dr.GetString(1);  //ad soyadı ekrana yazdırıyoruz
                 ad = dr.GetString(0);
                 soyad = dr.GetString(1);
+                mail = dr.GetString(2);
             }
             baglantı.Close();
             //baglanti.Close();

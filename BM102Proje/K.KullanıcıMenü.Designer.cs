@@ -86,6 +86,7 @@ namespace BM102Proje
             // 
             // Sikayet
             // 
+            this.Sikayet.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Sikayet.Image = ((System.Drawing.Image)(resources.GetObject("Sikayet.Image")));
             this.Sikayet.Location = new System.Drawing.Point(782, 13);
             this.Sikayet.Name = "Sikayet";
