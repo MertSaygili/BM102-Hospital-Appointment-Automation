@@ -61,7 +61,7 @@ namespace BM102Proje
             // Yönetici_cıkar
             // 
             this.Yönetici_cıkar.BackColor = System.Drawing.Color.DarkGray;
-            this.Yönetici_cıkar.Location = new System.Drawing.Point(302, 392);
+            this.Yönetici_cıkar.Location = new System.Drawing.Point(649, 392);
             this.Yönetici_cıkar.Name = "Yönetici_cıkar";
             this.Yönetici_cıkar.Size = new System.Drawing.Size(193, 76);
             this.Yönetici_cıkar.TabIndex = 3;
@@ -72,7 +72,7 @@ namespace BM102Proje
             // yönetici_ekle
             // 
             this.yönetici_ekle.BackColor = System.Drawing.Color.DarkGray;
-            this.yönetici_ekle.Location = new System.Drawing.Point(42, 392);
+            this.yönetici_ekle.Location = new System.Drawing.Point(425, 392);
             this.yönetici_ekle.Name = "yönetici_ekle";
             this.yönetici_ekle.Size = new System.Drawing.Size(193, 76);
             this.yönetici_ekle.TabIndex = 2;
@@ -84,7 +84,7 @@ namespace BM102Proje
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.dataGridView1);
-            this.groupBox1.Location = new System.Drawing.Point(3, 98);
+            this.groupBox1.Location = new System.Drawing.Point(15, 98);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(827, 273);
             this.groupBox1.TabIndex = 1;
@@ -120,10 +120,10 @@ namespace BM102Proje
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Georgia", 14F);
-            this.label1.Location = new System.Drawing.Point(330, 23);
+            this.label1.Font = new System.Drawing.Font("Georgia", 18F);
+            this.label1.Location = new System.Drawing.Point(270, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(191, 29);
+            this.label1.Size = new System.Drawing.Size(238, 35);
             this.label1.TabIndex = 22;
             this.label1.Text = "Yönetici Bilgileri";
             // 
