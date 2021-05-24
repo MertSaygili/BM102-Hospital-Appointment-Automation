@@ -55,23 +55,6 @@ namespace BM102Proje
             isaretlenmişi_gönder = isaretlenmis;
 
         }
-
-        private void Yönetici_cıkar_Click(object sender, EventArgs e)
-        {
-            string kimlik_numarası = dataGridView1.Rows[isaretlenmişi_gönder].Cells[2].Value.ToString(); //kimlik_numarası adlı değişkene 2 numaralı celldeki(kimliknumarası) değerini atıyoruz
-
-            baglantı.Open();
-
-            OleDbCommand kmt1 = new OleDbCommand("Delete * From YoneticiBilgileri Where KimlikNumarası = @a1", baglantı); //Silme işlemi için komut
-            kmt1.Parameters.AddWithValue("@a1", kimlik_numarası);
-            kmt1.ExecuteNonQuery();
-            baglantı.Close();
-
-            MessageBox.Show("Yönetici başarıyla silindi.");
-            verileri_göster();  //güncel verileri gösteriyoruz
-
-        }
-
         private void yönetici_ekle_Click(object sender, EventArgs e)
         {
             int sayı = 0;
@@ -116,6 +99,25 @@ namespace BM102Proje
             }
 
             baglantı.Close();
+        }
+        private void Yönetici_cıkar_Click(object sender, EventArgs e)
+        {
+            string kimlik_numarası = dataGridView1.Rows[isaretlenmişi_gönder].Cells[2].Value.ToString(); //kimlik_numarası adlı değişkene 2 numaralı celldeki(kimliknumarası) değerini atıyoruz
+
+            baglantı.Open();
+
+            OleDbCommand kmt1 = new OleDbCommand("Delete * From YoneticiBilgileri Where KimlikNumarası = @a1", baglantı); //Silme işlemi için komut
+            kmt1.Parameters.AddWithValue("@a1", kimlik_numarası);
+            kmt1.ExecuteNonQuery();
+            baglantı.Close();
+
+            MessageBox.Show("Yönetici başarıyla silindi.");
+            verileri_göster();  //güncel verileri gösteriyoruz
+
+        }
+        private void Güncelle_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void temizle() // kullanıcı boş girdiğinde veya aynı tc'den girdiğinde celleri temizliyorum

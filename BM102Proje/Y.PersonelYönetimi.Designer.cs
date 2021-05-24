@@ -37,6 +37,7 @@ namespace BM102Proje
             this.yönetici_ekle = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Güncelle = new System.Windows.Forms.Button();
             this.gradiantPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.button1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -47,6 +48,7 @@ namespace BM102Proje
             // 
             this.gradiantPanel1.ColorBot = System.Drawing.Color.LightCyan;
             this.gradiantPanel1.ColorTop = System.Drawing.Color.LightSeaGreen;
+            this.gradiantPanel1.Controls.Add(this.Güncelle);
             this.gradiantPanel1.Controls.Add(this.label1);
             this.gradiantPanel1.Controls.Add(this.button1);
             this.gradiantPanel1.Controls.Add(this.Yönetici_cıkar);
@@ -87,7 +89,7 @@ namespace BM102Proje
             // Yönetici_cıkar
             // 
             this.Yönetici_cıkar.BackColor = System.Drawing.Color.DarkGray;
-            this.Yönetici_cıkar.Location = new System.Drawing.Point(649, 392);
+            this.Yönetici_cıkar.Location = new System.Drawing.Point(450, 392);
             this.Yönetici_cıkar.Name = "Yönetici_cıkar";
             this.Yönetici_cıkar.Size = new System.Drawing.Size(193, 76);
             this.Yönetici_cıkar.TabIndex = 3;
@@ -98,7 +100,7 @@ namespace BM102Proje
             // yönetici_ekle
             // 
             this.yönetici_ekle.BackColor = System.Drawing.Color.DarkGray;
-            this.yönetici_ekle.Location = new System.Drawing.Point(425, 392);
+            this.yönetici_ekle.Location = new System.Drawing.Point(251, 392);
             this.yönetici_ekle.Name = "yönetici_ekle";
             this.yönetici_ekle.Size = new System.Drawing.Size(193, 76);
             this.yönetici_ekle.TabIndex = 2;
@@ -127,6 +129,17 @@ namespace BM102Proje
             this.dataGridView1.Size = new System.Drawing.Size(827, 250);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
+            // 
+            // Güncelle
+            // 
+            this.Güncelle.BackColor = System.Drawing.Color.DarkGray;
+            this.Güncelle.Location = new System.Drawing.Point(649, 392);
+            this.Güncelle.Name = "Güncelle";
+            this.Güncelle.Size = new System.Drawing.Size(193, 76);
+            this.Güncelle.TabIndex = 23;
+            this.Güncelle.Text = "Güncelle";
+            this.Güncelle.UseVisualStyleBackColor = false;
+            this.Güncelle.Click += new System.EventHandler(this.Güncelle_Click);
             // 
             // PersonelYönetimi
             // 
@@ -161,5 +174,6 @@ namespace BM102Proje
         private System.Windows.Forms.Button Yönetici_cıkar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox button1;
+        private System.Windows.Forms.Button Güncelle;
     }
 }

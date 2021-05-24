@@ -96,7 +96,7 @@ namespace BM102Proje
 
         private void RandevuAl_Load(object sender, EventArgs e)
         {
-            doktorlariyukle(); // doktorlar veritabanından çeker
+            //doktorlariyukle(); // doktorlar veritabanından çeker
         }
         
         private void doktorlariyukle()
@@ -113,7 +113,24 @@ namespace BM102Proje
             }
             baglantı.Close();
         }
+        private void RandevuPolAdi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            RandevuDoktorAdi.Items.Clear();
+            baglantı.Open();
 
+            OleDbCommand kmt = new OleDbCommand("Select Ad, Soyad From Doktorlar where Poliklinik = @a1", baglantı);
+            kmt.Parameters.AddWithValue("@a1 ", RandevuPolAdi.SelectedItem.ToString());
+            OleDbDataReader dr1 = kmt.ExecuteReader();
+
+            while (dr1.Read())
+            {
+                string isim = dr1.GetString(0);
+                string soyisim = dr1.GetString(1);
+                RandevuDoktorAdi.Items.Add(isim + " " + soyisim);
+            }
+
+            baglantı.Close();
+        }
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             if (RandevuHastaneAdiText.Text != "" && RandevuSehir.SelectedIndex >= 0 && RandevuSaat.SelectedIndex >= 0 && RandevuPolAdi.SelectedIndex >= 0)
@@ -176,5 +193,6 @@ namespace BM102Proje
         {
             temizle();
         }
+
     }
 }
