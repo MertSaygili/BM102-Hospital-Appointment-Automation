@@ -32,7 +32,7 @@ namespace BM102Proje
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YöneticiGirişiMenü));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.robokod = new System.Windows.Forms.Label();
-            this.robokutu = new System.Windows.Forms.MaskedTextBox();
+            this.Txtrobokutu = new System.Windows.Forms.MaskedTextBox();
             this.giris1 = new System.Windows.Forms.Button();
             this.giris2 = new System.Windows.Forms.Button();
             this.Sifre = new System.Windows.Forms.MaskedTextBox();
@@ -50,7 +50,7 @@ namespace BM102Proje
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuGradientPanel1.Controls.Add(this.robokod);
-            this.bunifuGradientPanel1.Controls.Add(this.robokutu);
+            this.bunifuGradientPanel1.Controls.Add(this.Txtrobokutu);
             this.bunifuGradientPanel1.Controls.Add(this.giris1);
             this.bunifuGradientPanel1.Controls.Add(this.giris2);
             this.bunifuGradientPanel1.Controls.Add(this.Sifre);
@@ -83,14 +83,14 @@ namespace BM102Proje
             this.robokod.TabIndex = 29;
             this.robokod.Text = "xxxxx";
             // 
-            // robokutu
+            // Txtrobokutu
             // 
-            this.robokutu.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.robokutu.Location = new System.Drawing.Point(289, 249);
-            this.robokutu.Margin = new System.Windows.Forms.Padding(4);
-            this.robokutu.Name = "robokutu";
-            this.robokutu.Size = new System.Drawing.Size(112, 31);
-            this.robokutu.TabIndex = 28;
+            this.Txtrobokutu.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Txtrobokutu.Location = new System.Drawing.Point(289, 249);
+            this.Txtrobokutu.Margin = new System.Windows.Forms.Padding(4);
+            this.Txtrobokutu.Name = "Txtrobokutu";
+            this.Txtrobokutu.Size = new System.Drawing.Size(112, 31);
+            this.Txtrobokutu.TabIndex = 28;
             // 
             // giris1
             // 
@@ -222,6 +222,6 @@ namespace BM102Proje
         private System.Windows.Forms.Button giris2;
         private System.Windows.Forms.Button giris1;
         private System.Windows.Forms.Label robokod;
-        private System.Windows.Forms.MaskedTextBox robokutu;
+        private System.Windows.Forms.MaskedTextBox Txtrobokutu;
     }
 }

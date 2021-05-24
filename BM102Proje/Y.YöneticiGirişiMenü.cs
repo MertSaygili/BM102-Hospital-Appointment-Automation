@@ -24,7 +24,7 @@ namespace BM102Proje
 
         private void YöneticiGirişiMenü_Load(object sender, EventArgs e)
         {
-            robokutu.Visible = false;
+            Txtrobokutu.Visible = false;
             robokod.Visible = false;
             giris2.Visible = false;
         }
@@ -39,7 +39,7 @@ namespace BM102Proje
         {
             KimlikNo.Text = "";
             Sifre.Text = "";
-            robokutu.Text = "";
+            Txtrobokutu.Text = "";
             robokod.Text = "";
         }
 
@@ -61,7 +61,7 @@ namespace BM102Proje
                 RoboKodd = KGM.RoboKod();       //RoboKodd adlı değişkene robotkodunu atıyorum
                 robokod.Text = RoboKodd;   //RoboKodu'un gereçlerini görünür yapıyorum
                 robokod.Visible = true;
-                robokutu.Visible = true;
+                Txtrobokutu.Visible = true;
             }
             else
             {
@@ -80,7 +80,7 @@ namespace BM102Proje
         private void giris2_Click(object sender, EventArgs e)
         {
 
-            if (RoboKodd == robokutu.Text || robokutu.Text == "111")
+            if (RoboKodd == Txtrobokutu.Text || Txtrobokutu.Text == "111")
             {
                 MessageBox.Show("Girişiniz yapılıyor...");
                 Thread.Sleep(3);
@@ -91,7 +91,7 @@ namespace BM102Proje
             else
             {
                 MessageBox.Show("Uyuşmayan kod!");
-                robokutu.Visible = false;
+                Txtrobokutu.Visible = false;
                 robokod.Visible = false;
                 giris2.Visible = false;
                 giris1.Visible = true;
