@@ -114,7 +114,7 @@ namespace BM102Proje
             baglantı.Close();
         }
 
-        private void temizle()
+        private void temizle() // kullanıcı boş girdiğinde veya aynı tc'den girdiğinde celleri temizliyorum
         {
             dataGridView1.Rows[isaretlenmişi_gönder].Cells[0].Value = " ";
             dataGridView1.Rows[isaretlenmişi_gönder].Cells[1].Value = " ";
