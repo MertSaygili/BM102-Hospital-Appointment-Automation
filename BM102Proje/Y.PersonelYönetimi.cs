@@ -70,17 +70,17 @@ namespace BM102Proje
             {
                 // İkinci olarak sistemde kayıtlı olan tc'nin tekrar kaydedilmesini önlüyoruz.
                 baglantı.Open();
-                OleDbCommand kmt0 = new OleDbCommand("Select KimlikNumarası From YoneticiBilgileri", baglantı);
+                OleDbCommand kmt0 = new OleDbCommand("Select KimlikNumarası From YoneticiBilgileri where KimlikNumarası = @a1", baglantı);
+                kmt0.Parameters.AddWithValue("@a1", dataGridView1.Rows[isaretlenmişi_gönder].Cells[2].Value.ToString());
                 OleDbDataReader dr = kmt0.ExecuteReader();
                 while (dr.Read())
                 {
                     sayı++;      
                 }
                 baglantı.Close();
-                if (sayı > 1)
+                if (sayı >= 1)
                 {
                     MessageBox.Show("Aynı kimlik numarası için 2 kişi kaydedilemez!");
-                    sayı = 0;
                     temizle();
                 }
                 else
@@ -96,7 +96,6 @@ namespace BM102Proje
                     kmt1.Parameters.AddWithValue("@a6", dataGridView1.Rows[isaretlenmişi_gönder].Cells[5].Value.ToString());
                     kmt1.ExecuteNonQuery();
                     MessageBox.Show("Başarıyla yönetici eklenmiştir.");
-                    sayı = 0;
                     baglantı.Close();
                 }
 
