@@ -76,13 +76,16 @@ namespace BM102Proje
                 {
                     sayı++;      
                 }
+                baglantı.Close();
                 if (sayı > 1)
                 {
                     MessageBox.Show("Aynı kimlik numarası için 2 kişi kaydedilemez!");
+                    sayı = 0;
                     temizle();
                 }
                 else
                 {
+                    baglantı.Open();
                     // Kullanıcının datagridview'e girdiği değerleri kaydediyoruz 
                     OleDbCommand kmt1 = new OleDbCommand("insert into YoneticiBilgileri (Ad, Soyad, KimlikNumarası, Email, Telefon, Sifre) values (@a1,@a2,@a3,@a4,@a5,@a6)", baglantı);
                     kmt1.Parameters.AddWithValue("@a1", dataGridView1.Rows[isaretlenmişi_gönder].Cells[0].Value.ToString());
@@ -93,12 +96,11 @@ namespace BM102Proje
                     kmt1.Parameters.AddWithValue("@a6", dataGridView1.Rows[isaretlenmişi_gönder].Cells[5].Value.ToString());
                     kmt1.ExecuteNonQuery();
                     MessageBox.Show("Başarıyla yönetici eklenmiştir.");
+                    sayı = 0;
+                    baglantı.Close();
                 }
-                
 
             }
-
-            baglantı.Close();
         }
         private void Yönetici_cıkar_Click(object sender, EventArgs e)
         {
