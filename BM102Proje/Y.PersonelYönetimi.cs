@@ -90,12 +90,6 @@ namespace BM102Proje
                 OleDbDataReader dr = kmt0.ExecuteReader();
                 if (dr.Read())
                 {
-                    MessageBox.Show("Aynı kimlik numarası için 2 adet farklı kayıt açılamaz!");
-                    temizle();
-                }
-                else
-                {
-
                     // Kullanıcının datagridview'e girdiği değerleri kaydediyoruz 
                     OleDbCommand kmt1 = new OleDbCommand("insert into YoneticiBilgileri (Ad, Soyad, KimlikNumarası, Email, Telefon, Sifre) values (@a1,@a2,@a3,@a4,@a5,@a6)", baglantı);
                     kmt1.Parameters.AddWithValue("@a1", dataGridView1.Rows[isaretlenmişi_gönder].Cells[0].Value.ToString());
@@ -106,6 +100,13 @@ namespace BM102Proje
                     kmt1.Parameters.AddWithValue("@a6", dataGridView1.Rows[isaretlenmişi_gönder].Cells[5].Value.ToString());
                     kmt1.ExecuteNonQuery();
                     MessageBox.Show("Başarıyla yönetici eklenmiştir.");
+                   
+                }
+                else
+                {
+                    MessageBox.Show("Aynı kimlik numarası için 2 adet farklı kayıt açılamaz!");
+                    temizle();
+
                 }
 
             }
