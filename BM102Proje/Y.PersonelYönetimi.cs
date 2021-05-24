@@ -74,6 +74,7 @@ namespace BM102Proje
 
         private void yönetici_ekle_Click(object sender, EventArgs e)
         {
+            int sayı = 0;
 
             // Kullanıcının datagridview'e girdiği değerlerin uygun olup olmadığına bakıyoruz
             // İlk olarak boş değerlerin kaydedilmesini engelliyoruz
@@ -88,7 +89,16 @@ namespace BM102Proje
                 baglantı.Open();
                 OleDbCommand kmt0 = new OleDbCommand("Select KimlikNumarası From YoneticiBilgileri", baglantı);
                 OleDbDataReader dr = kmt0.ExecuteReader();
-                if (dr.Read())
+                while (dr.Read())
+                {
+                    sayı++;      
+                }
+                if (sayı > 1)
+                {
+                    MessageBox.Show("Aynı kimlik numarası için 2 kişi kaydedilemez!");
+                    temizle();
+                }
+                else
                 {
                     // Kullanıcının datagridview'e girdiği değerleri kaydediyoruz 
                     OleDbCommand kmt1 = new OleDbCommand("insert into YoneticiBilgileri (Ad, Soyad, KimlikNumarası, Email, Telefon, Sifre) values (@a1,@a2,@a3,@a4,@a5,@a6)", baglantı);
@@ -100,14 +110,8 @@ namespace BM102Proje
                     kmt1.Parameters.AddWithValue("@a6", dataGridView1.Rows[isaretlenmişi_gönder].Cells[5].Value.ToString());
                     kmt1.ExecuteNonQuery();
                     MessageBox.Show("Başarıyla yönetici eklenmiştir.");
-                   
                 }
-                else
-                {
-                    MessageBox.Show("Aynı kimlik numarası için 2 adet farklı kayıt açılamaz!");
-                    temizle();
-
-                }
+                
 
             }
 
