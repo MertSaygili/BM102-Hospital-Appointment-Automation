@@ -121,7 +121,7 @@ namespace BM102Proje
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Georgia", 18F);
-            this.label1.Location = new System.Drawing.Point(270, 23);
+            this.label1.Location = new System.Drawing.Point(334, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(238, 35);
             this.label1.TabIndex = 22;
