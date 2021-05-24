@@ -68,7 +68,9 @@ namespace BM102Proje
             da.SelectCommand = komut;
             da.Fill(dt);    // datatable'ı databasedan aldığımız veriler ile dolduruyoruz
             dataGridView1.DataSource = dt; // veri kaynağı belirleniyor
+            if (dataGridView1.Rows.Count > 0) { // Eğer veri null gelmez ise
             dataGridView1.Rows[0].Selected = false; // daha hoş görünmesi için yapıyorum bunu
+            }
             dataGridView1.Columns[0].HeaderText = "Şehir";
             dataGridView1.Columns[1].HeaderText = "Hastane";
             dataGridView1.Columns[2].HeaderText = "Polikinlik";
