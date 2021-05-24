@@ -94,7 +94,6 @@ namespace BM102Proje
             // DuyuruEkle
             // 
             this.DuyuruEkle.BackColor = System.Drawing.Color.Transparent;
-            this.DuyuruEkle.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.DuyuruEkle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DuyuruEkle.Image = ((System.Drawing.Image)(resources.GetObject("DuyuruEkle.Image")));
             this.DuyuruEkle.ImageActive = null;
@@ -139,7 +138,6 @@ namespace BM102Proje
             // AsiStok
             // 
             this.AsiStok.BackColor = System.Drawing.Color.Transparent;
-            this.AsiStok.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.AsiStok.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AsiStok.Image = ((System.Drawing.Image)(resources.GetObject("AsiStok.Image")));
             this.AsiStok.ImageActive = null;

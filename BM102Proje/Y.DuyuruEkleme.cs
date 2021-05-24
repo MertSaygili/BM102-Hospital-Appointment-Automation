@@ -22,6 +22,7 @@ namespace BM102Proje
 
         private void onaylabutton_Click(object sender, EventArgs e)
         {
+            //onayla butonuna basılınca girdileri veritabanına kaydeder. Ardından panlei kapatır.
             baglantı.Open();
             OleDbCommand komut = new OleDbCommand("insert into Duyurular (Duyuru) values (@p1)", baglantı);
             komut.Parameters.AddWithValue("@p1", DuyuruEkleText.Text);
@@ -29,6 +30,11 @@ namespace BM102Proje
             baglantı.Close();
             MessageBox.Show("Duyuru sisteme başarıyla eklenmiştir.");
             this.Close();
+        }
+
+        private void DuyuruEkle_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

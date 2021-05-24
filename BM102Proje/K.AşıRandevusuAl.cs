@@ -28,18 +28,19 @@ namespace BM102Proje
         private void temizle()
         {
             AsiSehir.SelectedIndex = -1;
-            AsiSaat.SelectedIndex = -1;
+            AsiSaat.SelectedIndex = -1; //Bu kısımda butona basılınca yazıların temizlenmesi sağlanıyor.
             AsiHastane.Text = "";
         }
         private void GeriDon_Click(object sender, EventArgs e)
         {
             KullanıcıMenü KM = new KullanıcıMenü();
-            KM.Show();
+            KM.Show();                                 //Geri dön tuşu ile ana menüye dönmesi sağlanıyor.
             this.Hide();
         }
 
         private int kontrolsagla()
         {
+            //database içindeki AsiRandevulari adlı tablo içerisindeki verileri okuayarak kullanıcı tarafından girilen seçeneklerle karşılaştırıyor. Eğer eşleşen bir randevu varsa değeri 1 arttırıyor.?????? 
             baglantı.Open();
             OleDbCommand komut = new OleDbCommand("SELECT count (KimlikNumarası) from AsiRandevulari", baglantı);
             adet = System.Convert.ToInt32(komut.ExecuteScalar()); // BURAYA BAKILACAK
@@ -52,7 +53,7 @@ namespace BM102Proje
             OleDbCommand komut = new OleDbCommand("insert into AsiRandevulari (KimlikNumarası,Sehir,Hastane,Saat,Tarih,AsiTipi) values (@p1,@p2,@p3,@p4,@p5,@p6)", baglantı);
             komut.Parameters.AddWithValue("@p1", tcno);
             komut.Parameters.AddWithValue("@p2", AsiSehir.SelectedItem);
-            komut.Parameters.AddWithValue("@p3", AsiHastane.Text);
+            komut.Parameters.AddWithValue("@p3", AsiHastane.Text);          //Kullanıcı tarafından girilen ya da seçilen verileri database'imize kaydediyoruz.
             komut.Parameters.AddWithValue("@p4", AsiSaat.SelectedItem);
             komut.Parameters.AddWithValue("@p5", AsiTarih.Value);
             komut.Parameters.AddWithValue("@p6", AsiTipi.SelectedItem);
@@ -61,21 +62,23 @@ namespace BM102Proje
         }
         private void OnaylaButon_Click(object sender, EventArgs e)
         {
-            //*
+            //Onayla butonuna tıklandığı zaman kutucukların içlerinin boş olup olmamasını kontrol ediyoruz.
             if (AsiHastane.Text!= "" && AsiSehir.SelectedIndex >= 0 && AsiSaat.SelectedIndex >= 0)
             {
                 if (kontrolsagla() < 1) { 
                 bilgileriyaz();
-                MessageBox.Show("Randevunuz oluşturulmuştur.");
+                MessageBox.Show("Randevunuz oluşturulmuştur."); //tüm kutucuklar doluysa ve o tarihte başka bir randevu yoksa randevu oluşturuluyor ve database'e yazdırmak için bilgileriyaz fonksiyonu çağrılıyor.
                 temizle();
                 }
                 else
                 {
+                    //eğer seçilen tarih saat doktor için database'de zaten bir başka kayıt varsa uyarıyor.
                     MessageBox.Show("Sistemde daha önceden alınmış bir randevunuz zaten var.");
                 }
             }
             else
             {
+                //kutulardan en az biri boş ise uyarı veriyor.
                 MessageBox.Show("Girdilerde eksik var!");
             }
         }

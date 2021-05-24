@@ -160,6 +160,7 @@ namespace BM102Proje
             // 
             resources.ApplyResources(this.label8, "label8");
             this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label8.Name = "label8";
             // 
             // TxtVatandaşTelNumarası

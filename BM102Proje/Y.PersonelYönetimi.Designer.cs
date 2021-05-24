@@ -31,16 +31,16 @@ namespace BM102Proje
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonelYönetimi));
             this.gradiantPanel1 = new BM102Proje.GradiantPanel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.PictureBox();
             this.Yönetici_cıkar = new System.Windows.Forms.Button();
             this.yönetici_ekle = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.gradiantPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.button1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.button1)).BeginInit();
             this.SuspendLayout();
             // 
             // gradiantPanel1
@@ -57,6 +57,32 @@ namespace BM102Proje
             this.gradiantPanel1.Name = "gradiantPanel1";
             this.gradiantPanel1.Size = new System.Drawing.Size(859, 508);
             this.gradiantPanel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Georgia", 18F);
+            this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
+            this.label1.Location = new System.Drawing.Point(334, 23);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(238, 35);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Yönetici Bilgileri";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImage = global::BM102Proje.Properties.Resources.back_button_computer_left_blue_116903;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Location = new System.Drawing.Point(15, 23);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(49, 44);
+            this.button1.TabIndex = 21;
+            this.button1.TabStop = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Yönetici_cıkar
             // 
@@ -102,31 +128,6 @@ namespace BM102Proje
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::BM102Proje.Properties.Resources.back_button_computer_left_blue_116903;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(15, 23);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(49, 44);
-            this.button1.TabIndex = 21;
-            this.button1.TabStop = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Georgia", 18F);
-            this.label1.Location = new System.Drawing.Point(334, 23);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(238, 35);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Yönetici Bilgileri";
-            // 
             // PersonelYönetimi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -144,9 +145,9 @@ namespace BM102Proje
             this.Load += new System.EventHandler(this.PersonelYönetimi_Load);
             this.gradiantPanel1.ResumeLayout(false);
             this.gradiantPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.button1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.button1)).EndInit();
             this.ResumeLayout(false);
 
         }

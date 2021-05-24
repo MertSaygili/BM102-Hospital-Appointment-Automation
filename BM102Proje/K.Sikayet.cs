@@ -21,13 +21,14 @@ namespace BM102Proje
 
         private void GeriDon_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Close(); //paneli kapatır
         }
 
         private void onaylabutton_Click(object sender, EventArgs e)
         {
             if(SikayetKonu.Text != "" && SikayetSikayet.Text != "")
             {
+                //eğer tüm kutucuklar doluysa girilen verileri alıp veritabanına kaydeder.
                 baglantı.Open();
                 string ad = KullanıcıMenü.ad;
                 string soyad = KullanıcıMenü.soyad;
@@ -40,6 +41,11 @@ namespace BM102Proje
                 baglantı.Close();
                 MessageBox.Show("Talebiniz başarıyla iletilmiştir.\nSağlıklı günler!");
             }
+        }
+
+        private void Sikayetİstek_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

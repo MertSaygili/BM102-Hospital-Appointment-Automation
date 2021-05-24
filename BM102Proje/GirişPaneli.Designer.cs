@@ -95,7 +95,7 @@ namespace BM102Proje
             this.Başlık.BackColor = System.Drawing.Color.Transparent;
             this.Başlık.Font = new System.Drawing.Font("Cambria", 16F);
             this.Başlık.ForeColor = System.Drawing.Color.MidnightBlue;
-            this.Başlık.Location = new System.Drawing.Point(248, 38);
+            this.Başlık.Location = new System.Drawing.Point(248, 69);
             this.Başlık.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Başlık.Name = "Başlık";
             this.Başlık.Size = new System.Drawing.Size(506, 42);
@@ -105,7 +105,7 @@ namespace BM102Proje
             // 
             // GirişPaneli
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;

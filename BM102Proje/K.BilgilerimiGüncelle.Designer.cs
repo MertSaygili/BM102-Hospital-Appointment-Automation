@@ -96,7 +96,7 @@ namespace BM102Proje
             // 
             this.TxtOnayla.Location = new System.Drawing.Point(65, 403);
             this.TxtOnayla.Name = "TxtOnayla";
-            this.TxtOnayla.Size = new System.Drawing.Size(125, 26);
+            this.TxtOnayla.Size = new System.Drawing.Size(125, 31);
             this.TxtOnayla.TabIndex = 18;
             // 
             // Onayla
@@ -123,42 +123,42 @@ namespace BM102Proje
             // 
             this.TxtSoyad.Location = new System.Drawing.Point(212, 138);
             this.TxtSoyad.Name = "TxtSoyad";
-            this.TxtSoyad.Size = new System.Drawing.Size(192, 26);
+            this.TxtSoyad.Size = new System.Drawing.Size(192, 31);
             this.TxtSoyad.TabIndex = 13;
             // 
             // TxtTelefon
             // 
             this.TxtTelefon.Location = new System.Drawing.Point(212, 254);
             this.TxtTelefon.Name = "TxtTelefon";
-            this.TxtTelefon.Size = new System.Drawing.Size(192, 26);
+            this.TxtTelefon.Size = new System.Drawing.Size(192, 31);
             this.TxtTelefon.TabIndex = 12;
             // 
             // TxtSifre
             // 
             this.TxtSifre.Location = new System.Drawing.Point(212, 217);
             this.TxtSifre.Name = "TxtSifre";
-            this.TxtSifre.Size = new System.Drawing.Size(192, 26);
+            this.TxtSifre.Size = new System.Drawing.Size(192, 31);
             this.TxtSifre.TabIndex = 11;
             // 
             // TxtKimlik
             // 
             this.TxtKimlik.Location = new System.Drawing.Point(212, 180);
             this.TxtKimlik.Name = "TxtKimlik";
-            this.TxtKimlik.Size = new System.Drawing.Size(192, 26);
+            this.TxtKimlik.Size = new System.Drawing.Size(192, 31);
             this.TxtKimlik.TabIndex = 10;
             // 
             // TxtEmail
             // 
             this.TxtEmail.Location = new System.Drawing.Point(212, 300);
             this.TxtEmail.Name = "TxtEmail";
-            this.TxtEmail.Size = new System.Drawing.Size(192, 26);
+            this.TxtEmail.Size = new System.Drawing.Size(192, 31);
             this.TxtEmail.TabIndex = 9;
             // 
             // TxtAd
             // 
             this.TxtAd.Location = new System.Drawing.Point(212, 95);
             this.TxtAd.Name = "TxtAd";
-            this.TxtAd.Size = new System.Drawing.Size(192, 26);
+            this.TxtAd.Size = new System.Drawing.Size(192, 31);
             this.TxtAd.TabIndex = 7;
             // 
             // label7
@@ -166,9 +166,10 @@ namespace BM102Proje
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Cambria", 16F);
+            this.label7.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label7.Location = new System.Drawing.Point(170, 16);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 26);
+            this.label7.Size = new System.Drawing.Size(129, 32);
             this.label7.TabIndex = 6;
             this.label7.Text = "Bilgilerim";
             // 
@@ -178,7 +179,7 @@ namespace BM102Proje
             this.EmailLabel.BackColor = System.Drawing.Color.Transparent;
             this.EmailLabel.Location = new System.Drawing.Point(81, 308);
             this.EmailLabel.Name = "EmailLabel";
-            this.EmailLabel.Size = new System.Drawing.Size(100, 19);
+            this.EmailLabel.Size = new System.Drawing.Size(125, 23);
             this.EmailLabel.TabIndex = 5;
             this.EmailLabel.Text = "Email Adresi:";
             // 
@@ -188,7 +189,7 @@ namespace BM102Proje
             this.TelefonLabel.BackColor = System.Drawing.Color.Transparent;
             this.TelefonLabel.Location = new System.Drawing.Point(39, 262);
             this.TelefonLabel.Name = "TelefonLabel";
-            this.TelefonLabel.Size = new System.Drawing.Size(135, 19);
+            this.TelefonLabel.Size = new System.Drawing.Size(167, 23);
             this.TelefonLabel.TabIndex = 4;
             this.TelefonLabel.Text = "Telefon Numarası:";
             // 
@@ -198,7 +199,7 @@ namespace BM102Proje
             this.SifreLabel.BackColor = System.Drawing.Color.Transparent;
             this.SifreLabel.Location = new System.Drawing.Point(127, 225);
             this.SifreLabel.Name = "SifreLabel";
-            this.SifreLabel.Size = new System.Drawing.Size(45, 19);
+            this.SifreLabel.Size = new System.Drawing.Size(55, 23);
             this.SifreLabel.TabIndex = 3;
             this.SifreLabel.Text = "Şifre:";
             // 
@@ -209,7 +210,7 @@ namespace BM102Proje
             this.KimlikLabel.Location = new System.Drawing.Point(44, 188);
             this.KimlikLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.KimlikLabel.Name = "KimlikLabel";
-            this.KimlikLabel.Size = new System.Drawing.Size(127, 19);
+            this.KimlikLabel.Size = new System.Drawing.Size(161, 23);
             this.KimlikLabel.TabIndex = 2;
             this.KimlikLabel.Text = "Kimlik Numarası:";
             // 
@@ -220,7 +221,7 @@ namespace BM102Proje
             this.SoyadLabel.Location = new System.Drawing.Point(123, 146);
             this.SoyadLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.SoyadLabel.Name = "SoyadLabel";
-            this.SoyadLabel.Size = new System.Drawing.Size(55, 19);
+            this.SoyadLabel.Size = new System.Drawing.Size(67, 23);
             this.SoyadLabel.TabIndex = 1;
             this.SoyadLabel.Text = "Soyad:";
             // 
@@ -231,13 +232,13 @@ namespace BM102Proje
             this.AdLabel.Location = new System.Drawing.Point(152, 103);
             this.AdLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.AdLabel.Name = "AdLabel";
-            this.AdLabel.Size = new System.Drawing.Size(32, 19);
+            this.AdLabel.Size = new System.Drawing.Size(38, 23);
             this.AdLabel.TabIndex = 0;
             this.AdLabel.Text = "Ad:";
             // 
             // BilgilerimiGüncelle
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(455, 510);

@@ -35,13 +35,13 @@ namespace BM102Proje
             this.SikayetSikayet = new System.Windows.Forms.RichTextBox();
             this.SikayetKonu = new System.Windows.Forms.TextBox();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.GeriDon = new System.Windows.Forms.PictureBox();
-            this.onaylabutton = new Bunifu.Framework.UI.BunifuImageButton();
             this.AsiLogo = new System.Windows.Forms.PictureBox();
+            this.onaylabutton = new Bunifu.Framework.UI.BunifuImageButton();
+            this.GeriDon = new System.Windows.Forms.PictureBox();
             this.bunifuGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GeriDon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.onaylabutton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AsiLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.onaylabutton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GeriDon)).BeginInit();
             this.SuspendLayout();
             // 
             // SikayetKonuText
@@ -49,7 +49,7 @@ namespace BM102Proje
             this.SikayetKonuText.AutoSize = true;
             this.SikayetKonuText.BackColor = System.Drawing.Color.Transparent;
             this.SikayetKonuText.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.SikayetKonuText.Location = new System.Drawing.Point(81, 78);
+            this.SikayetKonuText.Location = new System.Drawing.Point(60, 78);
             this.SikayetKonuText.Name = "SikayetKonuText";
             this.SikayetKonuText.Size = new System.Drawing.Size(59, 22);
             this.SikayetKonuText.TabIndex = 0;
@@ -60,7 +60,7 @@ namespace BM102Proje
             this.SikayetSikayetText.AutoSize = true;
             this.SikayetSikayetText.BackColor = System.Drawing.Color.Transparent;
             this.SikayetSikayetText.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.SikayetSikayetText.Location = new System.Drawing.Point(81, 113);
+            this.SikayetSikayetText.Location = new System.Drawing.Point(60, 113);
             this.SikayetSikayetText.Name = "SikayetSikayetText";
             this.SikayetSikayetText.Size = new System.Drawing.Size(194, 22);
             this.SikayetSikayetText.TabIndex = 1;
@@ -103,20 +103,18 @@ namespace BM102Proje
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(613, 379);
             this.bunifuGradientPanel1.TabIndex = 4;
             // 
-            // GeriDon
+            // AsiLogo
             // 
-            this.GeriDon.BackColor = System.Drawing.Color.Transparent;
-            this.GeriDon.BackgroundImage = global::BM102Proje.Properties.Resources.back_button_computer_left_blue_116903;
-            this.GeriDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.GeriDon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.GeriDon.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GeriDon.Location = new System.Drawing.Point(13, 13);
-            this.GeriDon.Margin = new System.Windows.Forms.Padding(4);
-            this.GeriDon.Name = "GeriDon";
-            this.GeriDon.Size = new System.Drawing.Size(45, 42);
-            this.GeriDon.TabIndex = 54;
-            this.GeriDon.TabStop = false;
-            this.GeriDon.Click += new System.EventHandler(this.GeriDon_Click);
+            this.AsiLogo.BackColor = System.Drawing.Color.Transparent;
+            this.AsiLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AsiLogo.BackgroundImage")));
+            this.AsiLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AsiLogo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.AsiLogo.Location = new System.Drawing.Point(542, 11);
+            this.AsiLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AsiLogo.Name = "AsiLogo";
+            this.AsiLogo.Size = new System.Drawing.Size(57, 50);
+            this.AsiLogo.TabIndex = 61;
+            this.AsiLogo.TabStop = false;
             // 
             // onaylabutton
             // 
@@ -133,18 +131,20 @@ namespace BM102Proje
             this.onaylabutton.Zoom = 10;
             this.onaylabutton.Click += new System.EventHandler(this.onaylabutton_Click);
             // 
-            // AsiLogo
+            // GeriDon
             // 
-            this.AsiLogo.BackColor = System.Drawing.Color.Transparent;
-            this.AsiLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AsiLogo.BackgroundImage")));
-            this.AsiLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AsiLogo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.AsiLogo.Location = new System.Drawing.Point(542, 11);
-            this.AsiLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.AsiLogo.Name = "AsiLogo";
-            this.AsiLogo.Size = new System.Drawing.Size(57, 50);
-            this.AsiLogo.TabIndex = 61;
-            this.AsiLogo.TabStop = false;
+            this.GeriDon.BackColor = System.Drawing.Color.Transparent;
+            this.GeriDon.BackgroundImage = global::BM102Proje.Properties.Resources.back_button_computer_left_blue_116903;
+            this.GeriDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GeriDon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GeriDon.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.GeriDon.Location = new System.Drawing.Point(13, 13);
+            this.GeriDon.Margin = new System.Windows.Forms.Padding(4);
+            this.GeriDon.Name = "GeriDon";
+            this.GeriDon.Size = new System.Drawing.Size(45, 42);
+            this.GeriDon.TabIndex = 54;
+            this.GeriDon.TabStop = false;
+            this.GeriDon.Click += new System.EventHandler(this.GeriDon_Click);
             // 
             // Sikayetİstek
             // 
@@ -160,11 +160,12 @@ namespace BM102Proje
             this.Name = "Sikayetİstek";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Şikayet ve İstek ";
+            this.Load += new System.EventHandler(this.Sikayetİstek_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GeriDon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.onaylabutton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AsiLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.onaylabutton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GeriDon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

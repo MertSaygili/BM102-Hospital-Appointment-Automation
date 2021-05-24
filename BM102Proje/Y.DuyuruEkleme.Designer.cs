@@ -88,24 +88,26 @@ namespace BM102Proje
             this.SikayetSikayetText.Location = new System.Drawing.Point(17, 31);
             this.SikayetSikayetText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SikayetSikayetText.Name = "SikayetSikayetText";
-            this.SikayetSikayetText.Size = new System.Drawing.Size(60, 17);
+            this.SikayetSikayetText.Size = new System.Drawing.Size(79, 22);
             this.SikayetSikayetText.TabIndex = 63;
             this.SikayetSikayetText.Text = "Duyuru:";
             // 
             // DuyuruEkle
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(296, 240);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "DuyuruEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Duyuru Ekleme Paneli";
+            this.Load += new System.EventHandler(this.DuyuruEkle_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.onaylabutton)).EndInit();

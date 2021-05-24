@@ -30,7 +30,7 @@ namespace BM102Proje
             komut.Parameters.AddWithValue("@p1", tcno);
             komut.Parameters.AddWithValue("@p2", RandevuSehir.SelectedItem);
             komut.Parameters.AddWithValue("@p3", RandevuHastaneAdiText.Text);
-            komut.Parameters.AddWithValue("@p4", RandevuPolAdi.SelectedItem);
+            komut.Parameters.AddWithValue("@p4", RandevuPolAdi.SelectedItem);    //Aldığımız verileri database'e kaydediyoruz.
             komut.Parameters.AddWithValue("@p5", RandevuDoktorAdi.SelectedItem);
             komut.Parameters.AddWithValue("@p6", Convert.ToString(RandevuTarih.Value));
             komut.Parameters.AddWithValue("@p7", RandevuSaat.SelectedItem);
@@ -79,18 +79,18 @@ namespace BM102Proje
         {
             RandevuDoktorAdi.SelectedIndex = -1;
             RandevuPolAdi.SelectedIndex = -1;
-            RandevuHastaneAdiText.Text = "";
+            RandevuHastaneAdiText.Text = ""; //butona basıldığında kutucukları temizleyen fonksiyon
             RandevuSehir.SelectedIndex = -1;
             RandevuSaat.SelectedIndex = -1;
         }
         private void temizlesaat()
         {
-            RandevuSaat.SelectedIndex = -1;
+            RandevuSaat.SelectedIndex = -1; // eğer hastanın istediği randevu saatinde zaten bir randevu varsa saati sıfırlıyoruz
         }
         private void GeriDon_Click_1(object sender, EventArgs e)
         {
             KullanıcıMenü KM = new KullanıcıMenü();
-            KM.Show();
+            KM.Show();                              //Geri dön tuşu ile ana menüye dönüyoruz
             this.Hide();
         }
 
@@ -108,7 +108,7 @@ namespace BM102Proje
             while (dr.Read())
             {
                 string isim = dr.GetString(1);
-                string soyisim = dr.GetString(2);
+                string soyisim = dr.GetString(2);               //veritabanından doktorları çekiyoruz
                 RandevuDoktorAdi.Items.Add(isim+" "+soyisim);   
             }
             baglantı.Close();
@@ -118,17 +118,18 @@ namespace BM102Proje
         {
             if (RandevuHastaneAdiText.Text != "" && RandevuSehir.SelectedIndex >= 0 && RandevuSaat.SelectedIndex >= 0 && RandevuPolAdi.SelectedIndex >= 0)
             {
+                //kutucukların boş olup olmaması kontrol ediliyor.
                 if (kontrol() == 1) // KONTROLDEN BİR GELİRSE BAŞARIYLA YAZABİLİR
                 {
                     randevuyaz();
-                    Mail_at();
+                    Mail_at(); //randevu bilgilerini bilgilendirme maili şeklinde mail atıyoruz.
                     MessageBox.Show("Randevunuz oluşturulmuştur.");
                     temizle();
                 }
                 else
                 {
                     MessageBox.Show("Bu saatte doktorun randevusu bulunmaktadır. Lütfen başka bir saat ya başka bir hekim deneyiniz."); // ÖBÜRTÜRLÜ DATABASEDA VERİ VAR DEMEK
-                    temizlesaat();
+                    temizlesaat(); //o saatte randevu dolu olduğu için sadece saati sıfırlıyoruz ki kullanıcı diğer seçeneklerle tekrar uğraşmasın
                 }
             }
             else
