@@ -35,5 +35,12 @@ namespace BM102Proje
             DuyuruEkle DE = new DuyuruEkle();
             DE.Show();
         }
+
+        private void PersonelButton_Click(object sender, EventArgs e)
+        {
+            PersonelYönetimi PY = new PersonelYönetimi();
+            PY.Show();
+            this.Close();
+        }
     }
 }
