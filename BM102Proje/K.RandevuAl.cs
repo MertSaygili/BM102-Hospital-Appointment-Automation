@@ -32,7 +32,7 @@ namespace BM102Proje
             komut.Parameters.AddWithValue("@p3", RandevuHastaneAdiText.Text);
             komut.Parameters.AddWithValue("@p4", RandevuPolAdi.SelectedItem);    //Aldığımız verileri database'e kaydediyoruz.
             komut.Parameters.AddWithValue("@p5", RandevuDoktorAdi.SelectedItem);
-            komut.Parameters.AddWithValue("@p6", Convert.ToString(RandevuTarih.Value));
+            komut.Parameters.AddWithValue("@p6", Convert.ToString(RandevuTarih.Value).Substring(0,10));
             komut.Parameters.AddWithValue("@p7", RandevuSaat.SelectedItem);
             komut.Parameters.AddWithValue("@p8", RandevuSikayet.Text);
             komut.ExecuteNonQuery();
@@ -171,7 +171,7 @@ namespace BM102Proje
                         "<div style='border-color:red; height:50%; margin-left:30%; margin-right:30%; margin-top:5%; width:50%; '>" +
                             "<p style = ' text-align:left; font-size:160%; '>" + "Sayın, " + isim.ToUpper() + " " + soyisim.ToUpper() + "</p>" +
                             "<hr>" + "<br>" +
-                            "<p style = 'font-size:130%; text-align:justify;'>" + "Randevunuz, " + RandevuHastaneAdiText.Text + " " + RandevuPolAdi.SelectedItem + " Doktor " + RandevuDoktorAdi.SelectedItem + " ile " + Convert.ToString(RandevuTarih.Value).Substring(0, 10) + " tarihinde saat " + RandevuSaat.SelectedItem + "'da oluşturulmuştur." + "</p>" +
+                            "<p style = 'font-size:130%; text-align:justify;'>" + "Randevunuz, " + RandevuHastaneAdiText.Text + " " + RandevuPolAdi.SelectedItem + " Doktor " + RandevuDoktorAdi.SelectedItem + " ile " + Convert.ToString(RandevuTarih.Value) + " tarihinde saat " + RandevuSaat.SelectedItem + "'da oluşturulmuştur." + "</p>" +
                             "<br>" +
                             "<p style = 'font-size:130%; text-align:justify;'>" + "Lütfen randevu saatinizden en geç 15 dakika önce hastanenize giderek gerekli birimden randevunuzu onaylayınız." + "</p>" +
                             "<br>" +

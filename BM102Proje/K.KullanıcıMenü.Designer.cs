@@ -143,6 +143,7 @@ namespace BM102Proje
             this.pictureBox3.Size = new System.Drawing.Size(152, 121);
             this.pictureBox3.TabIndex = 18;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 

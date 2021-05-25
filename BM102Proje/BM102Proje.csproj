@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="K.Randevular.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="K.Randevular.Designer.cs">
+      <DependentUpon>K.Randevular.cs</DependentUpon>
+    </Compile>
     <Compile Include="Y.PersonelYönetimi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -164,6 +170,9 @@
     <Compile Include="Y.YoneticiMenu.Designer.cs">
       <DependentUpon>Y.YoneticiMenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="K.Randevular.resx">
+      <DependentUpon>K.Randevular.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Y.DuyuruEkleme.resx">
       <DependentUpon>Y.DuyuruEkleme.cs</DependentUpon>
     </EmbeddedResource>

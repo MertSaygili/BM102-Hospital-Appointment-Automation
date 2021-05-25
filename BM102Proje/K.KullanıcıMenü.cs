@@ -119,5 +119,12 @@ namespace BM102Proje
             Sikayetİstek sikayetistek = new Sikayetİstek();
             sikayetistek.Show();
         }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Randevular RA = new Randevular();
+            RA.Show();
+            this.Hide();
+        }
     }
 }
