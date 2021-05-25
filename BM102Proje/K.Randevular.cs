@@ -49,14 +49,13 @@ namespace BM102Proje
             randevuview.Columns[4].Width = 92;
             randevuview.Columns[5].Width = 60;
             randevuview.Columns[5].HeaderText = "R.Saati";
-            //randevuview.Rows[0].Cells[0].Selected = false;
 
             baglantı.Close();
             kontrol();
         }
         public void kontrol()
         {
-            DateTime simdi = DateTime.Now; // bugünü gün ay yıl olarak alıyoruz.
+            DateTime simdi = DateTime.Now.Date; // bugünü gün ay yıl olarak alıyoruz.
             for (int j = 0; j < randevuview.Rows.Count; j++)
             {
                 string[] tarih_dizi = new string[3];
@@ -66,9 +65,8 @@ namespace BM102Proje
                 int gun = Convert.ToInt32(tarih_dizi[0]);
                 DateTime rand = new DateTime(yil,ay,gun);
 
-                 //her satırdaki tarihi bugünle kıyaslayarak ileri mi geçmiş mi bugün mü randevu var diye sorguluyoruz.
-                //DateTime rand = Convert.ToDateTime(randevuview.Rows[i].Cells[4].Value);
-                if (DateTime.Compare(simdi,rand) < 0)
+                //her satırdaki tarihi bugünle kıyaslayarak ileri mi geçmiş mi bugün mü randevu var diye sorguluyoruz.
+                if (DateTime.Compare(simdi, rand) < 0)
                 {
                     randevuview.Rows[j].Cells[0].Style.BackColor = Color.LightCyan;
                     randevuview.Rows[j].Cells[1].Style.BackColor = Color.LightCyan;
@@ -96,6 +94,16 @@ namespace BM102Proje
                     randevuview.Rows[j].Cells[5].Style.BackColor = Color.Red;
                 }                   
             }
+        }
+
+        private void randevuview_SelectionChanged(object sender, EventArgs e)
+        {
+            randevuview.ClearSelection(); // Her seçimde seçimleri temizler.
+        }
+
+        private void randevuview_Sorted(object sender, EventArgs e)
+        {
+            kontrol(); // Sıraladığı zaman da renkler bozulmasın diye sıralandığında tekrar kontrol eder.
         }
     }
 }
