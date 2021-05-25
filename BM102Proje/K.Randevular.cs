@@ -56,10 +56,17 @@ namespace BM102Proje
         public void kontrol()
         {
             DateTime simdi = Convert.ToDateTime(DateTime.Now.ToString("dd/MM/yyyy")); // bugünü gün ay yıl olarak alıyoruz.
-            for (int i = 0; i<randevuview.Rows.Count; i++)
+            for (int i = 0; i < randevuview.Rows.Count; i++)
             {
+                string[] tarih_dizi = new string[3];
+                tarih_dizi = randevuview.Rows[i].Cells[4].Value.ToString().Split('.');
+                int ay = Convert.ToInt32(tarih_dizi[1]);
+                int yil = Convert.ToInt32(tarih_dizi[2]);
+                int gun = Convert.ToInt32(tarih_dizi[0]);
+                DateTime rand = new DateTime(yil,ay,gun);
+
                  //her satırdaki tarihi bugünle kıyaslayarak ileri mi geçmiş mi bugün mü randevu var diye sorguluyoruz.
-                DateTime rand = Convert.ToDateTime(randevuview.Rows[i].Cells[4].Value);
+                //DateTime rand = Convert.ToDateTime(randevuview.Rows[i].Cells[4].Value);
                 if (DateTime.Compare(simdi,rand) < 0)
                 {
                     randevuview.Rows[i].Cells[0].Style.BackColor = Color.LightCyan;
