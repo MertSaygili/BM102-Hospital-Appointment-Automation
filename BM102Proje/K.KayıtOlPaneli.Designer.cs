@@ -235,6 +235,7 @@ namespace BM102Proje
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gradiantPanel1);
+            this.MaximizeBox = false;
             this.Name = "KayıtOlPaneli";
             this.Load += new System.EventHandler(this.KayıtOlPaneli_Load);
             this.gradiantPanel1.ResumeLayout(false);

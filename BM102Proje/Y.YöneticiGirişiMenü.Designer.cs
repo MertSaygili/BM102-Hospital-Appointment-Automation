@@ -199,6 +199,7 @@ namespace BM102Proje
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "YöneticiGirişiMenü";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Yönetici Girişi Menü";

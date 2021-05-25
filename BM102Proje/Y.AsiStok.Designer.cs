@@ -197,9 +197,8 @@ namespace BM102Proje
             this.ClientSize = new System.Drawing.Size(571, 273);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "AsiStok";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aşı Stok Durumu";

@@ -156,7 +156,6 @@ namespace BM102Proje
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Sikayetİstek";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Şikayet ve İstek ";

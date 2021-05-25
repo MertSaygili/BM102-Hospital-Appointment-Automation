@@ -255,7 +255,8 @@ namespace BM102Proje
             this.ClientSize = new System.Drawing.Size(699, 345);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "YoneticiMenu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Yönetici Paneli";

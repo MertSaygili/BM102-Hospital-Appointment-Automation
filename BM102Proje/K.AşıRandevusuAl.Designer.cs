@@ -39,12 +39,12 @@ namespace BM102Proje
             this.AsiSehir = new System.Windows.Forms.ComboBox();
             this.AsiHastane = new System.Windows.Forms.TextBox();
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.AsiTipi = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.AsiSaatText = new System.Windows.Forms.Label();
             this.AsiHastaneText = new System.Windows.Forms.Label();
             this.AsiTarihText = new System.Windows.Forms.Label();
             this.AsiSehirText = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.AsiTipi = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.GeriDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AsiLogo)).BeginInit();
             this.bunifuGradientPanel1.SuspendLayout();
@@ -230,6 +230,21 @@ namespace BM102Proje
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 8;
             // 
+            // AsiTipi
+            // 
+            resources.ApplyResources(this.AsiTipi, "AsiTipi");
+            this.AsiTipi.FormattingEnabled = true;
+            this.AsiTipi.Items.AddRange(new object[] {
+            resources.GetString("AsiTipi.Items"),
+            resources.GetString("AsiTipi.Items1")});
+            this.AsiTipi.Name = "AsiTipi";
+            // 
+            // label1
+            // 
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Name = "label1";
+            // 
             // AsiSaatText
             // 
             resources.ApplyResources(this.AsiSaatText, "AsiSaatText");
@@ -254,21 +269,6 @@ namespace BM102Proje
             this.AsiSehirText.BackColor = System.Drawing.Color.Transparent;
             this.AsiSehirText.Name = "AsiSehirText";
             // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Name = "label1";
-            // 
-            // AsiTipi
-            // 
-            resources.ApplyResources(this.AsiTipi, "AsiTipi");
-            this.AsiTipi.FormattingEnabled = true;
-            this.AsiTipi.Items.AddRange(new object[] {
-            resources.GetString("AsiTipi.Items"),
-            resources.GetString("AsiTipi.Items1")});
-            this.AsiTipi.Name = "AsiTipi";
-            // 
             // AsiRandevusu
             // 
             this.AcceptButton = this.OnaylaButon;
@@ -278,6 +278,7 @@ namespace BM102Proje
             this.CancelButton = this.IptalButon;
             this.Controls.Add(this.bunifuGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "AsiRandevusu";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GeriDon)).EndInit();

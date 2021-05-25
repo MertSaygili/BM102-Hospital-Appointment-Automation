@@ -229,7 +229,6 @@
     <None Include="BM102ProjeDataSet.xss">
       <DependentUpon>BM102ProjeDataSet.xsd</DependentUpon>
     </None>
-    <None Include="K.Designer.KullanıcıMenü" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

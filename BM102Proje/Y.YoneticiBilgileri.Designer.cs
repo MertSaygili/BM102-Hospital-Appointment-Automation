@@ -175,6 +175,7 @@ namespace BM102Proje
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "YoneticiBilgileri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Yönetici Paneli";

@@ -31,17 +31,17 @@ namespace BM102Proje
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DuyuruEkle));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.ekleme = new System.Windows.Forms.Button();
+            this.cikarma = new System.Windows.Forms.Button();
+            this.onaylabuton1 = new Bunifu.Framework.UI.BunifuImageButton();
+            this.duyurucikarma = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.onaylabutton = new Bunifu.Framework.UI.BunifuImageButton();
             this.DuyuruEkleText = new System.Windows.Forms.RichTextBox();
             this.duyurutext = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.duyurucikarma = new System.Windows.Forms.ComboBox();
-            this.onaylabuton1 = new Bunifu.Framework.UI.BunifuImageButton();
-            this.cikarma = new System.Windows.Forms.Button();
-            this.ekleme = new System.Windows.Forms.Button();
             this.bunifuGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.onaylabutton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.onaylabuton1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.onaylabutton)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel1
@@ -66,6 +66,60 @@ namespace BM102Proje
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(463, 252);
             this.bunifuGradientPanel1.TabIndex = 0;
+            // 
+            // ekleme
+            // 
+            this.ekleme.Location = new System.Drawing.Point(118, 47);
+            this.ekleme.Name = "ekleme";
+            this.ekleme.Size = new System.Drawing.Size(154, 29);
+            this.ekleme.TabIndex = 73;
+            this.ekleme.Text = "Ekleme";
+            this.ekleme.UseVisualStyleBackColor = true;
+            this.ekleme.Click += new System.EventHandler(this.ekleme_Click);
+            // 
+            // cikarma
+            // 
+            this.cikarma.Location = new System.Drawing.Point(298, 47);
+            this.cikarma.Name = "cikarma";
+            this.cikarma.Size = new System.Drawing.Size(154, 29);
+            this.cikarma.TabIndex = 72;
+            this.cikarma.Text = "Çıkartma";
+            this.cikarma.UseVisualStyleBackColor = true;
+            this.cikarma.Click += new System.EventHandler(this.cikarma_Click);
+            // 
+            // onaylabuton1
+            // 
+            this.onaylabuton1.BackColor = System.Drawing.Color.Transparent;
+            this.onaylabuton1.Image = ((System.Drawing.Image)(resources.GetObject("onaylabuton1.Image")));
+            this.onaylabuton1.ImageActive = null;
+            this.onaylabuton1.Location = new System.Drawing.Point(402, 191);
+            this.onaylabuton1.Name = "onaylabuton1";
+            this.onaylabuton1.Size = new System.Drawing.Size(50, 45);
+            this.onaylabuton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.onaylabuton1.TabIndex = 70;
+            this.onaylabuton1.TabStop = false;
+            this.onaylabuton1.Zoom = 10;
+            this.onaylabuton1.Click += new System.EventHandler(this.onaylabuton1_Click);
+            // 
+            // duyurucikarma
+            // 
+            this.duyurucikarma.FormattingEnabled = true;
+            this.duyurucikarma.Location = new System.Drawing.Point(118, 103);
+            this.duyurucikarma.Name = "duyurucikarma";
+            this.duyurucikarma.Size = new System.Drawing.Size(335, 31);
+            this.duyurucikarma.TabIndex = 69;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Cambria", 12F);
+            this.label1.Location = new System.Drawing.Point(17, 54);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(62, 23);
+            this.label1.TabIndex = 68;
+            this.label1.Text = "İşlem:";
             // 
             // onaylabutton
             // 
@@ -103,60 +157,6 @@ namespace BM102Proje
             this.duyurutext.TabIndex = 63;
             this.duyurutext.Text = "Duyuru:";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Cambria", 12F);
-            this.label1.Location = new System.Drawing.Point(17, 54);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 23);
-            this.label1.TabIndex = 68;
-            this.label1.Text = "İşlem:";
-            // 
-            // duyurucikarma
-            // 
-            this.duyurucikarma.FormattingEnabled = true;
-            this.duyurucikarma.Location = new System.Drawing.Point(118, 103);
-            this.duyurucikarma.Name = "duyurucikarma";
-            this.duyurucikarma.Size = new System.Drawing.Size(335, 31);
-            this.duyurucikarma.TabIndex = 69;
-            // 
-            // onaylabuton1
-            // 
-            this.onaylabuton1.BackColor = System.Drawing.Color.Transparent;
-            this.onaylabuton1.Image = ((System.Drawing.Image)(resources.GetObject("onaylabuton1.Image")));
-            this.onaylabuton1.ImageActive = null;
-            this.onaylabuton1.Location = new System.Drawing.Point(402, 191);
-            this.onaylabuton1.Name = "onaylabuton1";
-            this.onaylabuton1.Size = new System.Drawing.Size(50, 45);
-            this.onaylabuton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.onaylabuton1.TabIndex = 70;
-            this.onaylabuton1.TabStop = false;
-            this.onaylabuton1.Zoom = 10;
-            this.onaylabuton1.Click += new System.EventHandler(this.onaylabuton1_Click);
-            // 
-            // cikarma
-            // 
-            this.cikarma.Location = new System.Drawing.Point(298, 47);
-            this.cikarma.Name = "cikarma";
-            this.cikarma.Size = new System.Drawing.Size(154, 29);
-            this.cikarma.TabIndex = 72;
-            this.cikarma.Text = "Çıkartma";
-            this.cikarma.UseVisualStyleBackColor = true;
-            this.cikarma.Click += new System.EventHandler(this.cikarma_Click);
-            // 
-            // ekleme
-            // 
-            this.ekleme.Location = new System.Drawing.Point(118, 47);
-            this.ekleme.Name = "ekleme";
-            this.ekleme.Size = new System.Drawing.Size(154, 29);
-            this.ekleme.TabIndex = 73;
-            this.ekleme.Text = "Ekleme";
-            this.ekleme.UseVisualStyleBackColor = true;
-            this.ekleme.Click += new System.EventHandler(this.ekleme_Click);
-            // 
             // DuyuruEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
@@ -175,8 +175,8 @@ namespace BM102Proje
             this.Load += new System.EventHandler(this.DuyuruEkle_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.onaylabutton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.onaylabuton1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.onaylabutton)).EndInit();
             this.ResumeLayout(false);
 
         }
