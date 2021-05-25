@@ -55,36 +55,40 @@ namespace BM102Proje
         }
         public void kontrol()
         {
-            string[] simdi = Convert.ToString(tarih.Value).Split('.');
-            for(int i = 0; i<randevuview.Rows.Count; i++)
+            DateTime simdi = Convert.ToDateTime(tarih.Value);
+            for (int i = 0; i<randevuview.Rows.Count; i++)
             {
-                int j = 2;
-                Console.WriteLine(randevuview.Rows[i].Cells[4]);
-                string[] rand = Convert.ToString(randevuview.Rows[i].Cells[4]).Split('.');
-                Console.WriteLine(randevuview.Rows[i].Cells[4]); 
-                Console.WriteLine(rand[0]);
-                    if (Convert.ToInt32(simdi[j])>= Convert.ToInt32(rand[j]))
-                    {
-
-                    }
-                    else if (Convert.ToInt32(simdi[j-1]) > Convert.ToInt32(rand[j-1]))
-                    {
-                        randevuview.Rows[i].Cells[0].Style.BackColor = Color.Green;
-                        randevuview.Rows[i].Cells[1].Style.BackColor = Color.Green;
-                        randevuview.Rows[i].Cells[2].Style.BackColor = Color.Green;
-                        randevuview.Rows[i].Cells[3].Style.BackColor = Color.Green;
-                        randevuview.Rows[i].Cells[4].Style.BackColor = Color.Green;
-                        randevuview.Rows[i].Cells[5].Style.BackColor = Color.Green;
-                    }
-                    else if (Convert.ToInt32(simdi[j - 2]) > Convert.ToInt32(rand[j - 2]))
-                    {
-                        randevuview.Rows[i].Cells[0].Style.BackColor = Color.Red;
-                        randevuview.Rows[i].Cells[1].Style.BackColor = Color.Red;
-                        randevuview.Rows[i].Cells[2].Style.BackColor = Color.Red;
-                        randevuview.Rows[i].Cells[3].Style.BackColor = Color.Red;
-                        randevuview.Rows[i].Cells[4].Style.BackColor = Color.Red;
-                        randevuview.Rows[i].Cells[5].Style.BackColor = Color.Red;
-                    }
+                Console.WriteLine(randevuview.Rows[i].Cells[4].Value);
+                DateTime rand = Convert.ToDateTime(randevuview.Rows[i].Cells[4].Value);
+                if (DateTime.Compare(simdi,rand) < 0)
+                {
+                    randevuview.Rows[i].Cells[0].Style.BackColor = Color.Tomato;
+                    randevuview.Rows[i].Cells[1].Style.BackColor = Color.Tomato;
+                    randevuview.Rows[i].Cells[2].Style.BackColor = Color.Tomato;
+                    randevuview.Rows[i].Cells[3].Style.BackColor = Color.Tomato;
+                    randevuview.Rows[i].Cells[4].Style.BackColor = Color.Tomato;
+                    randevuview.Rows[i].Cells[5].Style.BackColor = Color.Tomato;
+                }
+                else if (DateTime.Compare(simdi, rand) == 0)
+                {
+                    randevuview.Rows[i].Cells[0].Style.BackColor = Color.Green;
+                    randevuview.Rows[i].Cells[1].Style.BackColor = Color.Green;
+                    randevuview.Rows[i].Cells[2].Style.BackColor = Color.Green;
+                    randevuview.Rows[i].Cells[3].Style.BackColor = Color.Green;
+                    randevuview.Rows[i].Cells[4].Style.BackColor = Color.Green;
+                    randevuview.Rows[i].Cells[5].Style.BackColor = Color.Green;
+                }
+                else
+                {
+                    randevuview.Rows[i].Cells[0].Style.BackColor = Color.Red;
+                    randevuview.Rows[i].Cells[1].Style.BackColor = Color.Red;
+                    randevuview.Rows[i].Cells[2].Style.BackColor = Color.Red;
+                    randevuview.Rows[i].Cells[3].Style.BackColor = Color.Red;
+                    randevuview.Rows[i].Cells[4].Style.BackColor = Color.Red;
+                    randevuview.Rows[i].Cells[5].Style.BackColor = Color.Red;
+                }
+                    
+                    
             }
         }
     }

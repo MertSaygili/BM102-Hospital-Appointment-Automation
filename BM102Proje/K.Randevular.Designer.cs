@@ -31,14 +31,14 @@ namespace BM102Proje
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Randevular));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.GeriDon = new System.Windows.Forms.PictureBox();
+            this.tarih = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.randevuview = new System.Windows.Forms.DataGridView();
-            this.tarih = new System.Windows.Forms.DateTimePicker();
+            this.GeriDon = new System.Windows.Forms.PictureBox();
             this.bunifuGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GeriDon)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.randevuview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GeriDon)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel1
@@ -59,20 +59,19 @@ namespace BM102Proje
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(1016, 453);
             this.bunifuGradientPanel1.TabIndex = 0;
             // 
-            // GeriDon
+            // tarih
             // 
-            this.GeriDon.BackColor = System.Drawing.Color.Transparent;
-            this.GeriDon.BackgroundImage = global::BM102Proje.Properties.Resources.back_button_computer_left_blue_116903;
-            this.GeriDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.GeriDon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.GeriDon.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GeriDon.Location = new System.Drawing.Point(13, 14);
-            this.GeriDon.Margin = new System.Windows.Forms.Padding(4);
-            this.GeriDon.Name = "GeriDon";
-            this.GeriDon.Size = new System.Drawing.Size(45, 42);
-            this.GeriDon.TabIndex = 54;
-            this.GeriDon.TabStop = false;
-            this.GeriDon.Click += new System.EventHandler(this.GeriDon_Click);
+            this.tarih.CalendarForeColor = System.Drawing.Color.Cornsilk;
+            this.tarih.CalendarMonthBackground = System.Drawing.Color.Transparent;
+            this.tarih.CalendarTitleBackColor = System.Drawing.Color.Transparent;
+            this.tarih.CalendarTitleForeColor = System.Drawing.Color.Transparent;
+            this.tarih.CalendarTrailingForeColor = System.Drawing.Color.Transparent;
+            this.tarih.Enabled = false;
+            this.tarih.Location = new System.Drawing.Point(734, 26);
+            this.tarih.Name = "tarih";
+            this.tarih.Size = new System.Drawing.Size(265, 31);
+            this.tarih.TabIndex = 57;
+            this.tarih.Value = new System.DateTime(2021, 5, 25, 14, 5, 45, 0);
             // 
             // groupBox1
             // 
@@ -98,19 +97,20 @@ namespace BM102Proje
             this.randevuview.Size = new System.Drawing.Size(980, 331);
             this.randevuview.TabIndex = 0;
             // 
-            // tarih
+            // GeriDon
             // 
-            this.tarih.CalendarForeColor = System.Drawing.Color.Cornsilk;
-            this.tarih.CalendarMonthBackground = System.Drawing.Color.Transparent;
-            this.tarih.CalendarTitleBackColor = System.Drawing.Color.Transparent;
-            this.tarih.CalendarTitleForeColor = System.Drawing.Color.Transparent;
-            this.tarih.CalendarTrailingForeColor = System.Drawing.Color.Transparent;
-            this.tarih.Enabled = false;
-            this.tarih.Location = new System.Drawing.Point(734, 26);
-            this.tarih.Name = "tarih";
-            this.tarih.Size = new System.Drawing.Size(265, 31);
-            this.tarih.TabIndex = 57;
-            this.tarih.Value = new System.DateTime(2021, 5, 25, 14, 5, 45, 0);
+            this.GeriDon.BackColor = System.Drawing.Color.Transparent;
+            this.GeriDon.BackgroundImage = global::BM102Proje.Properties.Resources.back_button_computer_left_blue_116903;
+            this.GeriDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GeriDon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.GeriDon.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.GeriDon.Location = new System.Drawing.Point(13, 14);
+            this.GeriDon.Margin = new System.Windows.Forms.Padding(4);
+            this.GeriDon.Name = "GeriDon";
+            this.GeriDon.Size = new System.Drawing.Size(45, 42);
+            this.GeriDon.TabIndex = 54;
+            this.GeriDon.TabStop = false;
+            this.GeriDon.Click += new System.EventHandler(this.GeriDon_Click);
             // 
             // Randevular
             // 
@@ -126,9 +126,9 @@ namespace BM102Proje
             this.Text = "Randevular";
             this.Load += new System.EventHandler(this.Randevular_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.GeriDon)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.randevuview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GeriDon)).EndInit();
             this.ResumeLayout(false);
 
         }
