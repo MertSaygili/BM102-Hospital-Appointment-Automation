@@ -209,6 +209,7 @@ namespace BM102Proje
             this.aktifrandevular.Size = new System.Drawing.Size(143, 134);
             this.aktifrandevular.TabIndex = 24;
             this.aktifrandevular.TabStop = false;
+            this.aktifrandevular.Click += new System.EventHandler(this.aktifrandevular_Click);
             // 
             // hastalistesi
             // 
@@ -222,6 +223,7 @@ namespace BM102Proje
             this.hastalistesi.Size = new System.Drawing.Size(143, 134);
             this.hastalistesi.TabIndex = 23;
             this.hastalistesi.TabStop = false;
+            this.hastalistesi.Click += new System.EventHandler(this.hastalistesi_Click);
             // 
             // geridon
             // 

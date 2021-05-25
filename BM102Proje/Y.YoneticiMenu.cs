@@ -69,5 +69,19 @@ namespace BM102Proje
             this.Hide();
             YB.Show();
         }
+
+        private void aktifrandevular_Click(object sender, EventArgs e)
+        {
+            YoneticiRandevu YR = new YoneticiRandevu();
+            YR.Show();
+            this.Hide();
+        }
+
+        private void hastalistesi_Click(object sender, EventArgs e)
+        {
+            YoneticiHasta YH = new YoneticiHasta();
+            YH.Show();
+            this.Hide();
+        }
     }
 }

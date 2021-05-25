@@ -48,7 +48,18 @@ namespace BM102Proje
             randevuview.Columns[3].Width = 150;
             randevuview.Columns[4].Width = 92;
             randevuview.Columns[5].Width = 60;
-            randevuview.Columns[5].HeaderText = "R.Saati";
+
+            //hücrelerin başlıklarını düzenliyoruz
+            randevuview.Columns[0].HeaderText = "Şehir";
+            randevuview.Columns[1].HeaderText = "Hastane";
+            randevuview.Columns[2].HeaderText = "Polikinlik";
+            randevuview.Columns[3].HeaderText = "Doktor Adı";
+            randevuview.Columns[4].HeaderText = "Tarih";
+            randevuview.Columns[5].HeaderText = "Saat";
+
+            //başlıkların rengini ayarladık.
+            randevuview.EnableHeadersVisualStyles = false;
+            randevuview.ColumnHeadersDefaultCellStyle.BackColor = Color.Thistle;
 
             baglantı.Close();
             kontrol();
@@ -77,21 +88,21 @@ namespace BM102Proje
                 }
                 else if (DateTime.Compare(simdi, rand) == 0)
                 {
-                    randevuview.Rows[j].Cells[0].Style.BackColor = Color.Green;
-                    randevuview.Rows[j].Cells[1].Style.BackColor = Color.Green;
-                    randevuview.Rows[j].Cells[2].Style.BackColor = Color.Green; //eğer randevu günü bugünse yeşile boyuyoruz.
-                    randevuview.Rows[j].Cells[3].Style.BackColor = Color.Green;
-                    randevuview.Rows[j].Cells[4].Style.BackColor = Color.Green;
-                    randevuview.Rows[j].Cells[5].Style.BackColor = Color.Green;
+                    randevuview.Rows[j].Cells[0].Style.BackColor = Color.LightCoral;
+                    randevuview.Rows[j].Cells[1].Style.BackColor = Color.LightCoral;
+                    randevuview.Rows[j].Cells[2].Style.BackColor = Color.LightCoral; //eğer randevu günü bugünse yeşile boyuyoruz.
+                    randevuview.Rows[j].Cells[3].Style.BackColor = Color.LightCoral;
+                    randevuview.Rows[j].Cells[4].Style.BackColor = Color.LightCoral;
+                    randevuview.Rows[j].Cells[5].Style.BackColor = Color.LightCoral;
                 }
                 else
                 {
-                    randevuview.Rows[j].Cells[0].Style.BackColor = Color.Red;
-                    randevuview.Rows[j].Cells[1].Style.BackColor = Color.Red;
-                    randevuview.Rows[j].Cells[2].Style.BackColor = Color.Red; // eğer randevu günü geçmişse kırmızıya boyuyoruz.
-                    randevuview.Rows[j].Cells[3].Style.BackColor = Color.Red;
-                    randevuview.Rows[j].Cells[4].Style.BackColor = Color.Red;
-                    randevuview.Rows[j].Cells[5].Style.BackColor = Color.Red;
+                    randevuview.Rows[j].Cells[0].Style.BackColor = Color.Tomato;
+                    randevuview.Rows[j].Cells[1].Style.BackColor = Color.Tomato;
+                    randevuview.Rows[j].Cells[2].Style.BackColor = Color.Tomato; // eğer randevu günü geçmişse kırmızıya boyuyoruz.
+                    randevuview.Rows[j].Cells[3].Style.BackColor = Color.Tomato;
+                    randevuview.Rows[j].Cells[4].Style.BackColor = Color.Tomato;
+                    randevuview.Rows[j].Cells[5].Style.BackColor = Color.Tomato;
                 }                   
             }
         }

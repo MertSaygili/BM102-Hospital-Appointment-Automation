@@ -53,6 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Y.HastaListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Y.HastaListesi.Designer.cs">
+      <DependentUpon>Y.HastaListesi.cs</DependentUpon>
+    </Compile>
     <Compile Include="K.Randevular.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Y.YoneticiRandevu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Y.YoneticiRandevu.Designer.cs">
+      <DependentUpon>Y.YoneticiRandevu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Y.YöneticiGirişiMenü.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +182,9 @@
     <Compile Include="Y.YoneticiMenu.Designer.cs">
       <DependentUpon>Y.YoneticiMenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Y.HastaListesi.resx">
+      <DependentUpon>Y.HastaListesi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="K.Randevular.resx">
       <DependentUpon>K.Randevular.cs</DependentUpon>
     </EmbeddedResource>
@@ -220,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Y.DoktorEkle.resx">
       <DependentUpon>Y.DoktorEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Y.YoneticiRandevu.resx">
+      <DependentUpon>Y.YoneticiRandevu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Y.YöneticiGirişiMenü.resx">
       <DependentUpon>Y.YöneticiGirişiMenü.cs</DependentUpon>
