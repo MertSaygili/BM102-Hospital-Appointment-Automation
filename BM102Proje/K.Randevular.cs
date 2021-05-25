@@ -57,7 +57,7 @@ namespace BM102Proje
         public void kontrol()
         {
             DateTime simdi = DateTime.Now; // bugünü gün ay yıl olarak alıyoruz.
-            for (int j = 1; j < randevuview.Rows.Count; j++)
+            for (int j = 0; j < randevuview.Rows.Count; j++)
             {
                 string[] tarih_dizi = new string[3];
                 tarih_dizi = randevuview.Rows[j].Cells[4].Value.ToString().Split('.');
