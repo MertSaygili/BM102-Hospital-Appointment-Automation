@@ -88,12 +88,15 @@ namespace BM102Proje
             // 
             this.randevuview.AllowUserToAddRows = false;
             this.randevuview.AllowUserToDeleteRows = false;
+            this.randevuview.AllowUserToResizeColumns = false;
+            this.randevuview.AllowUserToResizeRows = false;
             this.randevuview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.randevuview.Location = new System.Drawing.Point(6, 32);
             this.randevuview.Name = "randevuview";
             this.randevuview.ReadOnly = true;
             this.randevuview.RowHeadersWidth = 51;
             this.randevuview.RowTemplate.Height = 24;
+            this.randevuview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.randevuview.Size = new System.Drawing.Size(980, 331);
             this.randevuview.TabIndex = 0;
             // 

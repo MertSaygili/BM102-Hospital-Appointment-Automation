@@ -32,7 +32,7 @@ namespace BM102Proje
             komut.Parameters.AddWithValue("@p3", RandevuHastaneAdiText.Text);
             komut.Parameters.AddWithValue("@p4", RandevuPolAdi.SelectedItem);    //Aldığımız verileri database'e kaydediyoruz.
             komut.Parameters.AddWithValue("@p5", RandevuDoktorAdi.SelectedItem);
-            komut.Parameters.AddWithValue("@p6", Convert.ToString(RandevuTarih.Value).Substring(0,10));
+            komut.Parameters.AddWithValue("@p6", Convert.ToString(RandevuTarih.Value).Substring(0,10).Replace('/','.'));
             komut.Parameters.AddWithValue("@p7", RandevuSaat.SelectedItem);
             komut.Parameters.AddWithValue("@p8", RandevuSikayet.Text);
             komut.ExecuteNonQuery();
@@ -78,7 +78,7 @@ namespace BM102Proje
         private void temizle()
         {
             RandevuDoktorAdi.SelectedIndex = -1;
-            RandevuPolAdi.SelectedIndex = -1;
+            RandevuPolAdi.SelectedIndex = 0;
             RandevuHastaneAdiText.Text = ""; //butona basıldığında kutucukları temizleyen fonksiyon
             RandevuSehir.SelectedIndex = -1;
             RandevuSaat.SelectedIndex = -1;
@@ -117,7 +117,6 @@ namespace BM102Proje
         {
             RandevuDoktorAdi.Items.Clear();
             baglantı.Open();
-
             OleDbCommand kmt = new OleDbCommand("Select Ad, Soyad From Doktorlar where Poliklinik = @a1", baglantı);
             kmt.Parameters.AddWithValue("@a1 ", RandevuPolAdi.SelectedItem.ToString());
             OleDbDataReader dr1 = kmt.ExecuteReader();

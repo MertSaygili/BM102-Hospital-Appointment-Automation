@@ -49,17 +49,18 @@ namespace BM102Proje
             randevuview.Columns[4].Width = 92;
             randevuview.Columns[5].Width = 60;
             randevuview.Columns[5].HeaderText = "R.Saati";
+            //randevuview.Rows[0].Cells[0].Selected = false;
 
             baglantı.Close();
             kontrol();
         }
         public void kontrol()
         {
-            DateTime simdi = Convert.ToDateTime(DateTime.Now.ToString("dd/MM/yyyy")); // bugünü gün ay yıl olarak alıyoruz.
-            for (int i = 0; i < randevuview.Rows.Count; i++)
+            DateTime simdi = DateTime.Now; // bugünü gün ay yıl olarak alıyoruz.
+            for (int j = 1; j < randevuview.Rows.Count; j++)
             {
                 string[] tarih_dizi = new string[3];
-                tarih_dizi = randevuview.Rows[i].Cells[4].Value.ToString().Split('.');
+                tarih_dizi = randevuview.Rows[j].Cells[4].Value.ToString().Split('.');
                 int ay = Convert.ToInt32(tarih_dizi[1]);
                 int yil = Convert.ToInt32(tarih_dizi[2]);
                 int gun = Convert.ToInt32(tarih_dizi[0]);
@@ -69,33 +70,31 @@ namespace BM102Proje
                 //DateTime rand = Convert.ToDateTime(randevuview.Rows[i].Cells[4].Value);
                 if (DateTime.Compare(simdi,rand) < 0)
                 {
-                    randevuview.Rows[i].Cells[0].Style.BackColor = Color.LightCyan;
-                    randevuview.Rows[i].Cells[1].Style.BackColor = Color.LightCyan;
-                    randevuview.Rows[i].Cells[2].Style.BackColor = Color.LightCyan; //eğer tarih ilerki bir günse hücreleri bu renge boyuyoruz.
-                    randevuview.Rows[i].Cells[3].Style.BackColor = Color.LightCyan;
-                    randevuview.Rows[i].Cells[4].Style.BackColor = Color.LightCyan;
-                    randevuview.Rows[i].Cells[5].Style.BackColor = Color.LightCyan;
+                    randevuview.Rows[j].Cells[0].Style.BackColor = Color.LightCyan;
+                    randevuview.Rows[j].Cells[1].Style.BackColor = Color.LightCyan;
+                    randevuview.Rows[j].Cells[2].Style.BackColor = Color.LightCyan; //eğer tarih ilerki bir günse hücreleri bu renge boyuyoruz.
+                    randevuview.Rows[j].Cells[3].Style.BackColor = Color.LightCyan;
+                    randevuview.Rows[j].Cells[4].Style.BackColor = Color.LightCyan;
+                    randevuview.Rows[j].Cells[5].Style.BackColor = Color.LightCyan;
                 }
                 else if (DateTime.Compare(simdi, rand) == 0)
                 {
-                    randevuview.Rows[i].Cells[0].Style.BackColor = Color.Green;
-                    randevuview.Rows[i].Cells[1].Style.BackColor = Color.Green;
-                    randevuview.Rows[i].Cells[2].Style.BackColor = Color.Green; //eğer randevu günü bugünse yeşile boyuyoruz.
-                    randevuview.Rows[i].Cells[3].Style.BackColor = Color.Green;
-                    randevuview.Rows[i].Cells[4].Style.BackColor = Color.Green;
-                    randevuview.Rows[i].Cells[5].Style.BackColor = Color.Green;
+                    randevuview.Rows[j].Cells[0].Style.BackColor = Color.Green;
+                    randevuview.Rows[j].Cells[1].Style.BackColor = Color.Green;
+                    randevuview.Rows[j].Cells[2].Style.BackColor = Color.Green; //eğer randevu günü bugünse yeşile boyuyoruz.
+                    randevuview.Rows[j].Cells[3].Style.BackColor = Color.Green;
+                    randevuview.Rows[j].Cells[4].Style.BackColor = Color.Green;
+                    randevuview.Rows[j].Cells[5].Style.BackColor = Color.Green;
                 }
                 else
                 {
-                    randevuview.Rows[i].Cells[0].Style.BackColor = Color.Red;
-                    randevuview.Rows[i].Cells[1].Style.BackColor = Color.Red;
-                    randevuview.Rows[i].Cells[2].Style.BackColor = Color.Red; // eğer randevu günü geçmişse kırmızıya boyuyoruz.
-                    randevuview.Rows[i].Cells[3].Style.BackColor = Color.Red;
-                    randevuview.Rows[i].Cells[4].Style.BackColor = Color.Red;
-                    randevuview.Rows[i].Cells[5].Style.BackColor = Color.Red;
-                }
-                    
-                    
+                    randevuview.Rows[j].Cells[0].Style.BackColor = Color.Red;
+                    randevuview.Rows[j].Cells[1].Style.BackColor = Color.Red;
+                    randevuview.Rows[j].Cells[2].Style.BackColor = Color.Red; // eğer randevu günü geçmişse kırmızıya boyuyoruz.
+                    randevuview.Rows[j].Cells[3].Style.BackColor = Color.Red;
+                    randevuview.Rows[j].Cells[4].Style.BackColor = Color.Red;
+                    randevuview.Rows[j].Cells[5].Style.BackColor = Color.Red;
+                }                   
             }
         }
     }
