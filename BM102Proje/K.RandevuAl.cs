@@ -32,7 +32,7 @@ namespace BM102Proje
             komut.Parameters.AddWithValue("@p3", RandevuHastaneAdiText.Text);
             komut.Parameters.AddWithValue("@p4", RandevuPolAdi.SelectedItem);    //Aldığımız verileri database'e kaydediyoruz.
             komut.Parameters.AddWithValue("@p5", RandevuDoktorAdi.SelectedItem);
-            komut.Parameters.AddWithValue("@p6", Convert.ToString(RandevuTarih.Value).Substring(0,10).Replace('/','.'));
+            komut.Parameters.AddWithValue("@p6", Convert.ToString(RandevuTarih.Value).Substring(0,10));
             komut.Parameters.AddWithValue("@p7", RandevuSaat.SelectedItem);
             komut.Parameters.AddWithValue("@p8", RandevuSikayet.Text);
             komut.ExecuteNonQuery();
