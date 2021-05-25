@@ -55,19 +55,19 @@ namespace BM102Proje
         }
         public void kontrol()
         {
-            DateTime simdi = Convert.ToDateTime(tarih.Value);
+            DateTime simdi = Convert.ToDateTime(DateTime.Now.ToString("dd/MM/yyyy"));
             for (int i = 0; i<randevuview.Rows.Count; i++)
             {
                 Console.WriteLine(randevuview.Rows[i].Cells[4].Value);
                 DateTime rand = Convert.ToDateTime(randevuview.Rows[i].Cells[4].Value);
                 if (DateTime.Compare(simdi,rand) < 0)
                 {
-                    randevuview.Rows[i].Cells[0].Style.BackColor = Color.Tomato;
-                    randevuview.Rows[i].Cells[1].Style.BackColor = Color.Tomato;
-                    randevuview.Rows[i].Cells[2].Style.BackColor = Color.Tomato;
-                    randevuview.Rows[i].Cells[3].Style.BackColor = Color.Tomato;
-                    randevuview.Rows[i].Cells[4].Style.BackColor = Color.Tomato;
-                    randevuview.Rows[i].Cells[5].Style.BackColor = Color.Tomato;
+                    randevuview.Rows[i].Cells[0].Style.BackColor = Color.LightCyan;
+                    randevuview.Rows[i].Cells[1].Style.BackColor = Color.LightCyan;
+                    randevuview.Rows[i].Cells[2].Style.BackColor = Color.LightCyan;
+                    randevuview.Rows[i].Cells[3].Style.BackColor = Color.LightCyan;
+                    randevuview.Rows[i].Cells[4].Style.BackColor = Color.LightCyan;
+                    randevuview.Rows[i].Cells[5].Style.BackColor = Color.LightCyan;
                 }
                 else if (DateTime.Compare(simdi, rand) == 0)
                 {
