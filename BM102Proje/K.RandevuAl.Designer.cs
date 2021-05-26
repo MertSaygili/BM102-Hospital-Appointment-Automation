@@ -31,6 +31,7 @@ namespace BM102Proje
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RandevuAl));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.hastanebutton = new System.Windows.Forms.Button();
             this.RandevuSikayet = new System.Windows.Forms.RichTextBox();
             this.RandevuSikayetText = new System.Windows.Forms.Label();
             this.iptalbutton = new Bunifu.Framework.UI.BunifuImageButton();
@@ -60,6 +61,7 @@ namespace BM102Proje
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.hastanebutton);
             this.bunifuGradientPanel1.Controls.Add(this.RandevuSikayet);
             this.bunifuGradientPanel1.Controls.Add(this.RandevuSikayetText);
             this.bunifuGradientPanel1.Controls.Add(this.iptalbutton);
@@ -83,20 +85,31 @@ namespace BM102Proje
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.LightSeaGreen;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(-5, 0);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(-4, 0);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(679, 486);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(509, 395);
             this.bunifuGradientPanel1.TabIndex = 0;
+            // 
+            // hastanebutton
+            // 
+            this.hastanebutton.Font = new System.Drawing.Font("Cambria", 9F);
+            this.hastanebutton.Location = new System.Drawing.Point(21, 340);
+            this.hastanebutton.Name = "hastanebutton";
+            this.hastanebutton.Size = new System.Drawing.Size(73, 42);
+            this.hastanebutton.TabIndex = 62;
+            this.hastanebutton.Text = "En Yakın Hastane";
+            this.hastanebutton.UseVisualStyleBackColor = true;
+            this.hastanebutton.Click += new System.EventHandler(this.hastanebutton_Click);
             // 
             // RandevuSikayet
             // 
             this.RandevuSikayet.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.RandevuSikayet.Location = new System.Drawing.Point(295, 315);
-            this.RandevuSikayet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RandevuSikayet.Location = new System.Drawing.Point(221, 256);
+            this.RandevuSikayet.Margin = new System.Windows.Forms.Padding(2);
             this.RandevuSikayet.Name = "RandevuSikayet";
-            this.RandevuSikayet.Size = new System.Drawing.Size(295, 74);
+            this.RandevuSikayet.Size = new System.Drawing.Size(222, 61);
             this.RandevuSikayet.TabIndex = 61;
             this.RandevuSikayet.Text = "";
             // 
@@ -105,9 +118,10 @@ namespace BM102Proje
             this.RandevuSikayetText.AutoSize = true;
             this.RandevuSikayetText.BackColor = System.Drawing.Color.Transparent;
             this.RandevuSikayetText.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.RandevuSikayetText.Location = new System.Drawing.Point(85, 313);
+            this.RandevuSikayetText.Location = new System.Drawing.Point(64, 254);
+            this.RandevuSikayetText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RandevuSikayetText.Name = "RandevuSikayetText";
-            this.RandevuSikayetText.Size = new System.Drawing.Size(164, 22);
+            this.RandevuSikayetText.Size = new System.Drawing.Size(128, 17);
             this.RandevuSikayetText.TabIndex = 60;
             this.RandevuSikayetText.Text = "Şikayetinizi giriniz:";
             // 
@@ -116,10 +130,9 @@ namespace BM102Proje
             this.iptalbutton.BackColor = System.Drawing.Color.Transparent;
             this.iptalbutton.Image = ((System.Drawing.Image)(resources.GetObject("iptalbutton.Image")));
             this.iptalbutton.ImageActive = null;
-            this.iptalbutton.Location = new System.Drawing.Point(508, 410);
-            this.iptalbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.iptalbutton.Location = new System.Drawing.Point(381, 333);
             this.iptalbutton.Name = "iptalbutton";
-            this.iptalbutton.Size = new System.Drawing.Size(67, 62);
+            this.iptalbutton.Size = new System.Drawing.Size(50, 50);
             this.iptalbutton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.iptalbutton.TabIndex = 58;
             this.iptalbutton.TabStop = false;
@@ -131,10 +144,9 @@ namespace BM102Proje
             this.onaylabutton.BackColor = System.Drawing.Color.Transparent;
             this.onaylabutton.Image = ((System.Drawing.Image)(resources.GetObject("onaylabutton.Image")));
             this.onaylabutton.ImageActive = null;
-            this.onaylabutton.Location = new System.Drawing.Point(433, 410);
-            this.onaylabutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.onaylabutton.Location = new System.Drawing.Point(325, 333);
             this.onaylabutton.Name = "onaylabutton";
-            this.onaylabutton.Size = new System.Drawing.Size(67, 62);
+            this.onaylabutton.Size = new System.Drawing.Size(50, 50);
             this.onaylabutton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.onaylabutton.TabIndex = 57;
             this.onaylabutton.TabStop = false;
@@ -147,10 +159,10 @@ namespace BM102Proje
             this.AsiLogo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("AsiLogo.BackgroundImage")));
             this.AsiLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AsiLogo.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.AsiLogo.Location = new System.Drawing.Point(588, 14);
-            this.AsiLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.AsiLogo.Location = new System.Drawing.Point(441, 11);
+            this.AsiLogo.Margin = new System.Windows.Forms.Padding(2);
             this.AsiLogo.Name = "AsiLogo";
-            this.AsiLogo.Size = new System.Drawing.Size(57, 50);
+            this.AsiLogo.Size = new System.Drawing.Size(43, 41);
             this.AsiLogo.TabIndex = 54;
             this.AsiLogo.TabStop = false;
             // 
@@ -161,10 +173,9 @@ namespace BM102Proje
             this.GeriDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GeriDon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GeriDon.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GeriDon.Location = new System.Drawing.Point(19, 14);
-            this.GeriDon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.GeriDon.Location = new System.Drawing.Point(14, 11);
             this.GeriDon.Name = "GeriDon";
-            this.GeriDon.Size = new System.Drawing.Size(45, 42);
+            this.GeriDon.Size = new System.Drawing.Size(34, 34);
             this.GeriDon.TabIndex = 53;
             this.GeriDon.TabStop = false;
             this.GeriDon.Click += new System.EventHandler(this.GeriDon_Click_1);
@@ -172,10 +183,10 @@ namespace BM102Proje
             // RandevuHastaneAdiText
             // 
             this.RandevuHastaneAdiText.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.RandevuHastaneAdiText.Location = new System.Drawing.Point(295, 140);
-            this.RandevuHastaneAdiText.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RandevuHastaneAdiText.Location = new System.Drawing.Point(221, 114);
+            this.RandevuHastaneAdiText.Margin = new System.Windows.Forms.Padding(2);
             this.RandevuHastaneAdiText.Name = "RandevuHastaneAdiText";
-            this.RandevuHastaneAdiText.Size = new System.Drawing.Size(295, 29);
+            this.RandevuHastaneAdiText.Size = new System.Drawing.Size(222, 24);
             this.RandevuHastaneAdiText.TabIndex = 51;
             // 
             // label3
@@ -184,9 +195,10 @@ namespace BM102Proje
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Cambria", 12F);
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(85, 282);
+            this.label3.Location = new System.Drawing.Point(64, 229);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 23);
+            this.label3.Size = new System.Drawing.Size(92, 19);
             this.label3.TabIndex = 49;
             this.label3.Text = "Saat seçiniz:";
             // 
@@ -209,10 +221,10 @@ namespace BM102Proje
             "14.30",
             "15.00",
             "15.30"});
-            this.RandevuSaat.Location = new System.Drawing.Point(295, 279);
-            this.RandevuSaat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RandevuSaat.Location = new System.Drawing.Point(221, 227);
+            this.RandevuSaat.Margin = new System.Windows.Forms.Padding(2);
             this.RandevuSaat.Name = "RandevuSaat";
-            this.RandevuSaat.Size = new System.Drawing.Size(295, 31);
+            this.RandevuSaat.Size = new System.Drawing.Size(222, 27);
             this.RandevuSaat.TabIndex = 48;
             // 
             // RandevuDoktorAdi
@@ -220,10 +232,10 @@ namespace BM102Proje
             this.RandevuDoktorAdi.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RandevuDoktorAdi.Font = new System.Drawing.Font("Cambria", 12F);
             this.RandevuDoktorAdi.FormattingEnabled = true;
-            this.RandevuDoktorAdi.Location = new System.Drawing.Point(295, 209);
-            this.RandevuDoktorAdi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RandevuDoktorAdi.Location = new System.Drawing.Point(221, 170);
+            this.RandevuDoktorAdi.Margin = new System.Windows.Forms.Padding(2);
             this.RandevuDoktorAdi.Name = "RandevuDoktorAdi";
-            this.RandevuDoktorAdi.Size = new System.Drawing.Size(295, 31);
+            this.RandevuDoktorAdi.Size = new System.Drawing.Size(222, 27);
             this.RandevuDoktorAdi.TabIndex = 47;
             // 
             // label2
@@ -232,9 +244,10 @@ namespace BM102Proje
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Cambria", 12F);
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(85, 212);
+            this.label2.Location = new System.Drawing.Point(64, 172);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(139, 23);
+            this.label2.Size = new System.Drawing.Size(112, 19);
             this.label2.TabIndex = 46;
             this.label2.Text = "Doktor seçiniz:";
             // 
@@ -244,9 +257,10 @@ namespace BM102Proje
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Cambria", 12F);
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(85, 249);
+            this.label1.Location = new System.Drawing.Point(64, 202);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 23);
+            this.label1.Size = new System.Drawing.Size(99, 19);
             this.label1.TabIndex = 45;
             this.label1.Text = "Tarih seçiniz:";
             // 
@@ -255,11 +269,11 @@ namespace BM102Proje
             this.RandevuTarih.CalendarFont = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.RandevuTarih.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RandevuTarih.Font = new System.Drawing.Font("Cambria", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.RandevuTarih.Location = new System.Drawing.Point(295, 245);
-            this.RandevuTarih.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RandevuTarih.Location = new System.Drawing.Point(221, 199);
+            this.RandevuTarih.Margin = new System.Windows.Forms.Padding(2);
             this.RandevuTarih.MinDate = new System.DateTime(2021, 5, 9, 0, 0, 0, 0);
             this.RandevuTarih.Name = "RandevuTarih";
-            this.RandevuTarih.Size = new System.Drawing.Size(295, 29);
+            this.RandevuTarih.Size = new System.Drawing.Size(222, 24);
             this.RandevuTarih.TabIndex = 44;
             this.RandevuTarih.Value = new System.DateTime(2021, 5, 9, 19, 47, 0, 0);
             // 
@@ -269,9 +283,10 @@ namespace BM102Proje
             this.RandevuPolikinlikText.BackColor = System.Drawing.Color.Transparent;
             this.RandevuPolikinlikText.Font = new System.Drawing.Font("Cambria", 12F);
             this.RandevuPolikinlikText.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RandevuPolikinlikText.Location = new System.Drawing.Point(85, 177);
+            this.RandevuPolikinlikText.Location = new System.Drawing.Point(64, 144);
+            this.RandevuPolikinlikText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RandevuPolikinlikText.Name = "RandevuPolikinlikText";
-            this.RandevuPolikinlikText.Size = new System.Drawing.Size(160, 23);
+            this.RandevuPolikinlikText.Size = new System.Drawing.Size(126, 19);
             this.RandevuPolikinlikText.TabIndex = 43;
             this.RandevuPolikinlikText.Text = "Polikinlik seçiniz:";
             // 
@@ -296,10 +311,10 @@ namespace BM102Proje
             "Ortopedi Poliklinikleri",
             "Psikiyatri Poliklinikleri",
             "Plastik Cerrahi Poliklinikleri"});
-            this.RandevuPolAdi.Location = new System.Drawing.Point(295, 174);
-            this.RandevuPolAdi.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RandevuPolAdi.Location = new System.Drawing.Point(221, 141);
+            this.RandevuPolAdi.Margin = new System.Windows.Forms.Padding(2);
             this.RandevuPolAdi.Name = "RandevuPolAdi";
-            this.RandevuPolAdi.Size = new System.Drawing.Size(295, 31);
+            this.RandevuPolAdi.Size = new System.Drawing.Size(222, 27);
             this.RandevuPolAdi.TabIndex = 42;
             this.RandevuPolAdi.SelectedIndexChanged += new System.EventHandler(this.RandevuPolAdi_SelectedIndexChanged);
             // 
@@ -309,9 +324,10 @@ namespace BM102Proje
             this.RandevuHastaneAdıText.BackColor = System.Drawing.Color.Transparent;
             this.RandevuHastaneAdıText.Font = new System.Drawing.Font("Cambria", 12F);
             this.RandevuHastaneAdıText.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RandevuHastaneAdıText.Location = new System.Drawing.Point(85, 142);
+            this.RandevuHastaneAdıText.Location = new System.Drawing.Point(64, 115);
+            this.RandevuHastaneAdıText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RandevuHastaneAdıText.Name = "RandevuHastaneAdıText";
-            this.RandevuHastaneAdıText.Size = new System.Drawing.Size(146, 23);
+            this.RandevuHastaneAdıText.Size = new System.Drawing.Size(116, 19);
             this.RandevuHastaneAdıText.TabIndex = 41;
             this.RandevuHastaneAdıText.Text = "Hastane giriniz:";
             // 
@@ -321,9 +337,10 @@ namespace BM102Proje
             this.RandevuSehirText.BackColor = System.Drawing.Color.Transparent;
             this.RandevuSehirText.Font = new System.Drawing.Font("Cambria", 12F);
             this.RandevuSehirText.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.RandevuSehirText.Location = new System.Drawing.Point(85, 107);
+            this.RandevuSehirText.Location = new System.Drawing.Point(64, 87);
+            this.RandevuSehirText.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.RandevuSehirText.Name = "RandevuSehirText";
-            this.RandevuSehirText.Size = new System.Drawing.Size(124, 23);
+            this.RandevuSehirText.Size = new System.Drawing.Size(99, 19);
             this.RandevuSehirText.TabIndex = 39;
             this.RandevuSehirText.Text = "Şehir seçiniz:";
             // 
@@ -413,20 +430,20 @@ namespace BM102Proje
             "Yalova",
             "Yozgat",
             "Zonguldak "});
-            this.RandevuSehir.Location = new System.Drawing.Point(295, 103);
-            this.RandevuSehir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.RandevuSehir.Location = new System.Drawing.Point(221, 84);
+            this.RandevuSehir.Margin = new System.Windows.Forms.Padding(2);
             this.RandevuSehir.Name = "RandevuSehir";
-            this.RandevuSehir.Size = new System.Drawing.Size(295, 31);
+            this.RandevuSehir.Size = new System.Drawing.Size(222, 27);
             this.RandevuSehir.TabIndex = 38;
             // 
             // RandevuAl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(672, 485);
+            this.ClientSize = new System.Drawing.Size(504, 394);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "RandevuAl";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -463,5 +480,6 @@ namespace BM102Proje
         private Bunifu.Framework.UI.BunifuImageButton iptalbutton;
         private System.Windows.Forms.RichTextBox RandevuSikayet;
         private System.Windows.Forms.Label RandevuSikayetText;
+        private System.Windows.Forms.Button hastanebutton;
     }
 }

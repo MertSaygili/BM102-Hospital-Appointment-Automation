@@ -17,6 +17,7 @@ namespace BM102Proje
     {
         OleDbConnection baglantı = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\veriler\\veritabani_access.mdb");
         MailMessage mesajım1 = new MailMessage();
+        static public StringBuilder url = new StringBuilder("https://www.google.com/maps/search/");
         public RandevuAl()
         {
             InitializeComponent();
@@ -193,5 +194,19 @@ namespace BM102Proje
             temizle();
         }
 
+        private void hastanebutton_Click(object sender, EventArgs e)
+        {
+            if (RandevuSehir.SelectedIndex == -1)
+            {
+                MessageBox.Show("Lütfen Şehir Seçiniz!");
+            }
+            else
+            {
+                string il = RandevuSehir.SelectedItem.ToString();
+                url.Append(il + "+"+"Hastaneleri");
+                Hastaneler has = new Hastaneler();
+                has.Show();
+            }
+        }
     }
 }
