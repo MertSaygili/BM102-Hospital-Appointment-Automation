@@ -40,11 +40,13 @@ namespace BM102Proje
 
         private int kontrolsagla()
         {
-            //database içindeki AsiRandevulari adlı tablo içerisindeki verileri okuayarak kullanıcı tarafından girilen seçeneklerle karşılaştırıyor. Eğer eşleşen bir randevu varsa değeri 1 arttırıyor.?????? 
+            string tcno = KullanıcıGirişiMenü.ilet;
             baglantı.Open();
-            OleDbCommand komut = new OleDbCommand("SELECT count (KimlikNumarası) from AsiRandevulari", baglantı);
-            adet = System.Convert.ToInt32(komut.ExecuteScalar()); // BURAYA BAKILACAK
+            OleDbCommand komut = new OleDbCommand("SELECT count (KimlikNumarası) from AsiRandevulari where KimlikNumarası=@a1", baglantı);
+            komut.Parameters.AddWithValue("@a1", tcno);
+            adet = System.Convert.ToInt32(komut.ExecuteScalar());  //Burada AsiRandevuları tablomuzdan kullanıcının kimliknumaralarının kaç adet olduğuna baktık. Sonucu adet adlı int değere eşitledik ve döndürdük.
             baglantı.Close();
+
             return adet;
         }
         private void bilgileriyaz() {
