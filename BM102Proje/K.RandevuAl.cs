@@ -21,7 +21,6 @@ namespace BM102Proje
         OleDbConnection baglantı = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\veriler\\veritabani_access.mdb");
         MailMessage mesajım1 = new MailMessage();
         static public StringBuilder url = new StringBuilder("https://www.google.com/maps/search/");
-        public ChromiumWebBrowser chromeBrowser;
         public RandevuAl()
         {
             InitializeComponent();
@@ -95,16 +94,13 @@ namespace BM102Proje
         private void GeriDon_Click_1(object sender, EventArgs e)
         {
             KullanıcıMenü KM = new KullanıcıMenü();
-            KM.Show();                              //Geri dön tuşu ile ana menüye dönüyoruz
-            this.Hide();
+            KM.Show();//Geri dön tuşu ile ana menüye dönüyoruz
+            this.Close();
         }
 
         private void RandevuAl_Load(object sender, EventArgs e)
         {
-            CefSettings settings = new CefSettings();
-            Cef.Initialize(settings);
-            chromeBrowser = new ChromiumWebBrowser();
-            tariyici.Visible = false;
+            tariyici.Visible = false;                   // taryıcı ilk başta görünür değil.
             //doktorlariyukle(); // doktorlar veritabanından çeker
         }
         
@@ -213,13 +209,13 @@ namespace BM102Proje
                 {
                     this.Size = new Size(1038, 433);
                     string il = RandevuSehir.SelectedItem.ToString();
-                    url.Append(il + "+"+"Hastaneleri");
+                    url.Append(il + "+"+"Hastaneleri");                 // urlyi ayarlayıp tarayıcı açıyoruz.
                     tarayiciayarla();
-                    hastanebutton.Text = "Haritayı Kapat";
+                    hastanebutton.Text = "Haritayı Kapat"; 
                         var script = @"
-                             document.getElementsByClassName('widget-pane-toggle-button noprint')[0].click();
+                             document.getElementsByClassName('widget-pane-toggle-button noprint')[0].click();   
                          ";
-                    chromeBrowser.ExecuteScriptAsyncWhenPageLoaded(script);
+                    Program.chromeBrowser.ExecuteScriptAsyncWhenPageLoaded(script); // Side paneli otomatik kapatan JavaScript scriptini sayfa yüklendiğinde çalıştırıyoruz.
                     sayac += 1;
                 }
             }
@@ -237,13 +233,18 @@ namespace BM102Proje
         {
             bunifuGradientPanel1.Size = new Size(1027, 395);
             tariyici.Location = new Point(504, 0);
-            tariyici.Size = new Size(525, 395);
+            tariyici.Size = new Size(525, 395);                 // Tarayıcı panel görselliği ayarlanıyor.
             tariyici.Visible = true;
-            tariyici.Controls.Add(chromeBrowser);
-            chromeBrowser.Load(RandevuAl.url.ToString());
-            url = new StringBuilder("https://www.google.com/maps/search/");
-            chromeBrowser.Dock = DockStyle.Fill;
-            Cef.EnableHighDPISupport();
+            tariyici.Controls.Add(Program.chromeBrowser);           // Tarayıcı paneline browser ekleniyor.
+            Program.chromeBrowser.Load(RandevuAl.url.ToString());   // url adresini tarayıca açıyoruz.
+            url = new StringBuilder("https://www.google.com/maps/search/"); // URL tekrar ilk haline alınıyor.
+            Program.chromeBrowser.Dock = DockStyle.Fill;    
+            Cef.EnableHighDPISupport(); // Her türlü monitörde uyumlu çalışması sağlıyor.
+        }
+
+        private void RandevuAl_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           
         }
     }
 }

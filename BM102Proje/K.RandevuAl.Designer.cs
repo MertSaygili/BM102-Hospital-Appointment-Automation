@@ -31,6 +31,7 @@ namespace BM102Proje
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RandevuAl));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.tariyici = new System.Windows.Forms.Panel();
             this.hastanebutton = new System.Windows.Forms.Button();
             this.RandevuSikayet = new System.Windows.Forms.RichTextBox();
             this.RandevuSikayetText = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@ namespace BM102Proje
             this.RandevuHastaneAdıText = new System.Windows.Forms.Label();
             this.RandevuSehirText = new System.Windows.Forms.Label();
             this.RandevuSehir = new System.Windows.Forms.ComboBox();
-            this.tariyici = new System.Windows.Forms.Panel();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iptalbutton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.onaylabutton)).BeginInit();
@@ -93,6 +93,13 @@ namespace BM102Proje
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(509, 395);
             this.bunifuGradientPanel1.TabIndex = 0;
+            // 
+            // tariyici
+            // 
+            this.tariyici.Location = new System.Drawing.Point(3, 3);
+            this.tariyici.Name = "tariyici";
+            this.tariyici.Size = new System.Drawing.Size(256, 395);
+            this.tariyici.TabIndex = 63;
             // 
             // hastanebutton
             // 
@@ -438,13 +445,6 @@ namespace BM102Proje
             this.RandevuSehir.Size = new System.Drawing.Size(222, 27);
             this.RandevuSehir.TabIndex = 38;
             // 
-            // tariyici
-            // 
-            this.tariyici.Location = new System.Drawing.Point(3, 3);
-            this.tariyici.Name = "tariyici";
-            this.tariyici.Size = new System.Drawing.Size(256, 395);
-            this.tariyici.TabIndex = 63;
-            // 
             // RandevuAl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -452,11 +452,12 @@ namespace BM102Proje
             this.ClientSize = new System.Drawing.Size(501, 394);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "RandevuAl";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Randevu Al";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RandevuAl_FormClosing);
             this.Load += new System.EventHandler(this.RandevuAl_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();

@@ -67,12 +67,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="K.RandevuAl.Hastane.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="K.RandevuAl.Hastane.Designer.cs">
-      <DependentUpon>K.RandevuAl.Hastane.cs</DependentUpon>
-    </Compile>
     <Compile Include="Y.HastaListesi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,9 +196,6 @@
     <Compile Include="Y.YoneticiMenu.Designer.cs">
       <DependentUpon>Y.YoneticiMenu.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="K.RandevuAl.Hastane.resx">
-      <DependentUpon>K.RandevuAl.Hastane.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Y.HastaListesi.resx">
       <DependentUpon>Y.HastaListesi.cs</DependentUpon>
     </EmbeddedResource>
