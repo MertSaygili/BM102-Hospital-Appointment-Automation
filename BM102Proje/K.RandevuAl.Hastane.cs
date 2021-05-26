@@ -28,7 +28,7 @@ namespace BM102Proje
             // Create a browser component
             chromeBrowser = new ChromiumWebBrowser(RandevuAl.url.ToString());
             // Add it to the form and fill it to the form window.
-            this.Controls.Add(chromeBrowser);
+            panel1.Controls.Add(chromeBrowser);
                 var script = @"
                 document.getElementsByClassName('widget-pane-toggle-button noprint')[0].click();
             ";
