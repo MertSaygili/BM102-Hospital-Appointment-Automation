@@ -50,6 +50,7 @@ namespace BM102Proje
             this.RandevuHastaneAdıText = new System.Windows.Forms.Label();
             this.RandevuSehirText = new System.Windows.Forms.Label();
             this.RandevuSehir = new System.Windows.Forms.ComboBox();
+            this.tariyici = new System.Windows.Forms.Panel();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iptalbutton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.onaylabutton)).BeginInit();
@@ -61,6 +62,7 @@ namespace BM102Proje
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.tariyici);
             this.bunifuGradientPanel1.Controls.Add(this.hastanebutton);
             this.bunifuGradientPanel1.Controls.Add(this.RandevuSikayet);
             this.bunifuGradientPanel1.Controls.Add(this.RandevuSikayetText);
@@ -436,11 +438,18 @@ namespace BM102Proje
             this.RandevuSehir.Size = new System.Drawing.Size(222, 27);
             this.RandevuSehir.TabIndex = 38;
             // 
+            // tariyici
+            // 
+            this.tariyici.Location = new System.Drawing.Point(3, 3);
+            this.tariyici.Name = "tariyici";
+            this.tariyici.Size = new System.Drawing.Size(256, 395);
+            this.tariyici.TabIndex = 63;
+            // 
             // RandevuAl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(504, 394);
+            this.ClientSize = new System.Drawing.Size(501, 394);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -481,5 +490,6 @@ namespace BM102Proje
         private System.Windows.Forms.RichTextBox RandevuSikayet;
         private System.Windows.Forms.Label RandevuSikayetText;
         private System.Windows.Forms.Button hastanebutton;
+        private System.Windows.Forms.Panel tariyici;
     }
 }

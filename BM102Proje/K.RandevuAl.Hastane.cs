@@ -34,6 +34,7 @@ namespace BM102Proje
             ";
             chromeBrowser.Dock = DockStyle.Fill;
             chromeBrowser.ExecuteScriptAsyncWhenPageLoaded(script);
+            Cef.EnableHighDPISupport();
         }
 
         private void Hastaneler_Load(object sender, EventArgs e)

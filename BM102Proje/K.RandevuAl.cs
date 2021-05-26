@@ -10,14 +10,18 @@ using System.Windows.Forms;
 using System.Data.OleDb;
 using System.Net.Mail;
 using System.Net;
+using CefSharp;
+using CefSharp.WinForms;
 namespace BM102Proje
 {
     
     public partial class RandevuAl : Form
     {
+        public int sayac = 0;
         OleDbConnection baglantı = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\veriler\\veritabani_access.mdb");
         MailMessage mesajım1 = new MailMessage();
         static public StringBuilder url = new StringBuilder("https://www.google.com/maps/search/");
+        public ChromiumWebBrowser chromeBrowser;
         public RandevuAl()
         {
             InitializeComponent();
@@ -97,6 +101,10 @@ namespace BM102Proje
 
         private void RandevuAl_Load(object sender, EventArgs e)
         {
+            CefSettings settings = new CefSettings();
+            Cef.Initialize(settings);
+            chromeBrowser = new ChromiumWebBrowser();
+            tariyici.Visible = false;
             //doktorlariyukle(); // doktorlar veritabanından çeker
         }
         
@@ -196,17 +204,46 @@ namespace BM102Proje
 
         private void hastanebutton_Click(object sender, EventArgs e)
         {
-            if (RandevuSehir.SelectedIndex == -1)
-            {
-                MessageBox.Show("Lütfen Şehir Seçiniz!");
+            if (sayac % 2 == 0) { 
+                if (RandevuSehir.SelectedIndex == -1)
+                {
+                    MessageBox.Show("Lütfen Şehir Seçiniz!");
+                }
+                else
+                {
+                    this.Size = new Size(1038, 433);
+                    string il = RandevuSehir.SelectedItem.ToString();
+                    url.Append(il + "+"+"Hastaneleri");
+                    tarayiciayarla();
+                    hastanebutton.Text = "Haritayı Kapat";
+                        var script = @"
+                             document.getElementsByClassName('widget-pane-toggle-button noprint')[0].click();
+                         ";
+                    chromeBrowser.ExecuteScriptAsyncWhenPageLoaded(script);
+                    sayac += 1;
+                }
             }
             else
             {
-                string il = RandevuSehir.SelectedItem.ToString();
-                url.Append(il + "+"+"Hastaneleri");
-                Hastaneler has = new Hastaneler();
-                has.Show();
+                tariyici.Visible = false;
+                this.Size = new Size(517, 433);
+                bunifuGradientPanel1.Size = new Size(509,395);
+                hastanebutton.Text = "En Yakın Hastane";
+                sayac += 1;
+                
             }
+        }
+        private void tarayiciayarla()
+        {
+            bunifuGradientPanel1.Size = new Size(1027, 395);
+            tariyici.Location = new Point(504, 0);
+            tariyici.Size = new Size(525, 395);
+            tariyici.Visible = true;
+            tariyici.Controls.Add(chromeBrowser);
+            chromeBrowser.Load(RandevuAl.url.ToString());
+            url = new StringBuilder("https://www.google.com/maps/search/");
+            chromeBrowser.Dock = DockStyle.Fill;
+            Cef.EnableHighDPISupport();
         }
     }
 }
