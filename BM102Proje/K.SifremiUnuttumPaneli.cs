@@ -127,10 +127,12 @@ namespace BM102Proje
 
                 kmt2.Parameters.AddWithValue("@a1", TxtSifre.Text);
                 kmt2.Parameters.AddWithValue("@a2", TxtKimlikNo.Text);
-                Console.WriteLine(TxtKimlikNo.Text);
-                Console.WriteLine(TxtSifre.Text);
                 kmt2.ExecuteNonQuery();
                 MessageBox.Show("Şifreniz başarıyla değiştirilmiştir, giriş yap menüsüne yönlendiriliyorsunuz.");
+
+                KullanıcıGirişiMenü kgm = new KullanıcıGirişiMenü();
+                kgm.Show();
+                this.Hide();
 
 
                 baglantı.Close();
