@@ -20,6 +20,7 @@ namespace BM102Proje
         public YöneticiGirişiMenü()
         {
             InitializeComponent();
+            sifregizle.Hide();
         }
 
         private void YöneticiGirişiMenü_Load(object sender, EventArgs e)
@@ -38,7 +39,7 @@ namespace BM102Proje
         private void temizle()      //TxtBoxları temizliyoruz
         {
             KimlikNo.Text = "";
-            Sifre.Text = "";
+            password.Text = "";
             Txtrobokutu.Text = "";
             robokod.Text = "";
         }
@@ -49,7 +50,7 @@ namespace BM102Proje
             baglantı.Open();
             OleDbCommand KGK = new OleDbCommand("Select * From YoneticiBilgileri where KimlikNumarası=@a1 and Sifre=@a2", baglantı);
             KGK.Parameters.AddWithValue("@a1", KimlikNo.Text); //@a1'e girilen kimlik numarasını atıyorum
-            KGK.Parameters.AddWithValue("@a2", Sifre.Text);   //@a2'ye girilen şifreyi atıyorum
+            KGK.Parameters.AddWithValue("@a2", password.Text);   //@a2'ye girilen şifreyi atıyorum
             OleDbDataReader dr = KGK.ExecuteReader();
 
             if (dr.Read())      // @a1 ile @a2 Sql'deki dosyada varsa çalışır
@@ -98,6 +99,20 @@ namespace BM102Proje
                 giris2.Visible = false;
                 temizle();
             }
+        }
+
+        private void sifregoster_Click(object sender, EventArgs e)
+        {
+            password.PasswordChar = '\0';
+            sifregoster.Hide();
+            sifregizle.Show();
+        }
+
+        private void sifregizle_Click(object sender, EventArgs e)
+        {
+            password.PasswordChar = '●';
+            sifregizle.Hide();
+            sifregoster.Show();
         }
     }
 }

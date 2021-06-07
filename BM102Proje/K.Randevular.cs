@@ -29,6 +29,7 @@ namespace BM102Proje
         private void Randevular_Load(object sender, EventArgs e)
         {
             randevugoster();
+            asigoster();
         }
         public void randevugoster()
         {
@@ -115,6 +116,86 @@ namespace BM102Proje
         private void randevuview_Sorted(object sender, EventArgs e)
         {
             kontrol(); // Sıraladığı zaman da renkler bozulmasın diye sıralandığında tekrar kontrol eder.
+        }
+        public void asigoster()
+        {
+            //veritabanından verileri okuyup tabloya yazdırıyoruz
+            string tcno = KullanıcıGirişiMenü.ilet;
+            baglantı.Open();
+            OleDbDataAdapter komut = new OleDbDataAdapter("Select Sehir,Hastane,Tarih,Saat,AsiTipi from AsiRandevulari where KimlikNumarası = @a1", baglantı);
+            komut.SelectCommand.Parameters.AddWithValue("@a1", tcno);
+            DataTable dt = new DataTable();
+            komut.Fill(dt);
+            asirandevuview.DataSource = dt;
+
+            //hücrelerin boyutunu ayarlıyoruz
+            asirandevuview.Columns[0].Width = 145;
+            asirandevuview.Columns[1].Width = 237;
+            asirandevuview.Columns[2].Width = 100;
+            asirandevuview.Columns[3].Width = 100;
+            asirandevuview.Columns[4].Width = 100;
+            //hücrelerin başlıklarını düzenliyoruz
+            asirandevuview.Columns[0].HeaderText = "Şehir";
+            asirandevuview.Columns[1].HeaderText = "Hastane";
+            asirandevuview.Columns[2].HeaderText = "Tarih";
+            asirandevuview.Columns[3].HeaderText = "Saat";
+            asirandevuview.Columns[4].HeaderText = "Aşı Tipi";
+
+            //başlıkların rengini ayarladık.
+            asirandevuview.EnableHeadersVisualStyles = false;
+            asirandevuview.ColumnHeadersDefaultCellStyle.BackColor = Color.Thistle;
+
+            baglantı.Close();
+            kontrol1();
+        }
+        public void kontrol1()
+        {
+            DateTime simdi = DateTime.Now.Date; // bugünü gün ay yıl olarak alıyoruz.
+            for (int j = 0; j < asirandevuview.Rows.Count; j++)
+            {
+                string[] tarih_dizi = new string[3];
+                tarih_dizi = asirandevuview.Rows[j].Cells[2].Value.ToString().Split('.');
+                int ay = Convert.ToInt32(tarih_dizi[1]);
+                int yil = Convert.ToInt32(tarih_dizi[2]);
+                int gun = Convert.ToInt32(tarih_dizi[0]);
+                DateTime rand = new DateTime(yil, ay, gun);
+
+                //her satırdaki tarihi bugünle kıyaslayarak ileri mi geçmiş mi bugün mü randevu var diye sorguluyoruz.
+                if (DateTime.Compare(simdi, rand) < 0)
+                {
+                    asirandevuview.Rows[j].Cells[0].Style.BackColor = Color.LightCyan;
+                    asirandevuview.Rows[j].Cells[1].Style.BackColor = Color.LightCyan;
+                    asirandevuview.Rows[j].Cells[2].Style.BackColor = Color.LightCyan; //eğer tarih ilerki bir günse hücreleri bu renge boyuyoruz.
+                    asirandevuview.Rows[j].Cells[3].Style.BackColor = Color.LightCyan;
+                    asirandevuview.Rows[j].Cells[4].Style.BackColor = Color.LightCyan;
+                }
+                else if (DateTime.Compare(simdi, rand) == 0)
+                {
+                    asirandevuview.Rows[j].Cells[0].Style.BackColor = Color.LightCoral;
+                    asirandevuview.Rows[j].Cells[1].Style.BackColor = Color.LightCoral;
+                    asirandevuview.Rows[j].Cells[2].Style.BackColor = Color.LightCoral; //eğer randevu günü bugünse yeşile boyuyoruz.
+                    asirandevuview.Rows[j].Cells[3].Style.BackColor = Color.LightCoral;
+                    asirandevuview.Rows[j].Cells[4].Style.BackColor = Color.LightCoral;
+                }
+                else
+                {
+                    asirandevuview.Rows[j].Cells[0].Style.BackColor = Color.Tomato;
+                    asirandevuview.Rows[j].Cells[1].Style.BackColor = Color.Tomato;
+                    asirandevuview.Rows[j].Cells[2].Style.BackColor = Color.Tomato; // eğer randevu günü geçmişse kırmızıya boyuyoruz.
+                    asirandevuview.Rows[j].Cells[3].Style.BackColor = Color.Tomato;
+                    asirandevuview.Rows[j].Cells[4].Style.BackColor = Color.Tomato;
+                }
+            }
+        }
+
+        private void asirandevuview_Sorted(object sender, EventArgs e)
+        {
+            kontrol1();
+        }
+
+        private void asirandevuview_SelectionChanged(object sender, EventArgs e)
+        {
+            asirandevuview.ClearSelection(); // Her seçimde seçimleri temizler.
         }
     }
 }

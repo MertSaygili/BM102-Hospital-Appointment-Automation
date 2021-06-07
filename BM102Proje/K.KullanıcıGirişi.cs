@@ -22,6 +22,7 @@ namespace BM102Proje
         public KullanıcıGirişiMenü()
         {
             InitializeComponent();
+            sifregizle.Hide();
         }
         private void TxtKimlikNumarası_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
@@ -32,7 +33,7 @@ namespace BM102Proje
         private void temizle()      //TxtBoxları temizliyoruz
         {
             TxtKimlikNumarası.Text = "";
-            TxtSifreGirisi.Text = "";
+            password.Text = "";
             TxtRoboKodGiriş.Text = "";
             RoboKodGörünüm.Text = "";
             TxtRoboKodGiriş.Text = "";
@@ -71,7 +72,7 @@ namespace BM102Proje
             baglantı.Open();
             OleDbCommand KGK = new OleDbCommand("Select * From HastaBilgileri where HastaKimlikNumarası=@a1 and HastaSifre=@a2", baglantı);
             KGK.Parameters.AddWithValue("@a1", TxtKimlikNumarası.Text); //@a1'e girilen kimlik numarasını atıyorum
-            KGK.Parameters.AddWithValue("@a2", TxtSifreGirisi.Text);   //@a2'ye girilen şifreyi atıyorum
+            KGK.Parameters.AddWithValue("@a2", password.Text);   //@a2'ye girilen şifreyi atıyorum
             OleDbDataReader dr = KGK.ExecuteReader();
 
             //baglanti.Open();
@@ -152,6 +153,20 @@ namespace BM102Proje
             GirişPaneli GP = new GirişPaneli();
             GP.Show();
             this.Hide();
+        }
+
+        private void sifregizle_Click(object sender, EventArgs e)
+        {
+            password.PasswordChar = '●';
+            sifregizle.Hide();
+            sifregoster.Show();
+        }
+
+        private void sifregoster_Click(object sender, EventArgs e)
+        {
+            password.PasswordChar = '\0';
+            sifregoster.Hide();
+            sifregizle.Show();
         }
     }
 }

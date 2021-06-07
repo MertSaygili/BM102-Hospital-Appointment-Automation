@@ -31,11 +31,15 @@ namespace BM102Proje
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Randevular));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.asirandevuview = new System.Windows.Forms.DataGridView();
             this.tarih = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.randevuview = new System.Windows.Forms.DataGridView();
             this.GeriDon = new System.Windows.Forms.PictureBox();
             this.bunifuGradientPanel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.asirandevuview)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.randevuview)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GeriDon)).BeginInit();
@@ -45,6 +49,7 @@ namespace BM102Proje
             // 
             this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
             this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel1.Controls.Add(this.groupBox2);
             this.bunifuGradientPanel1.Controls.Add(this.tarih);
             this.bunifuGradientPanel1.Controls.Add(this.groupBox1);
             this.bunifuGradientPanel1.Controls.Add(this.GeriDon);
@@ -54,11 +59,45 @@ namespace BM102Proje
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.LightSeaGreen;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.LightSeaGreen;
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, -1);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(762, 368);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(767, 512);
             this.bunifuGradientPanel1.TabIndex = 0;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.asirandevuview);
+            this.groupBox2.Location = new System.Drawing.Point(10, 361);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(2);
+            this.groupBox2.Size = new System.Drawing.Size(744, 140);
+            this.groupBox2.TabIndex = 58;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Aşı Randevum";
+            // 
+            // asirandevuview
+            // 
+            this.asirandevuview.AllowUserToAddRows = false;
+            this.asirandevuview.AllowUserToDeleteRows = false;
+            this.asirandevuview.AllowUserToResizeColumns = false;
+            this.asirandevuview.AllowUserToResizeRows = false;
+            this.asirandevuview.BackgroundColor = System.Drawing.Color.PaleTurquoise;
+            this.asirandevuview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.asirandevuview.Location = new System.Drawing.Point(4, 26);
+            this.asirandevuview.Margin = new System.Windows.Forms.Padding(2);
+            this.asirandevuview.Name = "asirandevuview";
+            this.asirandevuview.ReadOnly = true;
+            this.asirandevuview.RowHeadersWidth = 51;
+            this.asirandevuview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.asirandevuview.RowTemplate.Height = 24;
+            this.asirandevuview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.asirandevuview.Size = new System.Drawing.Size(735, 106);
+            this.asirandevuview.TabIndex = 0;
+            this.asirandevuview.SelectionChanged += new System.EventHandler(this.asirandevuview_SelectionChanged);
+            this.asirandevuview.Sorted += new System.EventHandler(this.asirandevuview_Sorted);
             // 
             // tarih
             // 
@@ -68,21 +107,21 @@ namespace BM102Proje
             this.tarih.CalendarTitleForeColor = System.Drawing.Color.Transparent;
             this.tarih.CalendarTrailingForeColor = System.Drawing.Color.Transparent;
             this.tarih.Enabled = false;
-            this.tarih.Location = new System.Drawing.Point(550, 21);
-            this.tarih.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tarih.Location = new System.Drawing.Point(536, 21);
+            this.tarih.Margin = new System.Windows.Forms.Padding(2);
             this.tarih.Name = "tarih";
-            this.tarih.Size = new System.Drawing.Size(200, 26);
+            this.tarih.Size = new System.Drawing.Size(214, 26);
             this.tarih.TabIndex = 57;
-            this.tarih.Value = new System.DateTime(2021, 5, 25, 14, 5, 45, 0);
+            this.tarih.Value = new System.DateTime(2021, 6, 7, 0, 0, 0, 0);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
             this.groupBox1.Controls.Add(this.randevuview);
             this.groupBox1.Location = new System.Drawing.Point(10, 51);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(744, 306);
             this.groupBox1.TabIndex = 56;
             this.groupBox1.TabStop = false;
@@ -94,16 +133,17 @@ namespace BM102Proje
             this.randevuview.AllowUserToDeleteRows = false;
             this.randevuview.AllowUserToResizeColumns = false;
             this.randevuview.AllowUserToResizeRows = false;
+            this.randevuview.BackgroundColor = System.Drawing.Color.PaleTurquoise;
             this.randevuview.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.randevuview.Location = new System.Drawing.Point(4, 26);
-            this.randevuview.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.randevuview.Margin = new System.Windows.Forms.Padding(2);
             this.randevuview.Name = "randevuview";
             this.randevuview.ReadOnly = true;
             this.randevuview.RowHeadersWidth = 51;
             this.randevuview.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.randevuview.RowTemplate.Height = 24;
             this.randevuview.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.randevuview.Size = new System.Drawing.Size(735, 269);
+            this.randevuview.Size = new System.Drawing.Size(735, 276);
             this.randevuview.TabIndex = 0;
             this.randevuview.SelectionChanged += new System.EventHandler(this.randevuview_SelectionChanged);
             this.randevuview.Sorted += new System.EventHandler(this.randevuview_Sorted);
@@ -127,16 +167,18 @@ namespace BM102Proje
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(763, 366);
+            this.ClientSize = new System.Drawing.Size(763, 510);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Randevular";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Randevular";
             this.Load += new System.EventHandler(this.Randevular_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.asirandevuview)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.randevuview)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GeriDon)).EndInit();
@@ -151,5 +193,7 @@ namespace BM102Proje
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView randevuview;
         private System.Windows.Forms.DateTimePicker tarih;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.DataGridView asirandevuview;
     }
 }

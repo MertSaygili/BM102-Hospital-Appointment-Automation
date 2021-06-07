@@ -42,5 +42,12 @@ namespace BM102Proje
             PY.Show();
             this.Close();
         }
+
+        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        {
+            Sikayet S = new Sikayet();
+            S.Show();
+            this.Close();
+        }
     }
 }

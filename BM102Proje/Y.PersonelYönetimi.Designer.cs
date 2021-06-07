@@ -31,13 +31,13 @@ namespace BM102Proje
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonelYönetimi));
             this.gradiantPanel1 = new BM102Proje.GradiantPanel();
+            this.Güncelle = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.PictureBox();
             this.Yönetici_cıkar = new System.Windows.Forms.Button();
             this.yönetici_ekle = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Güncelle = new System.Windows.Forms.Button();
             this.gradiantPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.button1)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -60,6 +60,17 @@ namespace BM102Proje
             this.gradiantPanel1.Size = new System.Drawing.Size(859, 508);
             this.gradiantPanel1.TabIndex = 0;
             // 
+            // Güncelle
+            // 
+            this.Güncelle.BackColor = System.Drawing.Color.DarkGray;
+            this.Güncelle.Location = new System.Drawing.Point(649, 392);
+            this.Güncelle.Name = "Güncelle";
+            this.Güncelle.Size = new System.Drawing.Size(193, 76);
+            this.Güncelle.TabIndex = 23;
+            this.Güncelle.Text = "Güncelle";
+            this.Güncelle.UseVisualStyleBackColor = false;
+            this.Güncelle.Click += new System.EventHandler(this.Güncelle_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -68,7 +79,7 @@ namespace BM102Proje
             this.label1.ForeColor = System.Drawing.Color.MidnightBlue;
             this.label1.Location = new System.Drawing.Point(334, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(238, 35);
+            this.label1.Size = new System.Drawing.Size(191, 29);
             this.label1.TabIndex = 22;
             this.label1.Text = "Yönetici Bilgileri";
             // 
@@ -121,6 +132,7 @@ namespace BM102Proje
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.PaleTurquoise;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(0, 23);
             this.dataGridView1.Name = "dataGridView1";
@@ -130,20 +142,9 @@ namespace BM102Proje
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellDoubleClick);
             // 
-            // Güncelle
-            // 
-            this.Güncelle.BackColor = System.Drawing.Color.DarkGray;
-            this.Güncelle.Location = new System.Drawing.Point(649, 392);
-            this.Güncelle.Name = "Güncelle";
-            this.Güncelle.Size = new System.Drawing.Size(193, 76);
-            this.Güncelle.TabIndex = 23;
-            this.Güncelle.Text = "Güncelle";
-            this.Güncelle.UseVisualStyleBackColor = false;
-            this.Güncelle.Click += new System.EventHandler(this.Güncelle_Click);
-            // 
             // PersonelYönetimi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(857, 505);

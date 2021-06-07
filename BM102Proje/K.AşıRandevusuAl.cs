@@ -57,7 +57,7 @@ namespace BM102Proje
             komut.Parameters.AddWithValue("@p2", AsiSehir.SelectedItem);
             komut.Parameters.AddWithValue("@p3", AsiHastane.Text);          //Kullanıcı tarafından girilen ya da seçilen verileri database'imize kaydediyoruz.
             komut.Parameters.AddWithValue("@p4", AsiSaat.SelectedItem);
-            komut.Parameters.AddWithValue("@p5", AsiTarih.Value);
+            komut.Parameters.AddWithValue("@p5", AsiTarih.Value.ToString().Substring(0,10));
             komut.Parameters.AddWithValue("@p6", AsiTipi.SelectedItem);
             komut.ExecuteNonQuery();
             baglantı.Close();

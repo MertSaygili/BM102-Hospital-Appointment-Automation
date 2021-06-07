@@ -67,6 +67,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Y.SikayetIstek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Y.SikayetIstek.Designer.cs">
+      <DependentUpon>Y.SikayetIstek.cs</DependentUpon>
+    </Compile>
     <Compile Include="Y.HastaListesi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -196,6 +202,9 @@
     <Compile Include="Y.YoneticiMenu.Designer.cs">
       <DependentUpon>Y.YoneticiMenu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Y.SikayetIstek.resx">
+      <DependentUpon>Y.SikayetIstek.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Y.HastaListesi.resx">
       <DependentUpon>Y.HastaListesi.cs</DependentUpon>
     </EmbeddedResource>
