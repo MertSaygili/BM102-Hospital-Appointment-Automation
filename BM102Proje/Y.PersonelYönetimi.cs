@@ -27,6 +27,7 @@ namespace BM102Proje
 
         private void verileri_göster() //Data sakladığımız yönetici bilgileri göstermek amacıyla
         {
+            int row;
             baglantı.Open();
 
             // Datadaki verileri yazdırıyoruz
@@ -35,6 +36,7 @@ namespace BM102Proje
             da.Fill(dt);
             dataGridView1.DataSource = dt;
 
+            row = dataGridView1.Rows.Count;
 
             //Datadaki verilerin görünümüyle alakalı
             dataGridView1.Columns[0].Width = 100;
@@ -45,6 +47,11 @@ namespace BM102Proje
             dataGridView1.Columns[5].Width = 120;
 
             dataGridView1.Rows[0].Selected = false;
+
+            for(int i=0; i< row -1; i++)
+            {
+                dataGridView1.Rows[i].Cells[2].ReadOnly = true;    //kimlik numarasını değişime kapatır
+            }
 
             baglantı.Close();
         }
@@ -118,7 +125,26 @@ namespace BM102Proje
         }
         private void Güncelle_Click(object sender, EventArgs e)
         {
+            //Kısaca yöneticilerin bilgilerinde değişiklik yapılabilmesini sağlıyorum
 
+            string tc;
+            tc = dataGridView1.Rows[isaretlenmişi_gönder].Cells[2].Value.ToString();
+
+            baglantı.Open();
+
+            OleDbCommand kmt = new OleDbCommand("UPDATE YoneticiBilgileri SET Ad = @a1, Soyad = @a2, Email = @a3, Telefon = @a4, Sifre = @a5 Where KimlikNumarası = @a6", baglantı);
+            Console.WriteLine(dataGridView1.Rows[isaretlenmişi_gönder].Cells[0].Value.ToString());
+            kmt.Parameters.AddWithValue("@a1", dataGridView1.Rows[isaretlenmişi_gönder].Cells[0].Value.ToString());
+            kmt.Parameters.AddWithValue("@a2", dataGridView1.Rows[isaretlenmişi_gönder].Cells[1].Value.ToString());
+            kmt.Parameters.AddWithValue("@a3", dataGridView1.Rows[isaretlenmişi_gönder].Cells[3].Value.ToString());
+            kmt.Parameters.AddWithValue("@a4", dataGridView1.Rows[isaretlenmişi_gönder].Cells[4].Value.ToString());
+            kmt.Parameters.AddWithValue("@a5", dataGridView1.Rows[isaretlenmişi_gönder].Cells[5].Value.ToString());
+            kmt.Parameters.AddWithValue("@a6", tc);
+
+            kmt.ExecuteNonQuery();
+            
+            MessageBox.Show("Güncelleme başarıyla yapıldı");
+            baglantı.Close();
         }
 
         private void temizle() // kullanıcı boş girdiğinde veya aynı tc'den girdiğinde celleri temizliyorum
