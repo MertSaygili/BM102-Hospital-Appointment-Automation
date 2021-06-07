@@ -129,7 +129,7 @@ namespace BM102Proje
             this.password.Location = new System.Drawing.Point(244, 150);
             this.password.Mask = "000000";
             this.password.Name = "password";
-            this.password.PasswordChar = '•';
+            this.password.PasswordChar = '●';
             this.password.Size = new System.Drawing.Size(331, 26);
             this.password.TabIndex = 1;
             this.password.ValidatingType = typeof(int);

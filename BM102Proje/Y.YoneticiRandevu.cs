@@ -117,7 +117,7 @@ namespace BM102Proje
                 {
                     randevuview1.Rows[j].Cells[0].Style.BackColor = Color.LightCoral;
                     randevuview1.Rows[j].Cells[1].Style.BackColor = Color.LightCoral;
-                    randevuview1.Rows[j].Cells[2].Style.BackColor = Color.LightCoral; //eğer randevu günü bugünse yeşile boyuyoruz.
+                    randevuview1.Rows[j].Cells[2].Style.BackColor = Color.LightCoral; //eğer randevu günü bugünse lightcoral'a boyuyoruz.
                     randevuview1.Rows[j].Cells[3].Style.BackColor = Color.LightCoral;
                     randevuview1.Rows[j].Cells[4].Style.BackColor = Color.LightCoral;
                     randevuview1.Rows[j].Cells[5].Style.BackColor = Color.LightCoral;
@@ -160,7 +160,7 @@ namespace BM102Proje
                 {
                     asirandevulariview.Rows[j].Cells[0].Style.BackColor = Color.LightCoral;
                     asirandevulariview.Rows[j].Cells[1].Style.BackColor = Color.LightCoral;
-                    asirandevulariview.Rows[j].Cells[2].Style.BackColor = Color.LightCoral; //eğer randevu günü bugünse yeşile boyuyoruz.
+                    asirandevulariview.Rows[j].Cells[2].Style.BackColor = Color.LightCoral; //eğer randevu günü bugünse lightcoral'a boyuyoruz.
                     asirandevulariview.Rows[j].Cells[3].Style.BackColor = Color.LightCoral;
                     asirandevulariview.Rows[j].Cells[4].Style.BackColor = Color.LightCoral;
                     asirandevulariview.Rows[j].Cells[5].Style.BackColor = Color.LightCoral;

@@ -31,6 +31,8 @@ namespace BM102Proje
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(YöneticiGirişiMenü));
             this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.sifregizle = new System.Windows.Forms.PictureBox();
+            this.sifregoster = new System.Windows.Forms.PictureBox();
             this.robokod = new System.Windows.Forms.Label();
             this.Txtrobokutu = new System.Windows.Forms.MaskedTextBox();
             this.giris1 = new System.Windows.Forms.Button();
@@ -41,12 +43,10 @@ namespace BM102Proje
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.sifregoster = new System.Windows.Forms.PictureBox();
-            this.sifregizle = new System.Windows.Forms.PictureBox();
             this.bunifuGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.button1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sifregoster)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sifregizle)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sifregoster)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel1
@@ -74,6 +74,28 @@ namespace BM102Proje
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(512, 269);
             this.bunifuGradientPanel1.TabIndex = 0;
+            // 
+            // sifregizle
+            // 
+            this.sifregizle.Image = ((System.Drawing.Image)(resources.GetObject("sifregizle.Image")));
+            this.sifregizle.Location = new System.Drawing.Point(466, 133);
+            this.sifregizle.Name = "sifregizle";
+            this.sifregizle.Size = new System.Drawing.Size(27, 27);
+            this.sifregizle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.sifregizle.TabIndex = 31;
+            this.sifregizle.TabStop = false;
+            this.sifregizle.Click += new System.EventHandler(this.sifregizle_Click);
+            // 
+            // sifregoster
+            // 
+            this.sifregoster.Image = ((System.Drawing.Image)(resources.GetObject("sifregoster.Image")));
+            this.sifregoster.Location = new System.Drawing.Point(466, 133);
+            this.sifregoster.Name = "sifregoster";
+            this.sifregoster.Size = new System.Drawing.Size(27, 27);
+            this.sifregoster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.sifregoster.TabIndex = 30;
+            this.sifregoster.TabStop = false;
+            this.sifregoster.Click += new System.EventHandler(this.sifregoster_Click);
             // 
             // robokod
             // 
@@ -124,7 +146,7 @@ namespace BM102Proje
             this.password.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.password.Location = new System.Drawing.Point(216, 134);
             this.password.Name = "password";
-            this.password.PasswordChar = '•';
+            this.password.PasswordChar = '●';
             this.password.Size = new System.Drawing.Size(243, 26);
             this.password.TabIndex = 25;
             // 
@@ -185,28 +207,6 @@ namespace BM102Proje
             this.label1.TabIndex = 0;
             this.label1.Text = "Yönetici Personel Girişi";
             // 
-            // sifregoster
-            // 
-            this.sifregoster.Image = ((System.Drawing.Image)(resources.GetObject("sifregoster.Image")));
-            this.sifregoster.Location = new System.Drawing.Point(466, 133);
-            this.sifregoster.Name = "sifregoster";
-            this.sifregoster.Size = new System.Drawing.Size(27, 27);
-            this.sifregoster.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.sifregoster.TabIndex = 30;
-            this.sifregoster.TabStop = false;
-            this.sifregoster.Click += new System.EventHandler(this.sifregoster_Click);
-            // 
-            // sifregizle
-            // 
-            this.sifregizle.Image = ((System.Drawing.Image)(resources.GetObject("sifregizle.Image")));
-            this.sifregizle.Location = new System.Drawing.Point(466, 133);
-            this.sifregizle.Name = "sifregizle";
-            this.sifregizle.Size = new System.Drawing.Size(27, 27);
-            this.sifregizle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.sifregizle.TabIndex = 31;
-            this.sifregizle.TabStop = false;
-            this.sifregizle.Click += new System.EventHandler(this.sifregizle_Click);
-            // 
             // YöneticiGirişiMenü
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -215,7 +215,7 @@ namespace BM102Proje
             this.ClientSize = new System.Drawing.Size(505, 267);
             this.Controls.Add(this.bunifuGradientPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "YöneticiGirişiMenü";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -223,9 +223,9 @@ namespace BM102Proje
             this.Load += new System.EventHandler(this.YöneticiGirişiMenü_Load);
             this.bunifuGradientPanel1.ResumeLayout(false);
             this.bunifuGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.button1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sifregoster)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sifregizle)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sifregoster)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.button1)).EndInit();
             this.ResumeLayout(false);
 
         }
