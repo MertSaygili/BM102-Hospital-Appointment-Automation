@@ -38,17 +38,22 @@ namespace BM102Proje
             this.label1 = new System.Windows.Forms.Label();
             this.AsiStok = new Bunifu.Framework.UI.BunifuImageButton();
             this.GeriDon = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.bunifuImageButton1 = new Bunifu.Framework.UI.BunifuImageButton();
             this.bunifuGradientPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DuyuruEkle)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PersonelButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AsiStok)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.GeriDon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGradientPanel2
             // 
             this.bunifuGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel2.BackgroundImage")));
             this.bunifuGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.bunifuGradientPanel2.Controls.Add(this.label2);
+            this.bunifuGradientPanel2.Controls.Add(this.bunifuImageButton1);
             this.bunifuGradientPanel2.Controls.Add(this.DuyuruText);
             this.bunifuGradientPanel2.Controls.Add(this.PersonelText);
             this.bunifuGradientPanel2.Controls.Add(this.DuyuruEkle);
@@ -61,10 +66,10 @@ namespace BM102Proje
             this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.LightSeaGreen;
             this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.LightSeaGreen;
             this.bunifuGradientPanel2.Location = new System.Drawing.Point(1, -2);
-            this.bunifuGradientPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuGradientPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(659, 320);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(739, 260);
             this.bunifuGradientPanel2.TabIndex = 2;
             // 
             // DuyuruText
@@ -72,10 +77,9 @@ namespace BM102Proje
             this.DuyuruText.AutoSize = true;
             this.DuyuruText.BackColor = System.Drawing.Color.Transparent;
             this.DuyuruText.Font = new System.Drawing.Font("Cambria", 13F);
-            this.DuyuruText.Location = new System.Drawing.Point(255, 258);
-            this.DuyuruText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.DuyuruText.Location = new System.Drawing.Point(191, 210);
             this.DuyuruText.Name = "DuyuruText";
-            this.DuyuruText.Size = new System.Drawing.Size(130, 26);
+            this.DuyuruText.Size = new System.Drawing.Size(105, 21);
             this.DuyuruText.TabIndex = 31;
             this.DuyuruText.Text = "Duyuru Ekle";
             // 
@@ -84,10 +88,9 @@ namespace BM102Proje
             this.PersonelText.AutoSize = true;
             this.PersonelText.BackColor = System.Drawing.Color.Transparent;
             this.PersonelText.Font = new System.Drawing.Font("Cambria", 13F);
-            this.PersonelText.Location = new System.Drawing.Point(441, 258);
-            this.PersonelText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PersonelText.Location = new System.Drawing.Point(331, 210);
             this.PersonelText.Name = "PersonelText";
-            this.PersonelText.Size = new System.Drawing.Size(183, 26);
+            this.PersonelText.Size = new System.Drawing.Size(150, 21);
             this.PersonelText.TabIndex = 31;
             this.PersonelText.Text = "Personel Yönetimi";
             // 
@@ -97,10 +100,9 @@ namespace BM102Proje
             this.DuyuruEkle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.DuyuruEkle.Image = ((System.Drawing.Image)(resources.GetObject("DuyuruEkle.Image")));
             this.DuyuruEkle.ImageActive = null;
-            this.DuyuruEkle.Location = new System.Drawing.Point(239, 84);
-            this.DuyuruEkle.Margin = new System.Windows.Forms.Padding(4);
+            this.DuyuruEkle.Location = new System.Drawing.Point(179, 68);
             this.DuyuruEkle.Name = "DuyuruEkle";
-            this.DuyuruEkle.Size = new System.Drawing.Size(173, 158);
+            this.DuyuruEkle.Size = new System.Drawing.Size(130, 128);
             this.DuyuruEkle.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.DuyuruEkle.TabIndex = 30;
             this.DuyuruEkle.TabStop = false;
@@ -113,10 +115,9 @@ namespace BM102Proje
             this.PersonelButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.PersonelButton.Image = ((System.Drawing.Image)(resources.GetObject("PersonelButton.Image")));
             this.PersonelButton.ImageActive = null;
-            this.PersonelButton.Location = new System.Drawing.Point(447, 79);
-            this.PersonelButton.Margin = new System.Windows.Forms.Padding(4);
+            this.PersonelButton.Location = new System.Drawing.Point(335, 64);
             this.PersonelButton.Name = "PersonelButton";
-            this.PersonelButton.Size = new System.Drawing.Size(173, 160);
+            this.PersonelButton.Size = new System.Drawing.Size(130, 130);
             this.PersonelButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PersonelButton.TabIndex = 30;
             this.PersonelButton.TabStop = false;
@@ -128,10 +129,9 @@ namespace BM102Proje
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Cambria", 13F);
-            this.label1.Location = new System.Drawing.Point(25, 258);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(19, 210);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 26);
+            this.label1.Size = new System.Drawing.Size(140, 21);
             this.label1.TabIndex = 29;
             this.label1.Text = "Aşı Stok Durumu";
             // 
@@ -141,10 +141,9 @@ namespace BM102Proje
             this.AsiStok.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AsiStok.Image = ((System.Drawing.Image)(resources.GetObject("AsiStok.Image")));
             this.AsiStok.ImageActive = null;
-            this.AsiStok.Location = new System.Drawing.Point(31, 82);
-            this.AsiStok.Margin = new System.Windows.Forms.Padding(4);
+            this.AsiStok.Location = new System.Drawing.Point(23, 67);
             this.AsiStok.Name = "AsiStok";
-            this.AsiStok.Size = new System.Drawing.Size(173, 160);
+            this.AsiStok.Size = new System.Drawing.Size(130, 130);
             this.AsiStok.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.AsiStok.TabIndex = 28;
             this.AsiStok.TabStop = false;
@@ -158,33 +157,57 @@ namespace BM102Proje
             this.GeriDon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.GeriDon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.GeriDon.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.GeriDon.Location = new System.Drawing.Point(15, 17);
-            this.GeriDon.Margin = new System.Windows.Forms.Padding(4);
+            this.GeriDon.Location = new System.Drawing.Point(11, 14);
             this.GeriDon.Name = "GeriDon";
-            this.GeriDon.Size = new System.Drawing.Size(45, 42);
+            this.GeriDon.Size = new System.Drawing.Size(34, 34);
             this.GeriDon.TabIndex = 27;
             this.GeriDon.TabStop = false;
             this.GeriDon.Click += new System.EventHandler(this.GeriDon_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Cambria", 13F);
+            this.label2.Location = new System.Drawing.Point(497, 210);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 21);
+            this.label2.TabIndex = 33;
+            this.label2.Text = "Şikayetler/İstekler";
+            // 
+            // bunifuImageButton1
+            // 
+            this.bunifuImageButton1.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuImageButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuImageButton1.Image = ((System.Drawing.Image)(resources.GetObject("bunifuImageButton1.Image")));
+            this.bunifuImageButton1.ImageActive = null;
+            this.bunifuImageButton1.Location = new System.Drawing.Point(501, 64);
+            this.bunifuImageButton1.Name = "bunifuImageButton1";
+            this.bunifuImageButton1.Size = new System.Drawing.Size(130, 130);
+            this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.bunifuImageButton1.TabIndex = 32;
+            this.bunifuImageButton1.TabStop = false;
+            this.bunifuImageButton1.Zoom = 0;
+            // 
             // YoneticiBilgileri
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(659, 318);
+            this.ClientSize = new System.Drawing.Size(664, 258);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "YoneticiBilgileri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Yönetici Paneli";
+            this.Text = "Bilgilerim Paneli";
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuGradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DuyuruEkle)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PersonelButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AsiStok)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.GeriDon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -199,5 +222,7 @@ namespace BM102Proje
         private Bunifu.Framework.UI.BunifuImageButton PersonelButton;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuImageButton AsiStok;
+        private System.Windows.Forms.Label label2;
+        private Bunifu.Framework.UI.BunifuImageButton bunifuImageButton1;
     }
 }
