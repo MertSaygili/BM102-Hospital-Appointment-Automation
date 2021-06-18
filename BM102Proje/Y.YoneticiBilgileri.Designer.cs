@@ -202,6 +202,7 @@ namespace BM102Proje
             this.Name = "YoneticiBilgileri";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bilgilerim Paneli";
+            this.Load += new System.EventHandler(this.YoneticiBilgileri_Load);
             this.bunifuGradientPanel2.ResumeLayout(false);
             this.bunifuGradientPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bunifuImageButton1)).EndInit();

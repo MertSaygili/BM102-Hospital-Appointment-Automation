@@ -17,8 +17,7 @@ namespace BM102Proje
 
     public partial class KullanıcıGirişiMenü : Form
     {
-        OleDbConnection baglantı = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\veriler\\veritabani_access.mdb"); //OleDb bağlantısı
-        /*SqlConnection baglanti = new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=BM102Proje;Integrated Security=True");*/ //SQL'lin bağlantısını yapıyoruz
+        OleDbConnection baglantı = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=.\\veritabani_access.mdb"); //OleDb bağlantısı
         public KullanıcıGirişiMenü()
         {
             InitializeComponent();

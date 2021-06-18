@@ -16,8 +16,7 @@ namespace BM102Proje
         public static string ad;
         public static string soyad;
         public static string mail;
-        OleDbConnection baglantı = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\veriler\\veritabani_access.mdb");  //OleDb bağlantısı
-        //SqlConnection baglanti = new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=BM102Proje;Integrated Security=True"); SQl Bağlantısı
+        OleDbConnection baglantı = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=.\\veritabani_access.mdb");  //OleDb bağlantısı
         public KullanıcıMenü()
         {
             InitializeComponent();

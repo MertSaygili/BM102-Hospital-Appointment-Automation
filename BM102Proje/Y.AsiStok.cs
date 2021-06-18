@@ -13,7 +13,7 @@ namespace BM102Proje
 {
     public partial class AsiStok : Form
     {
-        OleDbConnection baglantı = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\veriler\\veritabani_access.mdb");  //OleDb bağlantısı
+        OleDbConnection baglantı = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=.\\veritabani_access.mdb"); //OleDb bağlantısı
         public double biontech_adet = 0;
         public double sinovac_adet = 0;
         public double biontech_yuzde;
@@ -91,6 +91,11 @@ namespace BM102Proje
             {
                 timer2.Stop();
             }
+        }
+
+        private void bunifuGradientPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

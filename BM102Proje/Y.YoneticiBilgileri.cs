@@ -49,5 +49,10 @@ namespace BM102Proje
             S.Show();
             this.Close();
         }
+
+        private void YoneticiBilgileri_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

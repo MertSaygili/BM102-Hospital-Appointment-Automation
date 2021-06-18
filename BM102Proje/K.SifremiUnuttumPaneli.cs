@@ -17,8 +17,7 @@ namespace BM102Proje
 {
     public partial class SifremiUnuttumPaneli : Form
     {
-        //SqlConnection baglanti = new SqlConnection("Data Source=MSI\\SQLEXPRESS;Initial Catalog=BM102Proje;Integrated Security=True"); Sql baglantı
-        OleDbConnection baglantı = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\veriler\\veritabani_access.mdb");
+        OleDbConnection baglantı = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=.\\veritabani_access.mdb");
         MailMessage mesajım1 = new MailMessage();
         public string kod1;
         public string ad, soyad, email_adresi;

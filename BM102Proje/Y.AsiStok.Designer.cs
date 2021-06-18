@@ -62,20 +62,20 @@ namespace BM102Proje
             this.bunifuGradientPanel2.GradientBottomRight = System.Drawing.Color.LightCyan;
             this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.LightSeaGreen;
             this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.LightSeaGreen;
-            this.bunifuGradientPanel2.Location = new System.Drawing.Point(-80, -68);
-            this.bunifuGradientPanel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuGradientPanel2.Location = new System.Drawing.Point(-60, -55);
+            this.bunifuGradientPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
-            this.bunifuGradientPanel2.Size = new System.Drawing.Size(716, 463);
+            this.bunifuGradientPanel2.Size = new System.Drawing.Size(537, 376);
             this.bunifuGradientPanel2.TabIndex = 2;
+            this.bunifuGradientPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.bunifuGradientPanel2_Paint);
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(360, 79);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(270, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(4, 206);
+            this.label2.Size = new System.Drawing.Size(3, 167);
             this.label2.TabIndex = 36;
             // 
             // label1
@@ -83,10 +83,9 @@ namespace BM102Proje
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Cambria", 14F);
-            this.label1.Location = new System.Drawing.Point(428, 289);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(321, 235);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(154, 28);
+            this.label1.Size = new System.Drawing.Size(121, 22);
             this.label1.TabIndex = 35;
             this.label1.Text = "Sinovac Stoğu";
             // 
@@ -95,10 +94,9 @@ namespace BM102Proje
             this.biontechtext.AutoSize = true;
             this.biontechtext.BackColor = System.Drawing.Color.Transparent;
             this.biontechtext.Font = new System.Drawing.Font("Cambria", 14F);
-            this.biontechtext.Location = new System.Drawing.Point(137, 289);
-            this.biontechtext.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.biontechtext.Location = new System.Drawing.Point(103, 235);
             this.biontechtext.Name = "biontechtext";
-            this.biontechtext.Size = new System.Drawing.Size(167, 28);
+            this.biontechtext.Size = new System.Drawing.Size(130, 22);
             this.biontechtext.TabIndex = 34;
             this.biontechtext.Text = "Biontech Stoğu";
             // 
@@ -114,13 +112,13 @@ namespace BM102Proje
             this.SinovacBar.LabelVisible = true;
             this.SinovacBar.LineProgressThickness = 12;
             this.SinovacBar.LineThickness = 8;
-            this.SinovacBar.Location = new System.Drawing.Point(399, 90);
-            this.SinovacBar.Margin = new System.Windows.Forms.Padding(13, 11, 13, 11);
+            this.SinovacBar.Location = new System.Drawing.Point(299, 73);
+            this.SinovacBar.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.SinovacBar.MaxValue = 100;
             this.SinovacBar.Name = "SinovacBar";
             this.SinovacBar.ProgressBackColor = System.Drawing.Color.White;
             this.SinovacBar.ProgressColor = System.Drawing.Color.Yellow;
-            this.SinovacBar.Size = new System.Drawing.Size(188, 188);
+            this.SinovacBar.Size = new System.Drawing.Size(153, 153);
             this.SinovacBar.TabIndex = 33;
             this.SinovacBar.Value = 0;
             // 
@@ -136,13 +134,13 @@ namespace BM102Proje
             this.BiontechBar.LabelVisible = true;
             this.BiontechBar.LineProgressThickness = 12;
             this.BiontechBar.LineThickness = 8;
-            this.BiontechBar.Location = new System.Drawing.Point(119, 90);
-            this.BiontechBar.Margin = new System.Windows.Forms.Padding(13, 11, 13, 11);
+            this.BiontechBar.Location = new System.Drawing.Point(89, 73);
+            this.BiontechBar.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
             this.BiontechBar.MaxValue = 100;
             this.BiontechBar.Name = "BiontechBar";
             this.BiontechBar.ProgressBackColor = System.Drawing.Color.White;
             this.BiontechBar.ProgressColor = System.Drawing.Color.Lime;
-            this.BiontechBar.Size = new System.Drawing.Size(188, 188);
+            this.BiontechBar.Size = new System.Drawing.Size(153, 153);
             this.BiontechBar.TabIndex = 32;
             this.BiontechBar.Value = 0;
             // 
@@ -151,9 +149,10 @@ namespace BM102Proje
             this.tarihsaat.AutoSize = true;
             this.tarihsaat.BackColor = System.Drawing.Color.Transparent;
             this.tarihsaat.Font = new System.Drawing.Font("Cambria", 15F);
-            this.tarihsaat.Location = new System.Drawing.Point(551, 38);
+            this.tarihsaat.Location = new System.Drawing.Point(413, 31);
+            this.tarihsaat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.tarihsaat.Name = "tarihsaat";
-            this.tarihsaat.Size = new System.Drawing.Size(135, 30);
+            this.tarihsaat.Size = new System.Drawing.Size(106, 23);
             this.tarihsaat.TabIndex = 31;
             this.tarihsaat.Text = "15.05.2021";
             // 
@@ -163,10 +162,10 @@ namespace BM102Proje
             this.geridon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("geridon.BackgroundImage")));
             this.geridon.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.geridon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.geridon.Location = new System.Drawing.Point(20, 33);
-            this.geridon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.geridon.Location = new System.Drawing.Point(15, 27);
+            this.geridon.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.geridon.Name = "geridon";
-            this.geridon.Size = new System.Drawing.Size(37, 34);
+            this.geridon.Size = new System.Drawing.Size(28, 28);
             this.geridon.TabIndex = 22;
             this.geridon.TabStop = false;
             // 
@@ -175,9 +174,10 @@ namespace BM102Proje
             this.hosgeldin.AutoSize = true;
             this.hosgeldin.BackColor = System.Drawing.Color.Transparent;
             this.hosgeldin.Font = new System.Drawing.Font("Cambria", 15F);
-            this.hosgeldin.Location = new System.Drawing.Point(63, 38);
+            this.hosgeldin.Location = new System.Drawing.Point(47, 31);
+            this.hosgeldin.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.hosgeldin.Name = "hosgeldin";
-            this.hosgeldin.Size = new System.Drawing.Size(184, 30);
+            this.hosgeldin.Size = new System.Drawing.Size(149, 23);
             this.hosgeldin.TabIndex = 0;
             this.hosgeldin.Text = "Sayın, xxxx xxxx";
             // 
@@ -191,13 +191,12 @@ namespace BM102Proje
             // 
             // AsiStok
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(571, 273);
+            this.ClientSize = new System.Drawing.Size(428, 222);
             this.Controls.Add(this.bunifuGradientPanel2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "AsiStok";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

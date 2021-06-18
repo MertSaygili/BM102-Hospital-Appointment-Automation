@@ -13,7 +13,7 @@ namespace BM102Proje
 {
     public partial class PersonelYönetimi : Form
     {
-        OleDbConnection baglantı = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\veriler\\veritabani_access.mdb"); //OleDB bağlantısı
+        OleDbConnection baglantı = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=.\\veritabani_access.mdb"); //OleDB bağlantısı
         public int isaretlenmişi_gönder;
         public PersonelYönetimi()
         {

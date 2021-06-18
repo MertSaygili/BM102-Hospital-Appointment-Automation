@@ -14,7 +14,7 @@ namespace BM102Proje
 {
     public partial class DuyuruEkle : Form
     {
-        OleDbConnection baglantı = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\veriler\\veritabani_access.mdb");
+        OleDbConnection baglantı = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=.\\veritabani_access.mdb");
         public DuyuruEkle()
         {
             InitializeComponent();

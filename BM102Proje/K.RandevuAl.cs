@@ -18,7 +18,7 @@ namespace BM102Proje
     public partial class RandevuAl : Form
     {
         public int sayac = 0;
-        OleDbConnection baglantı = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=..\\..\\veriler\\veritabani_access.mdb");
+        OleDbConnection baglantı = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0;Data Source=.\\veritabani_access.mdb");
         MailMessage mesajım1 = new MailMessage();
         static public StringBuilder url = new StringBuilder("https://www.google.com/maps/search/");
         public RandevuAl()
