@@ -32,6 +32,7 @@ namespace BM102Proje
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KayıtOlPaneli));
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.KayıtOl = new System.Windows.Forms.Button();
             this.gradiantPanel1 = new BM102Proje.GradiantPanel();
             this.button1 = new System.Windows.Forms.PictureBox();
             this.TxtŞifreTekrar = new System.Windows.Forms.MaskedTextBox();
@@ -40,7 +41,6 @@ namespace BM102Proje
             this.RoboKod = new System.Windows.Forms.Label();
             this.TxtKullanıcıRobosu = new System.Windows.Forms.TextBox();
             this.Sayac = new System.Windows.Forms.Label();
-            this.KayıtOl = new System.Windows.Forms.Button();
             this.SY = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.TxtVatandaşTelNumarası = new System.Windows.Forms.TextBox();
@@ -55,6 +55,8 @@ namespace BM102Proje
             this.KN = new System.Windows.Forms.Label();
             this.Label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.toolTip2 = new System.Windows.Forms.ToolTip(this.components);
             this.gradiantPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.button1)).BeginInit();
             this.SuspendLayout();
@@ -63,6 +65,14 @@ namespace BM102Proje
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // KayıtOl
+            // 
+            this.KayıtOl.BackColor = System.Drawing.Color.DarkGray;
+            resources.ApplyResources(this.KayıtOl, "KayıtOl");
+            this.KayıtOl.Name = "KayıtOl";
+            this.KayıtOl.UseVisualStyleBackColor = false;
+            this.KayıtOl.Click += new System.EventHandler(this.KayıtOl_Click);
             // 
             // gradiantPanel1
             // 
@@ -142,14 +152,6 @@ namespace BM102Proje
             resources.ApplyResources(this.Sayac, "Sayac");
             this.Sayac.Name = "Sayac";
             // 
-            // KayıtOl
-            // 
-            this.KayıtOl.BackColor = System.Drawing.Color.DarkGray;
-            resources.ApplyResources(this.KayıtOl, "KayıtOl");
-            this.KayıtOl.Name = "KayıtOl";
-            this.KayıtOl.UseVisualStyleBackColor = false;
-            this.KayıtOl.Click += new System.EventHandler(this.KayıtOl_Click);
-            // 
             // SY
             // 
             resources.ApplyResources(this.SY, "SY");
@@ -193,12 +195,14 @@ namespace BM102Proje
             resources.ApplyResources(this.S, "S");
             this.S.BackColor = System.Drawing.Color.Transparent;
             this.S.Name = "S";
+            this.toolTip1.SetToolTip(this.S, resources.GetString("S.ToolTip"));
             // 
             // TN
             // 
             resources.ApplyResources(this.TN, "TN");
             this.TN.BackColor = System.Drawing.Color.Transparent;
             this.TN.Name = "TN";
+            this.toolTip2.SetToolTip(this.TN, resources.GetString("TN.ToolTip"));
             // 
             // label5
             // 
@@ -271,5 +275,7 @@ namespace BM102Proje
         private System.Windows.Forms.MaskedTextBox TxtŞifre;
         private System.Windows.Forms.MaskedTextBox TxtŞifreTekrar;
         private System.Windows.Forms.PictureBox button1;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.ToolTip toolTip2;
     }
 }

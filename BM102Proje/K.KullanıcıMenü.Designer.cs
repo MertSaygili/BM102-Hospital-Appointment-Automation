@@ -29,6 +29,7 @@ namespace BM102Proje
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(KullanıcıMenü));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -49,6 +50,7 @@ namespace BM102Proje
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.AdSoyad = new System.Windows.Forms.Label();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.gradiantPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Sikayet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.button1)).BeginInit();
@@ -96,6 +98,7 @@ namespace BM102Proje
             this.Sikayet.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Sikayet.TabIndex = 22;
             this.Sikayet.TabStop = false;
+            this.toolTip1.SetToolTip(this.Sikayet, "Yardım Masası");
             this.Sikayet.Click += new System.EventHandler(this.Sikayet_Click);
             // 
             // button1
@@ -334,5 +337,6 @@ namespace BM102Proje
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox button1;
         private System.Windows.Forms.PictureBox Sikayet;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -27,15 +27,15 @@ namespace BM102Proje
         }
         private void temizle()  //Hatalar yapılırsa kullanıcının girdiklerini temizlemek için
         {
-            TxtVatandaşİsmi.Text = " ";
-            TxtVatandaşSoyİsim.Text = " ";
-            TxtVatandaşKimlikNumarası.Text = " ";
-            TxtVatandaşEmail.Text = " ";
-            TxtVatandaşTelNumarası.Text = " ";
-            TxtŞifre.Text = " ";
-            TxtŞifreTekrar.Text = " ";
-            TxtKullanıcıRobosu.Text = " ";
-            RoboKod.Text = " ";            
+            TxtVatandaşİsmi.Text = "";
+            TxtVatandaşSoyİsim.Text = "";
+            TxtVatandaşKimlikNumarası.Text = "";
+            TxtVatandaşEmail.Text = "";
+            TxtVatandaşTelNumarası.Text = "";
+            TxtŞifre.Text = "";
+            TxtŞifreTekrar.Text = "";
+            TxtKullanıcıRobosu.Text = "";
+            RoboKod.Text = "";            
         }
         public void mail()
         {
@@ -147,6 +147,27 @@ namespace BM102Proje
 
             baglanti.Close(); */
         }
+
+        private bool mailmi(string mail)
+        {
+            int toplam = 0;
+            foreach (char x in mail)
+            {
+                if (x == '@')
+                {
+                    toplam++;
+                }
+            }
+            if (toplam == 1)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         private void KayıtOl_Click(object sender, EventArgs e)
         {
             KayıtOl.Enabled = false;    //Kayıt ol'a tekrar basılmasını önlüyorum
@@ -155,11 +176,20 @@ namespace BM102Proje
             {
                 if (TxtŞifre.Text==TxtŞifreTekrar.Text && TxtŞifre.Text != "")     //Girdiği şifrelerin uyumuna bakıyorum
                 {
-                    mail();
-                    Console.WriteLine(kod1);
-                    MessageBox.Show("Mailinize gönderilmiş olan kodu boşluğa giriniz.");
-                    SayacGöster();
-                    RoboKod.Text = kod1;
+                    if (TxtŞifre.Text.Length == 6 && TxtVatandaşKimlikNumarası.Text.Length == 11 && mailmi(TxtVatandaşEmail.Text) && TxtVatandaşTelNumarası.Text.Length == 11)
+                    { 
+                        mail();
+                        Console.WriteLine(kod1);
+                        MessageBox.Show("Mailinize gönderilmiş olan kodu boşluğa giriniz.");
+                        SayacGöster();
+                        RoboKod.Text = kod1;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Girdiğiniz veriler uygun değil.","Hata",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                        temizle();
+                        KayıtOl.Enabled = true;
+                    }
                 }
                 else
                 {

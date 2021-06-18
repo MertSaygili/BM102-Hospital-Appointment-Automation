@@ -78,7 +78,7 @@ namespace BM102Proje
             if (dr1.Read()) //girilen kimlik datada varsa çalışır
             {
                 //SqlCommand kmt2 = new SqlCommand("Update HastaBilgileri set HastaSifre=@a2 where HastaKimlikNumarası=@a3",baglanti);    //Sql komudu
-                if(TxtSifre.Text == TxtSifreTekrar.Text && TxtSifre.Text != string.Empty)   //şifreler birbiriyle eşleşiyor mu? şifre null değil mi? Kontrol
+                if(TxtSifre.Text == TxtSifreTekrar.Text && TxtSifre.Text != string.Empty && TxtSifre.Text.Length == 6)   //şifreler birbiriyle eşleşiyor mu? şifre null değil mi? Kontrol
                 {
                     baglantı.Close();
                     email_gönder();
@@ -87,7 +87,7 @@ namespace BM102Proje
                 }
                 else
                 {
-                    MessageBox.Show("Birbiriyle uyuşmayan şifreler!");
+                    MessageBox.Show("Birbiriyle uyuşmayan veya 6 haneden küçük şifre girdiniz!");
                     Temizle();
                     
                 }
